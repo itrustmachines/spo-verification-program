@@ -13,4 +13,3 @@
   - publicKey = <publicKey>
   - clientWalletAddress = <clientWalletAddress>
 ```
-- 請將Output資訊與spo device client的設定檔內容中的privateKey,publicKey,clientWalletAddress替換,即可完成
