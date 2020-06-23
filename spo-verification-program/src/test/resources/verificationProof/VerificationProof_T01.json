@@ -1,0 +1,67 @@
+{
+  "status": "ok",
+  "description": "",
+  "query": "Locators=(619:ToolServerTest2_R1)",
+  "contractAddress": "0xc434650Ef2C1FA7B0b1a25615f9847e0C65874Ba",
+  "serverWalletAddress": "0x6B48f7395040793684B201776368Bb1774e4f6C7",
+  "env": "RINKEBY",
+  "existenceProofs": [
+    {
+      "clearanceOrder": 619,
+      "indexValue": "ToolServerTest2_R1",
+      "exist": true,
+      "merkleProof": {
+        "slice": "2.b8d33f57ea840289c414c3cbaa48e552b96e9658df448fcae956c49105195466.a046c4b89875a0757761e39ea5d0e4c17b46be8b8a0871eafb539b1810891cc0.d1e2046db4da1958ed4bc5216f7f7e696bf0b8e5793690441bd3a027cb2b50d0",
+        "pbPair": [
+          {
+            "index": 1,
+            "keyHash": "437bb710b776b8e6313b996479482b489dc5e3a468b67063fc37b617750c9d14",
+            "value": "45ff4daf6fd2c2e9ddd547e1137ffcdb20f73a66f9d8377b6da96404856c92e7"
+          },
+          {
+            "index": 2,
+            "keyHash": "edf7be586cbfa926d683b96c252c8fd7f7d8119f729fabf3c2a460a6ff671c9e",
+            "value": "4610af0a22a8a08d74e09654db84422404bb4797f817ac87d29f804e1e140481"
+          }
+        ],
+        "clearanceOrder": 619,
+        "sigServer": {
+          "r": "060c9665cccd777f46cd63fdd8d6cd37b9563ea26e8a0950080dd193ccb541fe",
+          "s": "612fb4afaa01799075e6dfdfe8b9d0ee9103ecebbb43ed8dc42cfa6c42144a9e",
+          "v": "1b"
+        }
+      },
+      "receipt": {
+        "callerAddress": "0xcfae2d39ee286c1cbaa698bd00c516ec28743f85",
+        "timestamp": 1590734616138,
+        "cmd": "{TEST_CMD}",
+        "indexValue": "ToolServerTest2_R1",
+        "metadata": "",
+        "clearanceOrder": 619,
+        "sigClient": {
+          "r": "a4e8209266a839f1eee799d8ee27904409d793b440dc576185110479477c88de",
+          "s": "08b0de7adada97f57d75612d26f6817caeca810540c30e043ab9ee9264af6692",
+          "v": "1b"
+        },
+        "timestampSPO": 1590734616151,
+        "result": "ok",
+        "sigServer": {
+          "r": "2ad8f60b632fedfb9fadc1742b9176443dc304b6c38031476363026e1a88b872",
+          "s": "16b662d10a4a5b539d7cf7d1c8663968a103afa4f64d36986d1243efc856b929",
+          "v": "1b"
+        }
+      }
+    }
+  ],
+  "clearanceRecords": [
+    {
+      "id": 2,
+      "clearanceOrder": 619,
+      "rootHash": "d1e2046db4da1958ed4bc5216f7f7e696bf0b8e5793690441bd3a027cb2b50d0",
+      "chainHash": "875baa7b4be140cb3acbfec987246b998e688e2790522dbe5be75aca10d40413",
+      "description": "\n[ITM,RH:d1e2046db4da1958ed4bc5216f7f7e696bf0b8e5793690441bd3a027cb2b50d0,TS:1590734628417,CO:619]",
+      "createTime": 1590734660000,
+      "txHash": "0xa28c38dd51ffe149d4842024c0087b3209b4ed22ab61a970d3210a5c86127aa5"
+    }
+  ]
+}
