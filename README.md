@@ -63,9 +63,9 @@
     
     }
 -  其中，nodeUrl 和 infuraProjectIdEnv 為 infura endpoints 之拆解，範例如下 : 
-   若 infura endpoints 為https://rinkeby.infura.io/v3/1a2b3c4d5e6f7g8h，則
-   -  <nodeUrl> 為https://rinkeby.infura.io/v3/
-   -  <infuraProjectIdEnv> 為1a2b3c4d5e6f7g8h
+   若 infura endpoints 為"https://rinkeby.infura.io/v3/1a2b3c4d5e6f7g8h"，則
+   -  <nodeUrl> 為"https://rinkeby.infura.io/v3/"
+   -  <infuraProjectIdEnv> 為"1a2b3c4d5e6f7g8h"
    
 -  以下為 VerificationApi 建構範例 : 
     ```
