@@ -93,66 +93,15 @@
 
 ## 驗證流程
 
--  使用 VerificationProof **filePath** 驗證
-    1. 將下載的 verificationProof.json 檔之路徑貼上至 filePath，如下 : 
-    ```
-    package com.itrustmachines.verification;
-    import com.itrustmachines.common.config.EthereumNodeConfig;
-    import com.itrustmachines.verification.vo.VerifyReceiptAndMerkleProofResult;
-    import com.itrustmachines.verification.vo.VerifyVerificationProofResult;
-    import java.util.List;
+-  使用 [VerificationProof filePath](./spo-verification-program/src/test/java/com/itrustmachines/verification/sample/filePathSample.java) 驗證
+    1. 將下載的 verificationProof.json 檔之路徑貼上至 filePath。
 
-    public class Demo {
+   2. 執行此段程式碼，若是驗證成功則 output 為 true； 反之則為 false。
 
-        public static void main(String[] args) {
-
-            String contractAddress = <contractAddress>;
-            String serverWalletAddress = <serverWalletAddress>;
-            EthereumNodeConfig.Authentication auth = new EthereumNodeConfig.Authentication(<needAuth>, <username>, <password>);
-            EthereumNodeConfig config = new EthereumNodeConfig(<privateKey>, <nodeUrl>, <infuraProjectIdEnv>, <blockchainExplorerUrl>, auth);
-            VerificationApi api = VerificationApi.getInstance(contractAddress, serverWalletAddress, config);
-
-            String filePath = <verificationProof.json檔之路徑>;
-            VerifyVerificationProofResult result = api.verify(filePath);
-            List<VerifyReceiptAndMerkleProofResult> proofResultList = result.getVerifyReceiptResults();
-            for (int i = 0; i < proofResultList.size(); i++) {
-                System.out.println(proofResultList.get(i).isPass());
-            }
-        }
-    }
-    ```
-
-   2. 執行此段程式碼，若是驗證成功則 output 為 true； 反之則為 false
-
--  使用 VerificationProof **jsonString** 驗證
-   1. 將下載的 verificationProof.json 檔打開，複製全部內容，貼上至 jsonString，如下 : 
-    ```
-    package com.itrustmachines.verification;
-    import com.itrustmachines.common.config.EthereumNodeConfig;
-    import com.itrustmachines.verification.vo.VerifyReceiptAndMerkleProofResult;
-    import com.itrustmachines.verification.vo.VerifyVerificationProofResult;
-    import java.util.List;
-
-    public class Demo {
-
-        public static void main(String[] args) {
-
-            String contractAddress = <contractAddress>;
-            String serverWalletAddress = <serverWalletAddress>;
-            EthereumNodeConfig.Authentication auth = new EthereumNodeConfig.Authentication(<needAuth>, <username>, <password>);
-            EthereumNodeConfig config = new EthereumNodeConfig(<privateKey>, <nodeUrl>, <infuraProjectIdEnv>, <blockchainExplorerUrl>, auth);
-            VerificationApi api = VerificationApi.getInstance(contractAddress, serverWalletAddress, config);
-
-            String jsonString = <verificationProof.json檔之內容>;
-            VerifyVerificationProofResult result = api.verifyJsonString(jsonString);
-            List<VerifyReceiptAndMerkleProofResult> proofResultList = result.getVerifyReceiptResults();
-            for (int i = 0; i < proofResultList.size(); i++) {
-            System.out.println(proofResultList.get(i).isPass());
-            }
-        }
-    }
-    ```
-   2. 執行此段程式碼，若是驗證成功則 output 為 true； 反之則為 false
+-  使用 [VerificationProof jsonString](./spo-verification-program/src/test/java/com/itrustmachines/verification/sample/jsonStringSample.java) 驗證
+   1. 將下載的 verificationProof.json 檔打開，複製全部內容，貼上至 jsonString。 
+    
+   2. 執行此段程式碼，若是驗證成功則 output 為 true； 反之則為 false。
     
 -  直接使用 VerificationProof 驗證(過程較繁瑣，較不推薦)
    1. 利用下載的 verificationProof.json 檔的資訊，宣告所有的參數，如下 :
@@ -185,4 +134,4 @@
         }
     }
     ```
-   2. 執行此段程式碼，若是驗證成功則 output 為 true； 反之則為 false
+   2. 執行此段程式碼，若是驗證成功則 output 為 true； 反之則為 false。
