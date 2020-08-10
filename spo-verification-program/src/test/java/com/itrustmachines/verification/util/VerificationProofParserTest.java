@@ -15,7 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 public class VerificationProofParserTest {
   
   public static VerificationProof getTestVerificationProof() {
-    String filePath = "src/test/resources/verificationProof/SPO_DEVICE_CLIENT_RX_2020-04-29.json";
+    String filePath = "src/test/resources/verificationProof/SolarPanel_R152_22600.json";
     final Path path = Paths.get(filePath);
     assertThat(path.toFile()).canRead();
     

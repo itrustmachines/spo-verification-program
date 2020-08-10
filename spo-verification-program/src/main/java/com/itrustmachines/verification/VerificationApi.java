@@ -1,6 +1,6 @@
 package com.itrustmachines.verification;
 
-import com.itrustmachines.common.config.EthereumNodeConfig;
+import com.itrustmachines.common.ethereum.config.EthereumNodeConfig;
 import com.itrustmachines.common.util.ClearanceRecordServiceBuilder;
 import com.itrustmachines.verification.service.VerifyVerificationProofService;
 import com.itrustmachines.verification.util.VerificationProofParser;

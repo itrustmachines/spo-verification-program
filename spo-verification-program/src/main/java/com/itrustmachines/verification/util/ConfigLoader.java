@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Properties;
 
-import com.itrustmachines.common.config.EthereumNodeConfig;
+import com.itrustmachines.common.ethereum.config.EthereumNodeConfig;
 
 import lombok.NonNull;
 import lombok.experimental.UtilityClass;

@@ -2,7 +2,7 @@ package com.itrustmachines.verification.vo;
 
 import java.util.List;
 
-import com.itrustmachines.common.constants.EthereumEnv;
+import com.itrustmachines.common.ethereum.EthereumEnv;
 import com.itrustmachines.common.vo.ClearanceRecord;
 
 import lombok.AllArgsConstructor;

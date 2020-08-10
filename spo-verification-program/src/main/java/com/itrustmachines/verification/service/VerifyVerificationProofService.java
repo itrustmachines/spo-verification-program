@@ -12,7 +12,7 @@ import org.web3j.crypto.Keys;
 import org.web3j.crypto.Sign;
 import org.web3j.utils.Numeric;
 
-import com.itrustmachines.common.contract.ClearanceRecordService;
+import com.itrustmachines.common.ethereum.service.ClientContractService;
 import com.itrustmachines.common.tpm.PBPair;
 import com.itrustmachines.common.util.HashUtils;
 import com.itrustmachines.common.util.SignatureUtil;
@@ -34,11 +34,11 @@ import lombok.extern.slf4j.Slf4j;
 public class VerifyVerificationProofService {
   
   private final String serverWalletAddress;
-  private final ClearanceRecordService clearanceRecordService;
+  private final ClientContractService clearanceRecordService;
   private final VerifyReceiptAndMerkleProofService verifyReceiptAndMerkleProofService;
   
   public VerifyVerificationProofService(final @NonNull String serverWalletAddress,
-      final @NonNull ClearanceRecordService clearanceRecordService) {
+      final @NonNull ClientContractService clearanceRecordService) {
     this.serverWalletAddress = serverWalletAddress;
     this.clearanceRecordService = clearanceRecordService;
     this.verifyReceiptAndMerkleProofService = new VerifyReceiptAndMerkleProofService(serverWalletAddress,

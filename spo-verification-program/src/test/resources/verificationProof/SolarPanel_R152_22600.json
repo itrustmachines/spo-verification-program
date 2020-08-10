@@ -1,0 +1,65 @@
+{
+  "query": "Locators=(22600:SolarPanel_R152)",
+  "contractAddress": "0x1Bbe2D131a42DaEd0110fd2bE08AF56906A5a1Ce",
+  "serverWalletAddress": "0xA197013CA3978962B91f471C4e8C8b6DB42B14D5",
+  "env": "RINKEBY",
+  "existenceProofs": [
+    {
+      "clearanceOrder": 22600,
+      "indexValue": "SolarPanel_R152",
+      "exist": true,
+      "merkleProof": {
+        "slice": "201.55c33d219008ee868a6dc0357c9cf3e2ee83469c1b90587c972f0cc837115dce.434c5951f1b97d0463b114e3716238114ef676ad05514b8c6e01807f3dd5c224.e4a05ddfad0ba0d47e001a310a5e29ce394d0199addda4a2d9e077d33969e457.82816576f47b8fd572f1675461d24f3dd2c9b0e0c776018108487f8949de021b.73c35eee34627c26f9f98ad3236b635e2088102016c05229ad32a076a34b9434.e26358617ab86f89ae3a8b35ddebec4c32d8687ebde89b811ae5d6a5342a84ae.a8957df413d398bce19af5a24cd35f5958917ee872c837d20504e6896a132f0b.09f5a35464c89e5dc7e4b0709a368cad30ab58d386d924a0de91aa9330fdedbe.cbe2090352ec55b6f64dfd6c5dcf1d7a7372750535d6df5b0f5212957c311e05.511fb12c6203af22945d4626223e4613c7c5e4a1b2c8a8d5b1d048d464547d35.68ae8814971dc35968e40ab62f8193f7a98234a7dbbb92d7e7c1393b006ac057.b77e9aebecf5af05e229e9f923eab219b8df43cf2664fd568047a77a7fa9e112.d27fb9afb03b526f4dba76b929625e40108da476a38be94b9107e2da4afc6876.5c50a5c0764821aff86e50d4258e8b6590484f1506b3283aa83f3aa2385eec57.c6de4f48ebccffa2f269bb27d77f9b2045a4390fee0413a0654aeba2f43aada2",
+        "pbPair": [
+          {
+            "index": 1,
+            "keyHash": "52246912de9bed05b80ec118c3aecf8282535243c41025e7a232bc0e109ab36d",
+            "value": "6c2dc2c61c765d22f4d98cd3f9e2e64367d8df94a00900fa64e6e582d6dddf57"
+          },
+          {
+            "index": 2,
+            "keyHash": "777eaa386568c0431677854774d7afa412541d669a3e09c79ea1440bcf08f197",
+            "value": "95a715043c22f90c6c81fb710d2730d645c07dd772928d43fa4127ab474c20f2"
+          }
+        ],
+        "clearanceOrder": 22600,
+        "sigServer": {
+          "r": "a2518da52883e527adba38ffe20192013d864f4a52c662dd0b1bf5c716d3f221",
+          "s": "029ea8ef097a92b42cc098827d9d751f345b3943e33ed9d4d9855ac872769d36",
+          "v": "1c"
+        }
+      },
+      "receipt": {
+        "callerAddress": "0x281d8fbe2e0d83db1231b6b29c351553d4eb3afe",
+        "timestamp": 1594872117059,
+        "cmd": "{\"deviceId\":\"SolarPanel\",\"timestamp\":1594872116824,\"watt\":1.5344016649323617,\"voltage\":2.4774193548387093,\"current\":0.6193548387096773,\"solarUtilizationRate\":0.12786680541103015}",
+        "indexValue": "SolarPanel_R152",
+        "metadata": "",
+        "clearanceOrder": 22600,
+        "sigClient": {
+          "r": "9ed3335edfbd455c0b1cdec3b3d9eee41a36738b7b34caba45f8a56c1e96ef36",
+          "s": "7aa837722098e96c9c4f7e2936092f36991072948906d724b0e532c76aefe37b",
+          "v": "1b"
+        },
+        "timestampSPO": 1594872117192,
+        "result": "ok",
+        "sigServer": {
+          "r": "014c73a3e493735a830c4160e7cfccf15db16939e7a476f6a1bf7c092aa37e95",
+          "s": "6d86cf757cefe616367da669c9e890f8cce83bd1d7c6e8e560c68725a430df34",
+          "v": "1b"
+        }
+      }
+    }
+  ],
+  "clearanceRecords": [
+    {
+      "id": 3915,
+      "clearanceOrder": 22600,
+      "rootHash": "c6de4f48ebccffa2f269bb27d77f9b2045a4390fee0413a0654aeba2f43aada2",
+      "chainHash": "76546419e2e535adce0839a4142e7fa34c4216105d52005d0a42fe7114eb06c6",
+      "description": "\n[ITM,RH:c6de4f48ebccffa2f269bb27d77f9b2045a4390fee0413a0654aeba2f43aada2,TS:1594872129860,CO:22600]",
+      "createTime": 1594872160000,
+      "txHash": "0xfb712e88d076a222d235acfd1471cfd921cef1cb25972d18c70cf600bdacd648"
+    }
+  ]
+}
