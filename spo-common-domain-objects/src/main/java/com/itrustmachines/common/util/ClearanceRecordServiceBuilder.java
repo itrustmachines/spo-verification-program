@@ -1,19 +1,19 @@
 package com.itrustmachines.common.util;
 
-import com.itrustmachines.common.config.EthereumNodeConfig;
-import com.itrustmachines.common.contract.ClearanceRecordService;
+import com.itrustmachines.common.ethereum.service.ClientContractService;
+import com.itrustmachines.common.ethereum.config.EthereumNodeConfig;
 
 public class ClearanceRecordServiceBuilder {
   
-  public static ClearanceRecordService build(String contractAddress, EthereumNodeConfig config) {
-    final ClearanceRecordService result;
+  public static ClientContractService build(String contractAddress, EthereumNodeConfig config) {
+    final ClientContractService result;
     final EthereumNodeConfig.Authentication authentication = config.getAuthentication();
-    if ((authentication != null) && (authentication.getNeedAuth() == true)) {
-      result = new ClearanceRecordService(contractAddress, config.getPrivateKeyEnv(),
+    if ((authentication != null) && authentication.getNeedAuth()) {
+      result = new ClientContractService(contractAddress, config.getPrivateKeyEnv(),
           config.getNodeUrl() + config.getInfuraProjectIdEnv(), authentication.getNeedAuth(),
           authentication.getUsername(), authentication.getPassword());
     } else {
-      result = new ClearanceRecordService(contractAddress, config.getPrivateKeyEnv(),
+      result = new ClientContractService(contractAddress, config.getPrivateKeyEnv(),
           config.getNodeUrl() + config.getInfuraProjectIdEnv());
     }
     return result;

@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class KeyInfoUtil {
   
-  public KeyInfo buildKeyInfo(final @NonNull String privateKey) {
+  public KeyInfo buildKeyInfo(@NonNull final String privateKey) {
     log.debug("buildKeyInfo() begin");
     final Credentials credentials = Credentials.create(privateKey);
     final KeyInfo keyInfo = KeyInfo.builder()

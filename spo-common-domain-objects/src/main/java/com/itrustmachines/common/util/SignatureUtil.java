@@ -23,7 +23,7 @@ public class SignatureUtil {
    *          sign this data
    * @return signature class
    */
-  public Web3jSignature signData(final @NonNull String privateKey, final @NonNull String data) {
+  public Web3jSignature signData(@NonNull final String privateKey, @NonNull final String data) {
     final Credentials credentials = Credentials.create(privateKey);
     final Sign.SignatureData signature = Sign.signMessage(data.getBytes(StandardCharsets.UTF_8),
         credentials.getEcKeyPair());
@@ -46,8 +46,8 @@ public class SignatureUtil {
    *          sign message
    * @return boolean
    */
-  public boolean verifySignature(final @NonNull String serverWalletAddress, final @NonNull SpoSignature sig,
-      final @NonNull byte[] message) {
+  public boolean verifySignature(@NonNull final String serverWalletAddress, @NonNull final SpoSignature sig,
+      @NonNull final byte[] message) {
     log.debug("verifySignature() serverWalletAddress={}, sig={}", serverWalletAddress, sig);
     final ECDSASignature ecdsaSignature = transferToECDSASignature(sig);
     boolean match = false;
@@ -73,8 +73,8 @@ public class SignatureUtil {
   }
   
   // TODO check usage
-  public BigInteger getPublicKey(final @NonNull String address, final @NonNull ECDSASignature sig,
-      final @NonNull byte[] message) {
+  public BigInteger getPublicKey(@NonNull final String address, @NonNull final ECDSASignature sig,
+      @NonNull final byte[] message) {
     log.debug("getPublicKey() address={}, sig={}", address, sig);
     BigInteger publicKey = null;
     for (int i = 0; i < 4; i++) {
@@ -94,7 +94,7 @@ public class SignatureUtil {
     return publicKey;
   }
   
-  public ECDSASignature transferToECDSASignature(final @NonNull SpoSignature sig) {
+  public ECDSASignature transferToECDSASignature(@NonNull final SpoSignature sig) {
     log.debug("transferToECDSASignature() sig={}", sig);
     ECDSASignature ecdsaSig = null;
     try {
@@ -108,4 +108,5 @@ public class SignatureUtil {
     log.debug("transferToECDSASignature() ecdsaSig={}", ecdsaSig);
     return ecdsaSig;
   }
+  
 }

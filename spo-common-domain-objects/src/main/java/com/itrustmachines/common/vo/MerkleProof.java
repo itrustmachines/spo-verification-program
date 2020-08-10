@@ -4,34 +4,35 @@ import java.io.Serializable;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
-import com.itrustmachines.common.tpm.PBPair;
-import lombok.*;
 import org.web3j.crypto.Hash;
 
+import com.itrustmachines.common.tpm.PBPair;
 import com.itrustmachines.common.util.PBPairUtil;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 public class MerkleProof implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+  
   private String slice;
-
+  
   private List<PBPair.PBPairValue> pbPair;
-
+  
   private Long clearanceOrder;
-
+  
   private SpoSignature sigServer;
   
   public String toSignData() {
-    final StringBuilder sb = new StringBuilder();
-    sb.append(getSlice())
-      .append(PBPairUtil.toPbPairString(getPbPair()))
-      .append(getClearanceOrder());
-
-    return sb.toString();
+    return new StringBuilder().append(slice)
+                              .append(PBPairUtil.toPbPairString(pbPair))
+                              .append(clearanceOrder)
+                              .toString();
   }
   
   public byte[] toSignDataSha3() {

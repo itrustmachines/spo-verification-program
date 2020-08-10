@@ -10,14 +10,16 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class UrlUtil {
   
-  public String urlWithoutSlash(String url) {
-    String pattern = "(https?):\\/\\/[-a-zA-Z0-9+&@#\\/%?=~_|!:,.;]*[-a-zA-Z0-9+]";
-    Pattern r = Pattern.compile(pattern);
+  public static final String URL_REGEX_PATTERN = "(https?):\\/\\/[-a-zA-Z0-9+&@#\\/%?=~_|!:,.;]*[-a-zA-Z0-9+]";
+  
+  public String urlWithoutSlash(final String url) {
+    Pattern r = Pattern.compile(URL_REGEX_PATTERN);
     Matcher m = r.matcher(url);
+    String resultUrl = url;
     if (m.find()) {
-      url = m.group(0);
+      resultUrl = m.group(0);
     }
-    return url;
+    return resultUrl;
   }
   
 }

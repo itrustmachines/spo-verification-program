@@ -19,7 +19,7 @@ public class Slice implements Serializable {
   
   int index;
   List<String> interNodes;
-
+  
   // FIXME change to 'indexString()'
   public String toString() {
     final StringBuilder sb = new StringBuilder();
@@ -30,15 +30,14 @@ public class Slice implements Serializable {
     sb.append(this.interNodes.get(this.interNodes.size() - 1));
     return sb.toString();
   }
-
+  
   public static String getRootHash(Slice slice) {
-    String rootHash = slice.getInterNodes()
-                           .get(slice.getInterNodes()
-                                     .size()
-                               - 1);
-    return rootHash;
+    return slice.getInterNodes()
+                .get(slice.getInterNodes()
+                          .size()
+                    - 1);
   }
-
+  
   public static Slice fromString(String input) {
     final String[] tokens = input.split("\\.");
     int index = Integer.parseInt(tokens[0]);

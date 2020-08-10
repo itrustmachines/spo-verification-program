@@ -26,7 +26,7 @@ public class HashUtils {
         b[i] = (byte) v;
       }
     } catch (Exception e) {
-      log.error("hex2byte() error, input={}", input, e);
+      log.warn("hex2byte() error, input={}", input, e);
     }
     return b;
   }
@@ -55,7 +55,7 @@ public class HashUtils {
       
       return md.digest();
     } catch (Exception e) {
-      log.error("sha256 Collection<byte[]> error", e);
+      log.warn("sha256 Collection<byte[]> error", e);
     }
     return null;
   }
@@ -70,12 +70,12 @@ public class HashUtils {
       
       return md.digest();
     } catch (NoSuchAlgorithmException ex) {
-      log.error("sha256 byte[]... error", ex);
+      log.warn("sha256 byte[]... error", ex);
     }
     return null;
   }
   
-  public static String sha256(File file) {
+  public String sha256(File file) {
     try {
       MessageDigest md = MessageDigest.getInstance("SHA-256");
       InputStream is = new FileInputStream(file);
@@ -88,13 +88,13 @@ public class HashUtils {
       
       return byte2hex(md.digest());
     } catch (Exception e) {
-      log.error("sha256 error, file={}", file, e);
+      log.warn("sha256 error, file={}", file, e);
     }
     return null;
   }
-
+  
   public String sha256(String data) {
     return byte2hex(data.getBytes());
   }
-
+  
 }

@@ -16,11 +16,11 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class PBPairUtil {
   
-  public String toPbPairString(final @NonNull PBPair pbPair) {
+  public String toPbPairString(@NonNull final PBPair pbPair) {
     return toPbPairString(pbPair.getPbPairValueList());
   }
   
-  public String toPbPairString(final @NonNull List<PBPair.PBPairValue> pbPairList) {
+  public String toPbPairString(@NonNull final List<PBPair.PBPairValue> pbPairList) {
     final StringBuilder sb = new StringBuilder();
     for (PBPair.PBPairValue pbPairValue : pbPairList) {
       sb.append(pbPairValue.getIndex())
@@ -32,7 +32,7 @@ public class PBPairUtil {
     return pbPairString;
   }
   
-  public List<byte[]> getPbPairIndex(final @NonNull List<PBPair.PBPairValue> pbPairValueList) {
+  public List<byte[]> getPbPairIndex(@NonNull final List<PBPair.PBPairValue> pbPairValueList) {
     log.debug("getPbPairIndex() pbPairValueList={}", pbPairValueList);
     final List<byte[]> result = new ArrayList<>();
     for (PBPair.PBPairValue pbPairValue : pbPairValueList) {
@@ -42,7 +42,7 @@ public class PBPairUtil {
     return result;
   }
   
-  public List<byte[]> getPBPairKey(final @NonNull List<PBPair.PBPairValue> pbPairValueList) {
+  public List<byte[]> getPBPairKey(@NonNull final List<PBPair.PBPairValue> pbPairValueList) {
     log.debug("getPBPairKey() pbPairValueList={}", pbPairValueList);
     final List<byte[]> result = new ArrayList<>();
     for (PBPair.PBPairValue pbPairValue : pbPairValueList) {
@@ -52,7 +52,7 @@ public class PBPairUtil {
     return result;
   }
   
-  public List<byte[]> getPBPairValue(List<PBPair.PBPairValue> pbPairValueList) {
+  public List<byte[]> getPBPairValue(@NonNull final List<PBPair.PBPairValue> pbPairValueList) {
     log.debug("getPBPairValue() pbPairValueList={}", pbPairValueList);
     final List<byte[]> result = new ArrayList<>();
     for (PBPair.PBPairValue pbPairValue : pbPairValueList) {
