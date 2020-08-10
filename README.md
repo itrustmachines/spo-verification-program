@@ -91,14 +91,14 @@
     }
     ```
 
-## 驗證流程
+## [驗證流程](./spo-verification-program/src/test/java/com/itrustmachines/verification/service/VerifyVerificationProofServiceTest.java)
 
--  使用 [VerificationProof filePath](./spo-verification-program/src/test/java/com/itrustmachines/verification/sample/filePathSample.java) 驗證
+-  使用 VerificationProof filePath 驗證
     1. 將下載的 verificationProof.json 檔之路徑貼上至 filePath。
 
    2. 執行此段程式碼，若是驗證成功則 output 為 true； 反之則為 false。
 
--  使用 [VerificationProof jsonString](./spo-verification-program/src/test/java/com/itrustmachines/verification/sample/jsonStringSample.java) 驗證
+-  使用 VerificationProof jsonString 驗證
    1. 將下載的 verificationProof.json 檔打開，複製全部內容，貼上至 jsonString。 
     
    2. 執行此段程式碼，若是驗證成功則 output 為 true； 反之則為 false。
