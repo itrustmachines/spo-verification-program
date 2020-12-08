@@ -20,7 +20,6 @@ public class Slice implements Serializable {
   int index;
   List<String> interNodes;
   
-  // FIXME change to 'indexString()'
   public String toString() {
     final StringBuilder sb = new StringBuilder();
     sb.append(this.index + ".");

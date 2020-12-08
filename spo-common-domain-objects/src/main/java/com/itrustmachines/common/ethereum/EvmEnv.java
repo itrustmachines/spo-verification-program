@@ -16,20 +16,18 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class EvmEnv {
   
-  public static final double MULTIPLY = 10;
-  
   private String nodeUrl;
   private Web3j web3j;
   private ContractGasProvider contractGasProvider;
   
-  public static EvmEnv getInstance(final String nodeUrl) {
-    return getInstance(nodeUrl, false, "", "");
+  public static EvmEnv getInstance(final String nodeUrl, final double gasPriceMultiply) {
+    return getInstance(nodeUrl, gasPriceMultiply, false, "", "");
   }
   
-  public static EvmEnv getInstance(final String nodeUrl, final boolean isNeedAuth, final String userName,
-      final String password) {
-    log.debug("getInstance() nodeUrl={}, isNeedAuth={}, userName={}, password={}", nodeUrl, isNeedAuth, userName,
-        password);
+  public static EvmEnv getInstance(final String nodeUrl, final double gasPriceMultiply, final boolean isNeedAuth,
+      final String userName, final String password) {
+    log.debug("getInstance() nodeUrl={}, gasPriceMultiply={}, isNeedAuth={}, userName={}, password={}", nodeUrl,
+        gasPriceMultiply, isNeedAuth, userName, password);
     final Web3j web3j = getWeb3j(nodeUrl, isNeedAuth, userName, password);
     
     final EvmEnv evmEnv = EvmEnv.builder()
@@ -38,7 +36,7 @@ public class EvmEnv {
                                 .build();
     
     // create gasProvider and set to evmEnv
-    final DynamicGasProvider gasProvider = new DynamicGasProvider(evmEnv, MULTIPLY);
+    final DynamicGasProvider gasProvider = new DynamicGasProvider(evmEnv, gasPriceMultiply);
     evmEnv.setContractGasProvider(gasProvider);
     
     log.info("create EvmEnv[{}]={}", nodeUrl, evmEnv);

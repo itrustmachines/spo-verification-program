@@ -1,0 +1,75 @@
+{
+  "version": "2.2.0.RC1",
+  "query": "Locators=(31185:VirtualSpoClient_R1)",
+  "timestamp": 1606803362965,
+  "contractAddress": "0x99c2a52d230074984b148995A89Fa9BF1dD0aab8",
+  "serverWalletAddress": "0x6ceE2EF1264d99cf09ce692d0b4d03d7bD76f9f9",
+  "env": "RINKEBY",
+  "nodeConnectionString": "N/A",
+  "existenceProofs": [
+    {
+      "clearanceOrder": 31185,
+      "indexValue": "VirtualSpoClient_R1",
+      "exist": true,
+      "merkleProof": {
+        "slice": "22.a46f646832e531290012f0a0b12c7604ce02a34d7345abeaebb082240aa0b6d3.4b5fbdd4a6d3870bf935c9b8b2d3d4689c5ad6440eba9d9d3e4b7b2b57921d3b.f4d2ca5312950a870b0abedd6b4136feb022e726536f3d65b7fd47b42af5f435.b47364b0e6c86376e32f4b7ba9495d61452522d3c4201720aee0074420cf5141.04331651f8db3a8878e31c85cf093939d6c85cb1a624917ac297df6f2d690b2b.b15479dbdf0ee54c6b13afffe7cc750e3bfe7f65c2bad1cd8a676dd48f7b34e9.1c4560d34c64faa22f0ab0f41c01e3dfb0fbc6facc97daf76392d077ebe5d15b.acc200454bf32f40439c57ca79957988f349b5cc66c112c2eb8a9cbff103ec9f.612360e40a69b88cf10315cd89afaf3e1ff5526a4df3cf8047bfbc1c70af8335",
+        "pbPair": [
+          {
+            "index": 1,
+            "keyHash": "23392c98275c5b73aa09f09b39983c334e889ca986d2b81d7e5026615501be7b",
+            "value": "34493d93528e2d790738ba34ee3a3157c73b339167f8bc918d95c2191c6d6923"
+          },
+          {
+            "index": 2,
+            "keyHash": "197729cf4e3cf72da90690786438a58035c08610f2990a799d13ec6dac74302c",
+            "value": "2f5569acd30f176ec500edfa327f7b01f5d99607115533e79b9e1a2f9f4ccdba"
+          }
+        ],
+        "clearanceOrder": 31185,
+        "sigServer": {
+          "r": "9a621cdb197a90ea3503a134bf8e77517d97b615c1c9bf22fc3cda8562c2b79d",
+          "s": "0659ae8f3dff815bc4139d61301a09240653b6158ce3ed7717cdf9e49793cc90",
+          "v": "1c"
+        }
+      },
+      "receipt": {
+        "id": 388431,
+        "callerAddress": "0xe7598c0f5c1f8d26a88ecaec0fe5eda1ce629b5a",
+        "timestamp": 1606803306615,
+        "cmd": "{\"deviceId\":\"VirtualSpoClient\",\"timestamp\":1606803306425,\"watt\":15.744197157992094}",
+        "indexValue": "VirtualSpoClient_R1",
+        "metadata": "",
+        "clearanceOrder": 31185,
+        "sigClient": {
+          "r": "cc750c07f1ce1d69f1735092ab0eba3456acbce194b4d8058bd647f49559a6f9",
+          "s": "2fedb3f54f953836d3d9a77e4a74c91489d127d33e932c223e4b774f73c6fde8",
+          "v": "1b"
+        },
+        "timestampSPO": 1606803306714,
+        "result": "ok",
+        "sigServer": {
+          "r": "40d980a76364132a3365d3ea350f01778243843499057da87028c857c359530b",
+          "s": "7482f178c4bd75c7f76225118ff2d3c5c3376de59b82ffa53d257fdc2c43b7cf",
+          "v": "1b"
+        },
+        "secondPart": "185d4ec08680ad769558368f22f09bed4828bb19790263e149ace503c0986f50"
+      }
+    }
+  ],
+  "clearanceRecords": [
+    {
+      "id": 30915,
+      "clearanceOrder": 31185,
+      "rootHash": "612360e40a69b88cf10315cd89afaf3e1ff5526a4df3cf8047bfbc1c70af8335",
+      "chainHash": "18ac1e04b3729cb10bbd54ae2695859d67d6a2f86c056c0287e878bc1e7bee43",
+      "description": "\n[ITM,RH:612360e40a69b88cf10315cd89afaf3e1ff5526a4df3cf8047bfbc1c70af8335,TS:1606803310001,CO:31185]",
+      "createTime": 1606803324000,
+      "txHash": "0x4948af1f4cf1e1e0ecd73c298807b50666a92395eb2e6ba70d64ae9955992e34"
+    }
+  ],
+  "sigServer": {
+    "r": "f850451279c4e0053d797cc1d3a97202cae336ab42a83798addb5dcd2dd419a9",
+    "s": "15d973044c4360837ba70d77a74a4de866b793e4e882fd8137486596ae4a8ecc",
+    "v": "1c"
+  }
+}

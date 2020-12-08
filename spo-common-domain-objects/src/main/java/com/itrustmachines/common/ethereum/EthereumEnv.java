@@ -1,7 +1,18 @@
 package com.itrustmachines.common.ethereum;
 
 public enum EthereumEnv {
-
-  MAINNET, ROPSTEN, KOVAN, RINKEBY, GOERLI, PRIVATE_GETH, ERROR_ENV
+  
+  MAINNET,
+  
+  // ref: https://ethereum.org/en/developers/docs/networks/
+  ROPSTEN, RINKEBY, KOVAN, GOERLI,
+  
+  // auzre quorum
+  AZURE_QUORUM,
+  
+  // custom geth
+  PRIVATE_GETH,
+  
+  ERROR_ENV
 
 }

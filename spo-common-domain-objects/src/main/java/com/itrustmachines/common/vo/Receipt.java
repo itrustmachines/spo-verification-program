@@ -3,7 +3,6 @@ package com.itrustmachines.common.vo;
 import java.io.Serializable;
 import java.nio.charset.StandardCharsets;
 
-import org.jetbrains.annotations.NotNull;
 import org.web3j.crypto.Hash;
 
 import com.itrustmachines.common.util.HashUtils;

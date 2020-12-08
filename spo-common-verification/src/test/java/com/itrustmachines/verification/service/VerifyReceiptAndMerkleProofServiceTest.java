@@ -33,8 +33,8 @@ public class VerifyReceiptAndMerkleProofServiceTest {
   final String clearanceRecordJson = "{\"id\":3914,\"clearanceOrder\":22599,\"rootHash\":\"5f11281bc109ec663bab756bd776204c4614be42a16e9e7fce430da7eecf0ff1\",\"chainHash\":\"40485da0bfd6815e510756869a2f4f668120c42c3e556891f94a451644df1faa\",\"description\":\"\\n[ITM,RH:5f11281bc109ec663bab756bd776204c4614be42a16e9e7fce430da7eecf0ff1,TS:1594871660818,CO:22599]\",\"createTime\":1594871665000,\"txHash\":\"0xcc6d6b343d61b3fef26959717346f573145b623f3e89d35934bae979128a54c6\"}";
   
   private VerifyReceiptAndMerkleProofService buildService() {
-    final ClientContractService clearanceRecordService = new ClientContractService(contractAddress, privateKey,
-        nodeUrl);
+    final ClientContractService clearanceRecordService = new ClientContractService(contractAddress, privateKey, nodeUrl,
+        1.0, 5);
     return new VerifyReceiptAndMerkleProofService(serverWalletAddress, clearanceRecordService);
   }
   
@@ -51,6 +51,7 @@ public class VerifyReceiptAndMerkleProofServiceTest {
     
     // then
     assertThat(result.isPass()).isTrue();
+    assertThat(result.getRootHash()).isEqualTo("5f11281bc109ec663bab756bd776204c4614be42a16e9e7fce430da7eecf0ff1");
   }
   
   @Test

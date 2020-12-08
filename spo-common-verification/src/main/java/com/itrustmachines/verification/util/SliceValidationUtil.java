@@ -38,9 +38,11 @@ public class SliceValidationUtil {
   }
   
   public String getLeafNode(final Slice slice) {
+    final int sliceListSize = slice.getInterNodes()
+                                   .size();
     final int index = slice.getIndex();
     String leafNode;
-    if (index % 2 == 0) {
+    if (index % 2 == 0 || sliceListSize == 1) {
       leafNode = slice.getInterNodes()
                       .get(0);
     } else {

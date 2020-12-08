@@ -19,13 +19,13 @@ public class VerificationProofParser {
   final private Gson gson = new Gson();
   
   @SneakyThrows
-  public VerificationProof parse(final @NonNull String filePath) {
+  public VerificationProof parse(@NonNull final String filePath) {
     final Path path = Paths.get(filePath);
     return parse(path);
   }
   
   @SneakyThrows
-  public VerificationProof parse(final @NonNull Path path) {
+  public VerificationProof parse(@NonNull final Path path) {
     if (Files.isRegularFile(path)) {
       final StringBuilder sb = new StringBuilder();
       for (String line : Files.readAllLines(path)) {
@@ -38,7 +38,7 @@ public class VerificationProofParser {
   }
   
   @SneakyThrows
-  public VerificationProof parseJsonString(final @NonNull String jsonString) {
+  public VerificationProof parseJsonString(@NonNull final String jsonString) {
     final VerificationProof result = gson.fromJson(jsonString, VerificationProof.class);
     log.debug("parseJsonString() result={}", result);
     return result;

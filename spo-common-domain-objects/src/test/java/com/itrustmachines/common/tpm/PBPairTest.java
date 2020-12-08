@@ -2,6 +2,7 @@ package com.itrustmachines.common.tpm;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -19,7 +20,7 @@ public class PBPairTest {
     PBPair pbPair = new PBPair();
     pbPair.addPbPairValue(PBPair.PBPairValue.builder()
                                             .keyHash("1")
-                                            .value(HashUtils.byte2hex(HashUtils.sha256("1".getBytes())))
+                                            .value(HashUtils.byte2hex(HashUtils.sha256("1".getBytes(StandardCharsets.UTF_8))))
                                             .index(1)
                                             .build());
     
@@ -35,7 +36,7 @@ public class PBPairTest {
     PBPair pbPair = new PBPair();
     pbPair.addPbPairValue(PBPair.PBPairValue.builder()
                                             .keyHash("1")
-                                            .value(HashUtils.byte2hex(HashUtils.sha256("1".getBytes())))
+                                            .value(HashUtils.byte2hex(HashUtils.sha256("1".getBytes(StandardCharsets.UTF_8))))
                                             .index(1)
                                             .build());
     
@@ -46,7 +47,7 @@ public class PBPairTest {
                                          .collect(Collectors.toList());
     
     // then
-    assertThat(valueList).contains(HashUtils.sha256("1".getBytes()));
+    assertThat(valueList).contains(HashUtils.sha256("1".getBytes(StandardCharsets.UTF_8)));
   }
   
 }

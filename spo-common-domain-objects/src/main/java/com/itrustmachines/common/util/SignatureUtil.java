@@ -2,19 +2,31 @@ package com.itrustmachines.common.util;
 
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
+import java.util.concurrent.TimeUnit;
 
 import org.web3j.crypto.*;
 
+import com.google.common.cache.CacheBuilder;
+import com.google.common.cache.CacheLoader;
+import com.google.common.cache.LoadingCache;
 import com.itrustmachines.common.vo.SpoSignature;
 import com.itrustmachines.common.web3j.Web3jSignature;
 
 import lombok.NonNull;
+import lombok.SneakyThrows;
 import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
 
 @UtilityClass
 @Slf4j
 public class SignatureUtil {
+  
+  // key: privateKey
+  private final LoadingCache<String, Credentials> credentialsCache = CacheBuilder.newBuilder()
+                                                                                 .maximumSize(100)
+                                                                                 .expireAfterAccess(1, TimeUnit.DAYS)
+                                                                                 .build(CacheLoader.from(
+                                                                                     Credentials::create));
   
   /**
    * @param privateKey
@@ -23,8 +35,9 @@ public class SignatureUtil {
    *          sign this data
    * @return signature class
    */
+  @SneakyThrows
   public Web3jSignature signData(@NonNull final String privateKey, @NonNull final String data) {
-    final Credentials credentials = Credentials.create(privateKey);
+    final Credentials credentials = credentialsCache.get(privateKey);
     final Sign.SignatureData signature = Sign.signMessage(data.getBytes(StandardCharsets.UTF_8),
         credentials.getEcKeyPair());
     final byte[] content = Hash.sha3(data.getBytes(StandardCharsets.UTF_8));
@@ -51,7 +64,7 @@ public class SignatureUtil {
     log.debug("verifySignature() serverWalletAddress={}, sig={}", serverWalletAddress, sig);
     final ECDSASignature ecdsaSignature = transferToECDSASignature(sig);
     boolean match = false;
-    String addressRecovered = null;
+    String addressRecovered;
     for (int i = 0; i < 4; i++) {
       BigInteger publicKey = null;
       try {
@@ -66,6 +79,7 @@ public class SignatureUtil {
           match = true;
           break;
         }
+        log.debug("verifySignature() addressRecovered={}, serverAddress={}", addressRecovered, serverWalletAddress);
       }
     }
     log.debug("verifySignature() result={}", match);
@@ -103,7 +117,6 @@ public class SignatureUtil {
       ecdsaSig = new ECDSASignature(r, s);
     } catch (Exception e) {
       log.error("transferToECDSASignature() error, sig={}", sig, e);
-      throw e;
     }
     log.debug("transferToECDSASignature() ecdsaSig={}", ecdsaSig);
     return ecdsaSig;

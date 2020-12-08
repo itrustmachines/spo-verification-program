@@ -17,7 +17,7 @@ public class ConfigLoader {
   public final String PRIVATE_KEY_ENV_KEY = "privateKeyEnv";
   public final String INFURA_PROJECT_ID_KEY = "infuraProjectId";
   
-  public EthereumNodeConfig load(final @NonNull String propertiesFilePath) {
+  public EthereumNodeConfig load(@NonNull final String propertiesFilePath) {
     log.debug("load() propertiesFilePath={}, path={}", propertiesFilePath, System.getProperty("user.dir"));
     final Properties prop = new Properties();
     try {

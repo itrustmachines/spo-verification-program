@@ -17,7 +17,7 @@ public class ClientContractServiceTest {
     final String privateKey = "b8059c31844941a8b37d4cac37b331d7b8059c31844941a8b37d4cac37b331d7";
     final String nodeUrl = "https://rinkeby.infura.io/v3/c889a8d21e2b4179ab331713efb92a7d";
     
-    final ClientContractService service = new ClientContractService(contractAddress, privateKey, nodeUrl);
+    final ClientContractService service = new ClientContractService(contractAddress, privateKey, nodeUrl, 1.0, 5);
     final long contractCO = service.obtainContractClearanceOrder();
     log.info("contractCO={}", contractCO);
     assertThat(contractCO).isGreaterThan(1);

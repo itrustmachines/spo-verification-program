@@ -41,7 +41,7 @@ public class EvmService {
   private static final Map<String, EvmService> INSTANCE_MAP = new HashMap<>();
   
   @Synchronized
-  public static EvmService getInstance(final @NonNull EvmEnv evmEnv) {
+  public static EvmService getInstance(@NonNull final EvmEnv evmEnv) {
     final String nodeUrl = evmEnv.getNodeUrl();
     if (!INSTANCE_MAP.containsKey(nodeUrl)) {
       INSTANCE_MAP.put(nodeUrl, new EvmService(evmEnv));
@@ -74,7 +74,10 @@ public class EvmService {
     return BigInteger.valueOf((long) (getGasPrice().doubleValue() * multiply));
   }
   
-  public BigInteger getBalance(final @NonNull String walletAddress) {
+  /**
+   * @return balance in wei
+   */
+  public BigInteger getBalance(@NonNull final String walletAddress) {
     log.debug("getBalance() start, walletAddress={}", walletAddress);
     
     BigInteger result = BigInteger.ZERO;
@@ -100,11 +103,10 @@ public class EvmService {
     return result;
   }
   
-  public BigInteger getBalanceInEther(final @NonNull String walletAddress) {
+  public BigDecimal getBalanceInEther(@NonNull final String walletAddress) {
     log.debug("getBalanceInEther() start, walletAddress={}", walletAddress);
     final BigInteger balance = getBalance(walletAddress);
-    final BigInteger balanceInEther = Convert.fromWei("" + balance, Convert.Unit.ETHER)
-                                             .toBigInteger();
+    final BigDecimal balanceInEther = Convert.fromWei("" + balance, Convert.Unit.ETHER);
     log.debug("getBalanceInEther() walletAddress={}, balanceInEther={}", walletAddress, balanceInEther);
     return balanceInEther;
   }
@@ -130,67 +132,75 @@ public class EvmService {
     return result;
   }
   
-  public Transaction getTransaction(final @NonNull String txhash) {
-    log.debug("getTransaction() txHash={}, evmEnv={}", txhash, evmEnv);
+  public Optional<BigDecimal> getTransactionFeeInEther(@NonNull final String txHash) {
+    log.debug("getTransactionFeeInEther() txHash={}", txHash);
+    final TransactionReceipt txReceipt = getTransactionReceipt(txHash);
+    final Transaction tx = getTransaction(txHash);
     
-    Transaction result = null;
-    lock.lock();
-    try {
-      final Optional<Transaction> _tx = this.evmEnv.getWeb3j()
-                                                   .ethGetTransactionByHash(txhash)
-                                                   .send()
-                                                   .getTransaction();
-      if (_tx.isPresent()) {
-        result = _tx.get();
-      }
-    } catch (Exception e) {
-      final String errMsg = String.format("getTransaction() error, txhash=%s, Web3jService=%s", txhash,
-          this.toString());
-      log.error(errMsg, e);
-      throw new RuntimeException(errMsg);
-    } finally {
-      lock.unlock();
+    BigDecimal result = null;
+    if (txReceipt != null && tx != null && txReceipt.getGasUsed() != null && tx.getGasPrice() != null) {
+      result = Convert.fromWei("" + txReceipt.getGasUsed()
+                                             .multiply(tx.getGasPrice())
+                                             .longValue(),
+          Convert.Unit.ETHER);
     }
-    log.debug("getTransaction() result={}", result);
-    return result;
+    log.debug("getTransactionFeeInEther() txHash={}, result={}", txHash, result);
+    return Optional.ofNullable(result);
   }
   
-  public TransactionReceipt getTransactionReceipt(@NonNull final String txhash) {
-    log.debug("getTransactionReceipt() txHash={}, evmEnv={}", txhash, evmEnv);
+  public TransactionReceipt getTransactionReceipt(@NonNull final String txHash) {
+    log.debug("getTransactionReceipt() txHash={}, evmEnv={}", txHash, evmEnv);
     
     TransactionReceipt result = null;
     lock.lock();
     try {
       final Optional<TransactionReceipt> _txReceipt = this.evmEnv.getWeb3j()
-                                                                 .ethGetTransactionReceipt(txhash)
+                                                                 .ethGetTransactionReceipt(txHash)
                                                                  .send()
                                                                  .getTransactionReceipt();
       if (_txReceipt.isPresent()) {
         result = _txReceipt.get();
       }
     } catch (Exception e) {
-      final String errMsg = String.format("getTransactionReceipt() error, txhash=%s, Web3jService=%s", txhash,
+      final String errMsg = String.format("getTransactionReceipt() error, txHash=%s, Web3jService=%s", txHash,
           this.toString());
       log.error(errMsg, e);
       throw new RuntimeException(errMsg);
     } finally {
       lock.unlock();
     }
-    log.debug("getTransaction() result={}", result);
+    log.debug("getTransactionReceipt() txHash={}, result={}", txHash, result);
     return result;
   }
   
-  public BigInteger getTxGasPrice(final @NonNull String txhash) {
-    return getTransaction(txhash).getGasPrice();
+  public Transaction getTransaction(@NonNull final String txHash) {
+    log.debug("getTransaction() txHash={}, evmEnv={}", txHash, evmEnv);
+    
+    Transaction result = null;
+    lock.lock();
+    try {
+      final Optional<Transaction> _tx = this.evmEnv.getWeb3j()
+                                                   .ethGetTransactionByHash(txHash)
+                                                   .send()
+                                                   .getTransaction();
+      if (_tx.isPresent()) {
+        result = _tx.get();
+      }
+    } catch (Exception e) {
+      final String errMsg = String.format("getTransaction() error, txHash=%s, Web3jService=%s", txHash,
+          this.toString());
+      log.error(errMsg, e);
+      throw new RuntimeException(errMsg);
+    } finally {
+      lock.unlock();
+    }
+    log.debug("getTransaction() txHash={}, result={}", txHash, result);
+    return result;
   }
   
-  public BigInteger getTxGasUsed(final @NonNull String txhash) {
-    return getTransaction(txhash).getGas();
-  }
-  
-  public TransactionReceipt sendEther(final @NonNull Credentials credentials, final @NonNull String toAddress,
-      final @NonNull BigDecimal transferBalance) {
-    log.debug("sendBalance() transferBalance={}", transferBalance);
+  public TransactionReceipt sendEther(@NonNull final Credentials credentials, @NonNull final String toAddress,
+      @NonNull final BigDecimal transferBalance) {
+    log.debug("sendEther() toAddress={}, transferBalance={}", toAddress, transferBalance);
     lock.lock();
     TransactionReceipt receipt = null;
     try {
@@ -198,7 +208,7 @@ public class EvmService {
                         .send();
       return receipt;
     } catch (Exception e) {
-      final String errMsg = String.format("sendBalance() error, toAddress=%s, transferBalance=%s", toAddress,
+      final String errMsg = String.format("sendEther() error, toAddress=%s, transferBalance=%s", toAddress,
           transferBalance);
       log.error(errMsg, e);
       throw new RuntimeException(errMsg);

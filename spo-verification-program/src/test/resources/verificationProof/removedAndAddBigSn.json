@@ -1,0 +1,2810 @@
+{
+    "version": "2.2.0.SNAPSHOT",
+    "query": "IV_Key=SPO_TRACKER_TEST,FromTS=1605139200000,ToTS=1605225600000,FromCO=33397,ToCO=33397",
+    "timestamp": 1606097485797,
+    "contractAddress": "0xd91ad5999CF874453d3dD891b2d8b45580F9ac6d",
+    "serverWalletAddress": "0x9ed9920bc480baa6b709bd4afbf4013ead7d3e19",
+    "env": "RINKEBY",
+    "nodeConnectionString": "N/A",
+    "existenceProofs": [
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R2",
+            "exist": true,
+            "merkleProof": {
+                "slice": "168.5280cf0562f67a0ccaf7f865c153ae46a3aa7c4f72671aa493a0e6be82fc0ce6.e8a31b21f10e75a5668848044a1db254b3aba2b234a7296cd49ca415381ff7e0.26e63c347bbbc3af6729ad2bbcd1e0b04339916b19157e0e78de597f0a8499be.6c9478f149160026d3af41d5b0941a1b9956093eabb99c7e49e5fa3ab1bad0fe.4b07c4249b775e8cd2e84e8dccf9d6cc2ce22e6e365bdbaa29c9ee3e58597641.eeb566445228feb985e85978bce60a36f9db2a50f129ff855604d7e4e3d3111f.6e46fe7455d881f7f7475211947574494b0284449e02c5e4902a002239754beb.bcdd450e47e6c88dc7ddf3f0a3f6496a1bd906dda915f32fbf85624944307398.a66f2429ec07acd2a5de89e36999dccf7afc87523402625f9f9b3679c326fd5c.759c2925f621f3304406348b504b124000e7444757e1059b62a67be22c74c668.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "335e71b7eec0b08d3ff01c3ff585687ee95a819510531adeac27eabec578851f",
+                        "value": "b1cbe89cf5ae3168ca82144204dc888f75d17d4957308cbd1da65d4979fcd552"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "018bc5d4ebc6b09a80b1406d799b38f06c63337e4ea97f755959861b7740c718",
+                    "s": "3396eef66caf7a71f22c722baf4f90a67f27c933547cab74a525fe3d2a2ad72e",
+                    "v": "1b"
+                }
+            },
+            "receipt": {
+                "id": 969613,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170437936,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170437742,\"latitude\":25.016995,\"longitude\":121.541559,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R2",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "97eb7e63ee18224db051d8b2d4ee9b99c4af0985ca8c09c873393d2819c67381",
+                    "s": "5e039079aac7f300b7538b0e8612e899e210cf58c79d14f5eafffd7e22b722d3",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170438394,
+                "result": "ok",
+                "sigServer": {
+                    "r": "f4f786dbd8ea71860c4997605195e08c8651d4a5f725d710481804aea7b16b68",
+                    "s": "6e997b9ebb8fcadabb0bafc2a8ed3c9387a33b9cd5a090bda34f58e60cc09ac9",
+                    "v": "1c"
+                },
+                "secondPart": "75cb4b273ac82f7dd7dcb6db1413cae27601550e30b06f2f2f9fe42045df5f20"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R11",
+            "exist": true,
+            "merkleProof": {
+                "slice": "206.4e19e87660633d3d4127f122c4574888424bbff3d26f58c1523c90148f6fb71b.fcc90c1f4c23c2ffbd0334cf77651b560f050c1dd909614c1f02d9ed415eec24.42a187973ece4a20b86282c38d950db6e0befc31d10dfeb740de884d086fb8d1.1ba70086e238cd0a468029febc6dbcba8ffb3719ea0fb0275f150dc9144d5a13.f64a2bf5dc50b1548e80c231f7f996a2aa82b54fc074e042f24ed274d86ded38.37f6435c0a631ab5c3c1f771a18a8e3f09111e826ef40de9db996bad16810bd2.6895781f947428d210bdf7e4f6ba594f253c3048306d37b3c373610facedb157.8ba35ed929027f28583deeafdc3236414867354cb8cd9b342f3c5810261abf23.37f136407e0cc446ea295e690ec633481ad8105c15bd3296b191b6409705508d.c1fbccb9bfb5395b71167716da0ac5199ee224f0de909086f912140024063414.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "decc0fe4b67004668274791aaf393d5cc169789c10f58dfffb6409b573747c2e",
+                        "value": "f3d64fd1039858096dc5de8b23550bc86b31a4db0c1adfed41e9667ab2e2c842"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "9c97b987a445e165121e32bc1d25309e9be7be524176681d6f2b9b92b7822d0b",
+                        "value": "45abbc766a681ae5e6b27fa4e2576e2104a34c715ec9ac013d21c65756189ae4"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "58fde1bd4b49d0b92b10909f4b6c288bd07ec1f3154b0c0f30c2bf4f3098f165",
+                    "s": "05c466e886a8168cde21514f031387c72f569aebe5fb983b988abd3335e445c2",
+                    "v": "1b"
+                }
+            },
+            "receipt": {
+                "id": 969634,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170461740,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170461543,\"latitude\":25.01839,\"longitude\":121.536277,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R11",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "7d505f68a910e61a5af7b311dd6cc497e05abfc0d0177d04282a9a9523bbdef3",
+                    "s": "1ce7aea5e7721dd1b27f8853355c7d5f25ec4da0e0b2d1fbe29dafcc17841bc4",
+                    "v": "1b"
+                },
+                "timestampSPO": 1605170462192,
+                "result": "ok",
+                "sigServer": {
+                    "r": "55fd1f6c4cbc20db405de43894e3c37cbb0d7d3fdabf72efc01c55572270d521",
+                    "s": "4fe84b0932eecb358095ace5299b6321db48b258934afdbe418e91d79185426b",
+                    "v": "1c"
+                },
+                "secondPart": "bf3b4686555a81be84124a3623cef316592c03079ba83080c603e5f2821b8c49"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R12",
+            "exist": true,
+            "merkleProof": {
+                "slice": "249.9c77bed8dfeb302a41c7c6a29189388a424c25ae94d2955aa9cf9dd2cf31b9bd.6756b0cc195353a1d435f82e566fcdf75366881d891ba170ac177354cbaa525a.0c4f3655412036eeb6b49d491f94abd01bd9321ef106abb32df6580b90ea2404.9b8389246c8ffcbb3389037665276a7e823cca7789b3e4d439a04aefb1a0c46c.b5d81cf58ac81dc419a10efedd9658af49289a2303b32f2ee91ae94426a2515d.fc638da743f21f57867e0ecc661a0329119c28d2e77c76c865a2b3edb6a23b99.dbf40419e54fe8b35a7dd64253443e8f8ca5bc2f4daafd58bb4009ec434685c6.248d52d947721d607cc9a2cb61270f4dfa3d610509c1660ba3764df4f9b47768.d41ef4e2a73447543281f678750e333a38469c03565be8bcefcc68f6d8ec5920.45ac5f1d002ddca3cbaa5317116c17fa98fdbcebc844f58e4c00cc70ea141c1b.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "5a290faf16dbbde497e741556d69ba0da96be8a48d35cd3bfe302b0f56dd379f",
+                        "value": "a04044ad899474c23280baebe8ef55c141e699b155b78d390310f7a0a417476b"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "38f437feff0485aaf1bd33274c24b8a79a8eb5bc29ce3177197b258fc9e96c07",
+                        "value": "b543a9691019d8d6436ec18b46ebf643003676e761ab3db4c2e389817704ebb9"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "3c6b9f4afc6a7a578cd3862f09327a4107b53f41e38908295959e709505e36b3",
+                    "s": "3e6ac1cee03cce6a41bd2de03e5390e44b19d96aec00697e1259f523d69a8020",
+                    "v": "1b"
+                }
+            },
+            "receipt": {
+                "id": 969636,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170464422,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170464229,\"latitude\":25.018361,\"longitude\":121.535703,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R12",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "b10d94504d62a8616bac1887946b4eb1d8026d9b7c84076501fce29c9fe62587",
+                    "s": "669bed2e69d0ace59cee00f802a00535d0a5ee3cf3c0e5a5eedd6738230a1e6c",
+                    "v": "1b"
+                },
+                "timestampSPO": 1605170464877,
+                "result": "ok",
+                "sigServer": {
+                    "r": "f3c6c38ac5b985de3e76c5a0c5f3a3bc7e50889b86ea06c8ca847bf60f991072",
+                    "s": "015b22be46152642c226e0567f4ce242de5053b8d5a479a6c160547ed9237245",
+                    "v": "1b"
+                },
+                "secondPart": "51dbc22993ff259f00933fe307df5cadf4e629bab40c4b793f4f28594d55feb0"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R15",
+            "exist": true,
+            "merkleProof": {
+                "slice": "172.ffbbc90c8b1437acf2ffe0e420942c880d44e284d7c36c652b81efd83ffaf2f8.8ec26f18ff541822702d34ba7872027b56a7d2ab23cf019e1befc47e93c232a1.1e85d7ae4ec8c22ab6174472eaccb904f1f27c08191acf72b286c8ed30d5ca22.98fb0f16b7076aa49d6e4f16ea6a15b03a75024b38fb26062c83d2eac4d2e3a0.4b07c4249b775e8cd2e84e8dccf9d6cc2ce22e6e365bdbaa29c9ee3e58597641.eeb566445228feb985e85978bce60a36f9db2a50f129ff855604d7e4e3d3111f.6e46fe7455d881f7f7475211947574494b0284449e02c5e4902a002239754beb.bcdd450e47e6c88dc7ddf3f0a3f6496a1bd906dda915f32fbf85624944307398.a66f2429ec07acd2a5de89e36999dccf7afc87523402625f9f9b3679c326fd5c.759c2925f621f3304406348b504b124000e7444757e1059b62a67be22c74c668.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "41c352106473fc9b80d0db50e6aba11333d261216960623b3ebc066a16114195",
+                        "value": "accbe61a4d2cc9922655dd51b157e558187831a5cb53c6ff4e969221e08185c9"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "bd2e4456ee75a89adbec31914bf3b28496b78c7484ac0ce51a47fb20bd330668",
+                        "value": "96de8f79149a1199294cb6dfd77ae31a8b661aedc078f862ca1b257dd6ed3c93"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "be4731e5faa89ba30954243d8a2a887d21fa08aabc07d41f0e5633128f7e4612",
+                        "value": "9f2d06241180a4c69d254dcb2317cfa993706b657a615b2eaa4b7629f79e2087"
+                    },
+                    {
+                        "index": 4,
+                        "keyHash": "ac5f89b47e52db47b596adb3c51a8e8e9cf45bfe60fd97ec9f2e1622d1e43892",
+                        "value": "ce46cdc74c71b7f747671aaacf219150f30dae04fd8ecbd2fc61463a29f2f043"
+                    },
+                    {
+                        "index": 5,
+                        "keyHash": "e3de2c25ee5a69bfb1289194bc536a2571bda240dd5be80bff387a941d50c41e",
+                        "value": "6b341096ff169946d45227f10f93da30f7823e21493b9f41035ee78150f13b78"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "558b4d796355647bf7cc86f486ffd73ca265baac05db397aa343a665382bd285",
+                    "s": "2e017947b45c8b08e5f38782414ff77b658e13dd3418465bbea591e7a252a226",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969643,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170472428,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170472205,\"latitude\":25.018332,\"longitude\":121.534028,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R15",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "dfaa349a18a4ccd1e2f8ab67e0e499b7a38ed2797ae4126ad3f5969f27f3d9fa",
+                    "s": "50b3b2dd0d3f9c4c17fc47d052e2032be042af9ecb7ebbda50ab37517c9d5251",
+                    "v": "1b"
+                },
+                "timestampSPO": 1605170472884,
+                "result": "ok",
+                "sigServer": {
+                    "r": "ed4ee749606e083125ac5f4321bfe124f3387c46320f5022cadb0c845e2a8990",
+                    "s": "6ebfe961906cdab1b919df98eb8188612cc9178ce828da59b7c232e61102b9aa",
+                    "v": "1c"
+                },
+                "secondPart": "3c50fb17a5d4c6c19ddfdf4e2f21d385c29b2ec3f1af7d0fe3d1613f54b9ca78"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R59",
+            "exist": true,
+            "merkleProof": {
+                "slice": "172.ffbbc90c8b1437acf2ffe0e420942c880d44e284d7c36c652b81efd83ffaf2f8.8ec26f18ff541822702d34ba7872027b56a7d2ab23cf019e1befc47e93c232a1.1e85d7ae4ec8c22ab6174472eaccb904f1f27c08191acf72b286c8ed30d5ca22.98fb0f16b7076aa49d6e4f16ea6a15b03a75024b38fb26062c83d2eac4d2e3a0.4b07c4249b775e8cd2e84e8dccf9d6cc2ce22e6e365bdbaa29c9ee3e58597641.eeb566445228feb985e85978bce60a36f9db2a50f129ff855604d7e4e3d3111f.6e46fe7455d881f7f7475211947574494b0284449e02c5e4902a002239754beb.bcdd450e47e6c88dc7ddf3f0a3f6496a1bd906dda915f32fbf85624944307398.a66f2429ec07acd2a5de89e36999dccf7afc87523402625f9f9b3679c326fd5c.759c2925f621f3304406348b504b124000e7444757e1059b62a67be22c74c668.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "41c352106473fc9b80d0db50e6aba11333d261216960623b3ebc066a16114195",
+                        "value": "accbe61a4d2cc9922655dd51b157e558187831a5cb53c6ff4e969221e08185c9"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "bd2e4456ee75a89adbec31914bf3b28496b78c7484ac0ce51a47fb20bd330668",
+                        "value": "96de8f79149a1199294cb6dfd77ae31a8b661aedc078f862ca1b257dd6ed3c93"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "be4731e5faa89ba30954243d8a2a887d21fa08aabc07d41f0e5633128f7e4612",
+                        "value": "9f2d06241180a4c69d254dcb2317cfa993706b657a615b2eaa4b7629f79e2087"
+                    },
+                    {
+                        "index": 4,
+                        "keyHash": "ac5f89b47e52db47b596adb3c51a8e8e9cf45bfe60fd97ec9f2e1622d1e43892",
+                        "value": "ce46cdc74c71b7f747671aaacf219150f30dae04fd8ecbd2fc61463a29f2f043"
+                    },
+                    {
+                        "index": 5,
+                        "keyHash": "e3de2c25ee5a69bfb1289194bc536a2571bda240dd5be80bff387a941d50c41e",
+                        "value": "6b341096ff169946d45227f10f93da30f7823e21493b9f41035ee78150f13b78"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "558b4d796355647bf7cc86f486ffd73ca265baac05db397aa343a665382bd285",
+                    "s": "2e017947b45c8b08e5f38782414ff77b658e13dd3418465bbea591e7a252a226",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969643,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170472428,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170472205,\"latitude\":25.018332,\"longitude\":121.534028,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R59",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "dfaa349a18a4ccd1e2f8ab67e0e499b7a38ed2797ae4126ad3f5969f27f3d9fa",
+                    "s": "50b3b2dd0d3f9c4c17fc47d052e2032be042af9ecb7ebbda50ab37517c9d5251",
+                    "v": "1b"
+                },
+                "timestampSPO": 1605170472884,
+                "result": "ok",
+                "sigServer": {
+                    "r": "ed4ee749606e083125ac5f4321bfe124f3387c46320f5022cadb0c845e2a8990",
+                    "s": "6ebfe961906cdab1b919df98eb8188612cc9178ce828da59b7c232e61102b9aa",
+                    "v": "1c"
+                },
+                "secondPart": "3c50fb17a5d4c6c19ddfdf4e2f21d385c29b2ec3f1af7d0fe3d1613f54b9ca78"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R18",
+            "exist": true,
+            "merkleProof": {
+                "slice": "183.df938ef23893551aefe5bdcbfcd2e3c02b3ea0a1adf1c736b4ca0df2cb25c626.981b86d3309b710d3b0453747f11330f0985e7e020c10116074dc7f0b56b8e7e.ef7337971419bf9c3b4e5ba5759b41b6fa23765070b975def7c4034760ebebb1.999b40aba1e1512baaa5dbe15832c414adb67b2b33fced5da98ded2bf8df45e4.6d34249423673e9447a43f40b0d127f9244d34fb8782aff1ce2ea3b174f5a8e6.19dfda3b1ac97607821db67dbf2a56e7af109018e86e1b25dd4c42d97dab3a5a.feefd5cb73ea0cf23c4bd4fe564a887e9580a6d5661e7322e7fe2c5f09f780f7.94819aab6255fb1d2684869444e952f91f2b70c02b3482d19dedf8b9a88bc330.a66f2429ec07acd2a5de89e36999dccf7afc87523402625f9f9b3679c326fd5c.759c2925f621f3304406348b504b124000e7444757e1059b62a67be22c74c668.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "0a3ded00db35761074b2adcc3e5fd34c49d02a55f20429f3aa772a1b8a349c17",
+                        "value": "e0c6a30e6f2c376c5535687a64d9c55fa602cf463e3303a57996b02351c7b8bf"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "2bd655ed6b4abfa06098021b603adbeedbe9c06247fa0f45d893b0e46d8a3bf1",
+                        "value": "5d9397cb7a4ca985688e3660dfb201f505b9e4d3d635620daaa0f0d020a45207"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "c6b07d77c41d4f4987fef54586dead53ee148768ac3fa1a615a478c6e0798b0d",
+                    "s": "639f5b3a6479c97509dfbceb675bfeee6eec2e2dd01e4e06ce633d0926eed0a2",
+                    "v": "1b"
+                }
+            },
+            "receipt": {
+                "id": 969649,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170480341,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170480145,\"latitude\":25.017229,\"longitude\":121.533562,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R18",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "73919dcaf120501f38582c017d48dc2d01a446c36a81b3cba4eb8181b33022c2",
+                    "s": "29f23a5063826cb7d51c95aa8276323c961658795d19014b66ca51c34f82e890",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170480796,
+                "result": "ok",
+                "sigServer": {
+                    "r": "d57358229d8266ff6cb579babb2eb33b17b48b8c189dc1187eed1cb5aaa130dc",
+                    "s": "3e7915a249b0cd7fa02210382d5c4e2e1a1127a0cf4f6ac59af991f908c85b72",
+                    "v": "1c"
+                },
+                "secondPart": "7b1c63711bd80a7fefae5a79ce3b0877c0d005176ddfa55ffd765cdeb66ef9d4"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R19",
+            "exist": true,
+            "merkleProof": {
+                "slice": "229.fdc151fddc12e0c569cb8adb46b9cdacc5cbb8892a48376a701df2df0a1cec06.0e98c96218ab43994fa2c23d24fa21210c98574fb78bf5fd5507f7191b4d1b24.941112f401e19eab6ebf09c394200d5c81294084be4bd20ad99896827b8f3f9d.3e6703f10b6e25cbf365122c47fc8b5ca5ac15e4eb23aedbf3981abf7856df90.fe4b33cbbdb588f185a876b94e1a28f3d22c262c4c4cd26c3dae1256e4678431.b83dee3d8057b4131f8385e9ae9b891f18dccf6540406d6ceb96a54b337be622.b56a3ef8c995c98ac9eae76890d35a130141f5588b1a08130f4e77b918d7b6e3.03877968a1dd6a6eed2eccb8c1738198cad01d7a5be5f0244d8eeeefe1c0b67a.d41ef4e2a73447543281f678750e333a38469c03565be8bcefcc68f6d8ec5920.45ac5f1d002ddca3cbaa5317116c17fa98fdbcebc844f58e4c00cc70ea141c1b.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "dac0c0625edccfc1d41c6324bf9e86bbca5927ad20d71e0ffb87e60af9933568",
+                        "value": "b118d7ae07fa77673dd97618aa2f130a9bd9a435f3f80675ec77e25926fe32d3"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "ec48409c5b6f2c1d072281b8e6ba5c12400ffba3edc365c5f180581f8f5af71f",
+                        "value": "7e3680272dcf33e9400436add31f6d0b2766eceac706454ca9d4c42ededa54a1"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "bd5ca4615aacdd76057ab096a9bae9526b16b97eb55c50e64b58bb890835f49a",
+                        "value": "e851204317fb852234fd770587a25290de86a0b01d7fabcd7dcc84b04daf6c5b"
+                    },
+                    {
+                        "index": 4,
+                        "keyHash": "1eae1f80ea893439d9550ea715f5d34ad62909c7abcb071132369bec78bcd538",
+                        "value": "c088a382489369177237c7fdb24e075b3f7fe111e614c8bc25812dd780d4fe6a"
+                    },
+                    {
+                        "index": 5,
+                        "keyHash": "776750b48e3ad50decceb9a6dd1d58572a783dbb7ccfdd3e46f8901f1d262418",
+                        "value": "d8c9892404c30969d371b117ea943a31fd745e3419c3370c1f787dfe27e19d2f"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "a5bc3aba8d04be28bbd5b35e594d79bcc85ea07bf587648489dd6166cb4a33ce",
+                    "s": "304ab2e94648b35dc8ec5d779173b3036ce6a4a00a1155cc2ed13e79e2874432",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969652,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170482999,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170482803,\"latitude\":25.01701,\"longitude\":121.533851,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R19",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "84b434fa97dceccea978bd1553349ce2e1a0f0e24949a895044d9d19ad80e08d",
+                    "s": "3d5c6580e35a164cf9e44f45081166ca36ffe982694523df2b05751f9740fb46",
+                    "v": "1b"
+                },
+                "timestampSPO": 1605170483455,
+                "result": "ok",
+                "sigServer": {
+                    "r": "d49ff524fc9493d3af8a9137842374520a3d90a8d10da08045335e960ab19b6c",
+                    "s": "35ea05e22fd134acf8a840afdf561459b8a116929dd5800cec4bd6aac5c356c3",
+                    "v": "1b"
+                },
+                "secondPart": "a355c59a86f425bd13f47cad73dcec96cd84fb82e0ff013712585d6c29738898"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R23",
+            "exist": true,
+            "merkleProof": {
+                "slice": "164.27f9a1c9229de935ba3db728ec9af59031825c257ff1dd048d252b8cab2d38ce.183971bc9ec8b4f86124d868be9545125ed74bedfe43ceb19443f555b3fc8a52.f7c3f579e2dbad052ea9b6d31ffe32c7ca64ddea633ac47a7befc146573433b5.ae084cd7e2339868cb0389429979529f662cc4acff41c27e440640b1d9a223e6.bfa2085a9fc28953fb35d760d18879d1d1c82cb1facdb5609c11a90c798af8e9.107d20be62fba5e440c24763a0f3332c702e8f1cfb8a83f97707c2d36b5bf8a7.6e46fe7455d881f7f7475211947574494b0284449e02c5e4902a002239754beb.bcdd450e47e6c88dc7ddf3f0a3f6496a1bd906dda915f32fbf85624944307398.a66f2429ec07acd2a5de89e36999dccf7afc87523402625f9f9b3679c326fd5c.759c2925f621f3304406348b504b124000e7444757e1059b62a67be22c74c668.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "492710c0b359291dc57e424bd766d6e8388f5a7198cb126cfa80b7a7f66974e1",
+                        "value": "f85954590e303b4bd2d6e4a13817238b48d36badb72706602b120ddacf43f6f6"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "3734d7a708c41b91797bd3142816ca3f528ae44110199cc9078a93c7c8325106",
+                        "value": "d6935080f203ef3c0940dd1cee9ae061c5709f229cc1cd81a1880d552dc3bfeb"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "b9b74e6b2393928af8274b0a7221611be01b97fdb7c068ae56492c6ea194598b",
+                        "value": "bc732772f2cd5cf6200a9f76236533a11514847080b3e93dc58032bede7657f0"
+                    },
+                    {
+                        "index": 4,
+                        "keyHash": "920963966b41c31fe1338c17bed01f573ed25e1564fef260f9682367bc808f24",
+                        "value": "03606050de331bf7e315ec2581d5d981b8bbfb8b0246f9ec8281d81b81916b75"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "affc371ffe5554d4853278d4f7f2f0cf01457d308384ca7dd73d3df968ea63fa",
+                    "s": "5b464f10afcbb0beb747f7aad0ff76c59bec2182869414945047e193213292a1",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969661,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170493562,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170493369,\"latitude\":25.016529,\"longitude\":121.535342,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R23",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "3063fd795500422d8c8cd8f296f19862c3efe184524f5655f276f49bbd025734",
+                    "s": "3539fadef27e01037417c467275b651e534872ae049c3bfe75e0fa7a1accae88",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170494017,
+                "result": "ok",
+                "sigServer": {
+                    "r": "5f61f49fea0882d87bacf1cae6b99e2c4ade7aee255da569b2b349252e074a9c",
+                    "s": "139ab7fa2ea2dd2371f15504d3287ce0bb7db31c544e9240fa69ec3cc9798835",
+                    "v": "1c"
+                },
+                "secondPart": "84c8df735a053b21e181067379237b3a072c9bd40519d3e80622de9020e5aa22"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R24",
+            "exist": true,
+            "merkleProof": {
+                "slice": "197.1da699d5d89139d03573e11a6566b9f4b93272c4bb30eef1be3fd9ec95c9108e.c9ec93d86caf30a303275fee805c98550c43121e08d2933047d274630c3e9540.1ea195d1c2bd421eb5cd1e4cfbccff8462bf1957df6a682e710c5f7e0c8ca1ad.0d390e482c76e4d6fc75b27e2d073cff8b531ef94008f41346382b1ec5159a8f.cc84450085f5a741587e8c827c603f46756bad3337424ce85b241de9aa794387.271aa9043597e568d9be32bb05e4a8020375569f1562861b8f5433696bde177d.6895781f947428d210bdf7e4f6ba594f253c3048306d37b3c373610facedb157.8ba35ed929027f28583deeafdc3236414867354cb8cd9b342f3c5810261abf23.37f136407e0cc446ea295e690ec633481ad8105c15bd3296b191b6409705508d.c1fbccb9bfb5395b71167716da0ac5199ee224f0de909086f912140024063414.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "e83277266e97eb43c3385e4a1d959eda5eccd54621e9c64e624ea6da492c1868",
+                        "value": "fb356b09279dae118c4283c2446dace9f711e30b884633e1e57388205e59bf95"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "40f9f2c2124213fe01f53d7b1cb4cf5ee6d6d090630f26f479fdc2ec0644680b",
+                        "value": "58f8654299eb79d5650bf5a7b6d13c4e3aa24203bc2850c93ad734f9eb9df595"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "67c85d992f0e1586f52a11e6452f5da255f6af6ea512b7412981615c6c0f624c",
+                        "value": "94dbd858e22f0ac55b0b8b6cc91c242fe4decdc9700d92d8ee7f4ba7f1b4bd2b"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "7e8e11a7c9a6128d6d68cf2b57551ea2b82cc8a1f209eab437570add87df8f20",
+                    "s": "2d921e7884e56c01dbf956db88e2496449a2f1980ecd607c50654fd89ca42b22",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969664,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170496216,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170496014,\"latitude\":25.016154,\"longitude\":121.535396,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R24",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "9dfd3726eebf8350db3abcfc51e6367c83c7642d362516750ce5b6031e7706da",
+                    "s": "0c775ee73c8e74c5c7ae50391358d1bc68c7004dc57cd83d1af8172d944e630c",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170496674,
+                "result": "ok",
+                "sigServer": {
+                    "r": "bb30de9d4f496cf1c850407354f7eb9602e11cdf11867ee2017b6f32603b9d06",
+                    "s": "207ce88a9517a3552841326d964ef89f2683d04a856ce5fb58e36112cc7d3897",
+                    "v": "1b"
+                },
+                "secondPart": "54aa20cd3a8318fc9aa47c6ce517a92b6fbf737ea8a1f46118be7c23583068c2"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R27",
+            "exist": true,
+            "merkleProof": {
+                "slice": "214.163e90b4bc73a824e9d7f44560f80ff032dcf294d2fa981597a2efdce0c77012.c780116afb9037750189a3c21dab7cb0646d4178ea972a51612f8e58cdb43e18.8f7e2ce835d3756d377b4362a79a3a61c10d7ce0349c311a2b2c28bcb006d66d.1261550dcaf9c14dfcfc82b250871921186714d851240dacfbb7d4ec1047394c.f50d735ea68054d2ef6df74d046aa06878337374de02e7d3323283c67bd7c7bd.8aefebb4b75188d206dfb718f421081c63424916aa601038c306cbb49defe805.9c1cbd1fc2206768e932a84dd49963c3ea612a4f611bb1823a899bab55bd61ae.c2a1262b9757251e3bf3ec93757ffa821438876407900ce4ee202906c9b0b0bd.37f136407e0cc446ea295e690ec633481ad8105c15bd3296b191b6409705508d.c1fbccb9bfb5395b71167716da0ac5199ee224f0de909086f912140024063414.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "a1d25bfe4f8a2386575b84ea4abd0eba19b5a444d7385862718b24892bd7805c",
+                        "value": "c452fa14a7ce91072ae2d748620758e2749ec2e38bdb8033b6f950e8647852ba"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "4287ba359a3a36649b08911b0a46839162ac28c5acec9847ca0b7b1f9836360d",
+                    "s": "01e5111082c45d77d0b2ba671c4fc8aedf1a76b9b7297c2c387c5df32136b454",
+                    "v": "1b"
+                }
+            },
+            "receipt": {
+                "id": 969670,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170504141,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170503937,\"latitude\":25.015129,\"longitude\":121.536061,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R27",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "568f829d158bca23df00cede47ca2edf10b4c9fa51494534f32a89c242d658fc",
+                    "s": "40e758da55d0cd95dd6b3a6274985a63d9812554b84fef64f63828b8e106a3e8",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170504599,
+                "result": "ok",
+                "sigServer": {
+                    "r": "40d93d3c8f0e323a0b58debe6d0ec11a616c2feb0cc3e7eb352ce101196fa662",
+                    "s": "3afb8be73cf5fcfe528917c45babc806dbad4321bcb4b05f295a891e5ad88414",
+                    "v": "1c"
+                },
+                "secondPart": "f3a11bb72b26003e520e0a53c62f2f8ed577311e5b33b28e04fe8f160f11293c"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R30",
+            "exist": true,
+            "merkleProof": {
+                "slice": "148.c75228b96286bbe0cafad26e8f04683a9ba3c4e94a2b6f701d74d38612affd7b.48a02a4109aa96ffeb0a1c9ad963ddc216a224e5a38a132e3225d21089d353c7.6166afe5cbccf895154e848d9ec1ef8dfae6955599541b6a5eed15f1295dc3b5.35d52a953b725bb5f38e2911ee7cfce4849218921c60162f567b33012a61cfd5.f9481b9eec217ddaab31c3bcd3e644e6015ebb20ebd55e207d8b7487d49ad904.8d3e1b81940af8fe0d85a36f9ab5493a26dbe930fb1bfb68388e95ec6d8e83e2.4022ae759475ed8624c490fd4c1a2eefde97d9eb86e63827613ca11542bb56b1.8b6634e585e254dbc6272c43640a7db52ed80b62864c31cd0510a0488a0a46c8.b771927c3b61a86c8327d11c62e0a092d722c95fd69a613c9126b245b5c9a837.85762cf09a4444e666f761536fcd7347a2bf37fdf9eed756e2d9ca6c52becaff.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "0d9b59b232558c078f99e40eecad425373cdff66f2324da9b152e52c82557561",
+                        "value": "7b58ba8725ec233ea39efbb070075488d72182e6ba254480b9c4592fd93521a2"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "78303295fec69fc13db86bad0fc518dc5da701d92ec6eefe923d1ad9296b6fe7",
+                    "s": "76d437e5e8ee35d4c324c2eb328b80189812d7ffe867fad293f52dace0b89673",
+                    "v": "1b"
+                }
+            },
+            "receipt": {
+                "id": 969677,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170512023,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170511830,\"latitude\":25.014385,\"longitude\":121.535214,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R30",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "3e4127049a9f78458928ffa957bd83a6315ec046c865caf8d8594c35ab3d61cc",
+                    "s": "5baa6b0c1e22abf5534c4617ff33c8a0431da90325a99db2e3762889f417b9d0",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170512478,
+                "result": "ok",
+                "sigServer": {
+                    "r": "f2a7e8ffd6a136263c687c94d1d50c19031ab8b9541ed63d3c88d39d91944e5e",
+                    "s": "0cf4549f4c4dc74d2d667a90b9cfce28ec3797366e706c665cba324698140b8f",
+                    "v": "1b"
+                },
+                "secondPart": "a1091ee67441af5a6c30d4d5542f75af5d4e63e293d7ea89cfca0f91a7a4bef6"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R34",
+            "exist": true,
+            "merkleProof": {
+                "slice": "200.f3d1c3b65efa4d56d11bfb702a210189fb40680c20638661e92e5a025cff4945.90cd8bb2195f8cddb79ec33d8b8d07d938049862db25c947d7420f3dd6a03114.21fba0ff7d297a92f90fddbf9acb38792db37b694cb508b397697779c34c1faa.2d883f5cbe3607735f14dd1e0d54bda8d9837736eba2466e75e8e8979307d5a0.f64a2bf5dc50b1548e80c231f7f996a2aa82b54fc074e042f24ed274d86ded38.37f6435c0a631ab5c3c1f771a18a8e3f09111e826ef40de9db996bad16810bd2.6895781f947428d210bdf7e4f6ba594f253c3048306d37b3c373610facedb157.8ba35ed929027f28583deeafdc3236414867354cb8cd9b342f3c5810261abf23.37f136407e0cc446ea295e690ec633481ad8105c15bd3296b191b6409705508d.c1fbccb9bfb5395b71167716da0ac5199ee224f0de909086f912140024063414.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "bfc887b8f7e46801ccca215e797ad4f9a5ee34dcbdbfc10e34682fd1e104bd16",
+                        "value": "c97fc4486e8b8b323f77627a07429303f3c003d1f9ff6c5c178c3b63ba77bf28"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "132a1a39f3f78e584e57287582ed2f9c36788792fbfd87c2b1705fd72a668d41",
+                        "value": "e149248d6baade9100a8db8354bc9cfffa520efa62ae63fc544fd9fadb96d707"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "e4d6f1adc2481669f55d205483abea43ba67cdb2fd6d9e140dbe1297f3d6a176",
+                        "value": "ef21f446f799d598baccd06f6b380f4b705147b83d7ce5e196496710a37fdeee"
+                    },
+                    {
+                        "index": 4,
+                        "keyHash": "8d29a70396e8196c6a9242584e17bbc41dde3a51cb7634ef1e74455341ab5d1c",
+                        "value": "36385159d3c256619e32b01d54c9684d0849210a086aa121cdea4146aa75212f"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "8ae35650a617a6fab5a26ce20faa75cb48aa0c0dc631026ad933d05149bda4bf",
+                    "s": "4d7260c1e172de8384ae9f67d440d26367557bf091c6a60536a8881c496d5cc0",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969684,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170522539,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170522346,\"latitude\":25.013262,\"longitude\":121.536126,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R34",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "449989ac40de2abecda2a2557abdd541031d0e64ffbfb7bb33163fa1101ad4dd",
+                    "s": "6d5a73e9d5ed32c2749b2397939ae77f6919c279270950bf938ce4c350a3e801",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170522994,
+                "result": "ok",
+                "sigServer": {
+                    "r": "38d70a7365398c13972e9a8a65665070d8b7925434c227a05e42f630a0856203",
+                    "s": "3b173a0de553af3453df69b73775ebb5d7e2da2144a0bc357fe92870eeded76e",
+                    "v": "1b"
+                },
+                "secondPart": "42bf070321e8bc4dcfd9febcd083e0c084d1ec5a4140171470f7dc126433bcea"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R35",
+            "exist": true,
+            "merkleProof": {
+                "slice": "176.c421671fffff716b5edba3e782c1d89d8e158ab04e9dad4f35bfbfbb374fd7df.cef874090bf54aced1f6195e348034cfc8526441cd2937f7523b95e48b405fb9.66be1e6d90483da9feb86762ccd41b44260be7c1bcf70e222fefe3153d51b6c0.37867d279616c94bfe7b4b6671ccc0ccd81c34c8021ee5e59a696f2c3a43333a.6d34249423673e9447a43f40b0d127f9244d34fb8782aff1ce2ea3b174f5a8e6.19dfda3b1ac97607821db67dbf2a56e7af109018e86e1b25dd4c42d97dab3a5a.feefd5cb73ea0cf23c4bd4fe564a887e9580a6d5661e7322e7fe2c5f09f780f7.94819aab6255fb1d2684869444e952f91f2b70c02b3482d19dedf8b9a88bc330.a66f2429ec07acd2a5de89e36999dccf7afc87523402625f9f9b3679c326fd5c.759c2925f621f3304406348b504b124000e7444757e1059b62a67be22c74c668.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "9960ba4d54e97feb68779ec680bc10bba4701c317612c35550e31a5d8308a0b5",
+                        "value": "11c30d5a221803b134940b28e2555169bed8ebf8c943c81241e51854c81480b2"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "9951cd15a53877ee0ffe450ba901eb504a8b2e7c8b34c0f42333b5a3c10e1506",
+                    "s": "7ff05c6028b5e9beca08735acfef02caa8398cd615335b51e8229ceef8ea416b",
+                    "v": "1b"
+                }
+            },
+            "receipt": {
+                "id": 969688,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170525170,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170524975,\"latitude\":25.013033,\"longitude\":121.536582,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R35",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "c0d0ff746cdbb1ce7cb8b42fed91c291306c5632549cef463212bb91619094e4",
+                    "s": "2471e4a6eab2778a85c98f4db0650a5c91e60e01fb54dbcf34747b415f76cbdd",
+                    "v": "1b"
+                },
+                "timestampSPO": 1605170525627,
+                "result": "ok",
+                "sigServer": {
+                    "r": "e987a299a811c196f7994e13f499ed110e51dd5d23b369a946978f85eeb6e893",
+                    "s": "422348586aea76511ef8aed7ef52351de609c76f212c41c95a17c6eb0808acdc",
+                    "v": "1b"
+                },
+                "secondPart": "8cfee34e3c387f0cec71dbca14803dff1d20c43d47bfd0e31503e81e3778ad83"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R36",
+            "exist": true,
+            "merkleProof": {
+                "slice": "142.bafac02006f9a9c8ad1e70a03b86f6fdb9017a5010aa9bf866a5d2e4abbeb130.4fdd7fe89d4ab09b8d297073d2dee3e52401500b39c34a441fc9589fdae0f7bd.107723a99f4ec0fa07e3ebb59261a124a88a54f86c79e3ba6dcadf92cf283d58.03c7305f0f431b3129476d163e568e9b6392af9101c2e60c63be3735d37c8089.ae64bca1c3b4a724b857a766b6fa10e9cf380af8d8cf50996b241b6072624975.e20487ecece3111e4bfe51f4a99ec6fb316e1eee2f093889bf2b79a22aeeecf8.7216ce52a4402652045d5279953b4a1666a01385723cb9e5c28dd02c5ffd18fc.0645bb51959fb75bb5fc6e072f8f7d5230cb76b260d22fa2afb4400255e22d5e.b771927c3b61a86c8327d11c62e0a092d722c95fd69a613c9126b245b5c9a837.85762cf09a4444e666f761536fcd7347a2bf37fdf9eed756e2d9ca6c52becaff.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "d60cc215ce13113b61e75f80612c64e9052d61c6e2e5207ebe56685ce2df4c61",
+                        "value": "6e9648cdd9aeb337210208b007694fa4ade6becdbf5cb2c656389d490626d5bf"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "ca3916cd28762286e8c550a219c1d2d468170392b7b8125e523f8f01ff0233ee",
+                        "value": "85c86ce09d6c640c2aa0a25e4929649be6dfd7dacedd8401d484e30697a05f1e"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "4401dd857e8f1bcf53dc2590d2b7bb30c6d0301d140d0766f0ce4ed89256c2ba",
+                        "value": "0df55d3f2d3a9b694fc67a1234a574d014c7dd478259b9acf413c357e58f87b9"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "ed7a1e81b01a2595e949607d6594ec15d6b2e99a5303286300fc24dd5755550d",
+                    "s": "05eec1860fa578e9ee9490e459b2cdcc1257797f7288a5d13a3e39e7e4cf9053",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969690,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170527796,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170527603,\"latitude\":25.012547,\"longitude\":121.536587,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R36",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "9bc5914e2643100653deb833fe42490f684f39028bf7167d702bab1d56488339",
+                    "s": "7bde11f06be7b69eddaaf6079c13d2f118dcac591e81c66e937de0361a3d8800",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170528254,
+                "result": "ok",
+                "sigServer": {
+                    "r": "cffec74c4e1077e7b0cab2597201a7679a7976bc1abe30f5fe447f31628487a9",
+                    "s": "5cd85a2a3eebefd563e194f22a475aa93bdbfef660a79f977070700d16a391c9",
+                    "v": "1c"
+                },
+                "secondPart": "fe4952f004e730f0be254538abb840849e27bdb265f7c8a2281a3d1fdd53cb21"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R37",
+            "exist": true,
+            "merkleProof": {
+                "slice": "151.00314dcb09ba0d95aba926f195bd60a55bbf6a20f1d7e74ae80d7084fa760c4b.c3b1236059eea88e20437bc9d0cc9f805402a6844ab3c8c986c1571137268acc.6166afe5cbccf895154e848d9ec1ef8dfae6955599541b6a5eed15f1295dc3b5.35d52a953b725bb5f38e2911ee7cfce4849218921c60162f567b33012a61cfd5.f9481b9eec217ddaab31c3bcd3e644e6015ebb20ebd55e207d8b7487d49ad904.8d3e1b81940af8fe0d85a36f9ab5493a26dbe930fb1bfb68388e95ec6d8e83e2.4022ae759475ed8624c490fd4c1a2eefde97d9eb86e63827613ca11542bb56b1.8b6634e585e254dbc6272c43640a7db52ed80b62864c31cd0510a0488a0a46c8.b771927c3b61a86c8327d11c62e0a092d722c95fd69a613c9126b245b5c9a837.85762cf09a4444e666f761536fcd7347a2bf37fdf9eed756e2d9ca6c52becaff.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "def8c9f706de89ac4a4465f300c46705cb35b4782f5e003b2a5efa7931704aae",
+                        "value": "3aac6e94accd4a8cc9d51d1fef64f387598b13733bb450e3b5256e86471471c9"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "1e58f1f1fdb02c1c365281af96c12887f6211136d6cac8f76cadb3d77b3e4bde",
+                        "value": "7e690dbf5d7cf6e3f8fc19864128b14db59b5016c38bea7ef0a479a8aa28dc32"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "c312e3cf602f80f368e20374884cee8ba4c06898c74b2b242c658e2e82f30076",
+                    "s": "096aa95da9f1048e8d49d61f4109d2117ecea0c43911e86175b0a595109d1a65",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969692,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170530437,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170530242,\"latitude\":25.012095,\"longitude\":121.536651,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R37",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "773cdc61037ee92f5993838ebc2ac94b3f631c13e0ab72243d9065a9d9c03edc",
+                    "s": "12e0af167491da916d88eeb0f04f1febd38225565b8eea03c145e83341c2e884",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170530897,
+                "result": "ok",
+                "sigServer": {
+                    "r": "f88f32ce794788b3cef6c5510769fe01b753e6f67004d718cf4372d1aa666e5e",
+                    "s": "39fabdf2f14f8fb273facd20dc43ea2e50cf6837848c575bcaea30858b787d95",
+                    "v": "1b"
+                },
+                "secondPart": "9cca4be60ce595eb98be168aaa782bc9dff3a1641283a100543cdb66974cd716"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R38",
+            "exist": true,
+            "merkleProof": {
+                "slice": "249.9c77bed8dfeb302a41c7c6a29189388a424c25ae94d2955aa9cf9dd2cf31b9bd.6756b0cc195353a1d435f82e566fcdf75366881d891ba170ac177354cbaa525a.0c4f3655412036eeb6b49d491f94abd01bd9321ef106abb32df6580b90ea2404.9b8389246c8ffcbb3389037665276a7e823cca7789b3e4d439a04aefb1a0c46c.b5d81cf58ac81dc419a10efedd9658af49289a2303b32f2ee91ae94426a2515d.fc638da743f21f57867e0ecc661a0329119c28d2e77c76c865a2b3edb6a23b99.dbf40419e54fe8b35a7dd64253443e8f8ca5bc2f4daafd58bb4009ec434685c6.248d52d947721d607cc9a2cb61270f4dfa3d610509c1660ba3764df4f9b47768.d41ef4e2a73447543281f678750e333a38469c03565be8bcefcc68f6d8ec5920.45ac5f1d002ddca3cbaa5317116c17fa98fdbcebc844f58e4c00cc70ea141c1b.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "5a290faf16dbbde497e741556d69ba0da96be8a48d35cd3bfe302b0f56dd379f",
+                        "value": "a04044ad899474c23280baebe8ef55c141e699b155b78d390310f7a0a417476b"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "38f437feff0485aaf1bd33274c24b8a79a8eb5bc29ce3177197b258fc9e96c07",
+                        "value": "b543a9691019d8d6436ec18b46ebf643003676e761ab3db4c2e389817704ebb9"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "3c6b9f4afc6a7a578cd3862f09327a4107b53f41e38908295959e709505e36b3",
+                    "s": "3e6ac1cee03cce6a41bd2de03e5390e44b19d96aec00697e1259f523d69a8020",
+                    "v": "1b"
+                }
+            },
+            "receipt": {
+                "id": 969695,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170533061,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170532866,\"latitude\":25.011594,\"longitude\":121.536887,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R38",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "719b8dd542bdcbff346de123a25b4eca60f7d6d25db445083e190c16cc8d2d88",
+                    "s": "6f39c19b9dd8194fd962a65c7dbe72da4ccb674f2e0eda7d6c247ef7a7ab38be",
+                    "v": "1b"
+                },
+                "timestampSPO": 1605170533517,
+                "result": "ok",
+                "sigServer": {
+                    "r": "672c8ca4bcd7d113448eb147d505f85122e1f8f7d47006e33e9e2bcdb8040f52",
+                    "s": "4dcb1a024b90f54be4f0ed24567c9a3424b10abe53deabe406d18a4c77e61cc7",
+                    "v": "1b"
+                },
+                "secondPart": "0413a1da5bb47fddbd1d0e82900ce577be021c7aca12b95797d70b0fc822dd13"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R41",
+            "exist": true,
+            "merkleProof": {
+                "slice": "147.e2dec14fc64a84e85be390f370e92e6f253015d5376129f9975a0144ee71aea8.fcdc2c964592093a923266cd806eb6feecf13c954db33c8ffc1a0b0ff11af82a.32711af50cc2f804208f80dc33b725348210cf67e744c078eab8ea2550e33971.01dffe04d7c4d03c44c67c73635f06120f82c998af94958c25acbd68cf120155.f9481b9eec217ddaab31c3bcd3e644e6015ebb20ebd55e207d8b7487d49ad904.8d3e1b81940af8fe0d85a36f9ab5493a26dbe930fb1bfb68388e95ec6d8e83e2.4022ae759475ed8624c490fd4c1a2eefde97d9eb86e63827613ca11542bb56b1.8b6634e585e254dbc6272c43640a7db52ed80b62864c31cd0510a0488a0a46c8.b771927c3b61a86c8327d11c62e0a092d722c95fd69a613c9126b245b5c9a837.85762cf09a4444e666f761536fcd7347a2bf37fdf9eed756e2d9ca6c52becaff.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "ac2b26a989a4ba63595c55184a665cd3cbee510a285b7aeeeba1b940fd8d3f74",
+                        "value": "e9eddfe42678cfe1b2cea9f6e9bf82a66e073b6d0bcd8749dddea5bf27988861"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "2dcdf66ee67c5b7cd1053739042b698afd6348c61265d8972138149397cb8ec7",
+                        "value": "a50fb64b311cc017e3a1ed282c6f50af0c6ccbfeae8a7d27f3d2713a851cae5e"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "63e500a9c5f3606e435d77feef8776cb8d70557b9cb4ad1567ddc5355c741a08",
+                    "s": "7465d6b44c23cdcf335067b499ed0022b5e5e8a04b7deeb1d41fcd0626139c71",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969702,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170540949,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170540746,\"latitude\":25.012426,\"longitude\":121.538212,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R41",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "d81a9c6b93c2a189b737f87a702f9c84b69a52b111184ab46d285f12ffb9e8b8",
+                    "s": "725ab9411fd9a1dad8a50ac73f256a1c61aa10e7735e439b9ca96e88b58dfe03",
+                    "v": "1b"
+                },
+                "timestampSPO": 1605170541403,
+                "result": "ok",
+                "sigServer": {
+                    "r": "389941f8dc7651c37b31152930d582b80f821e7248e01e13e7ebd96342a897ce",
+                    "s": "581e1e21e8211bd1e61226fe8c62e12bef921bbc76c3268e10906faa02e2cd28",
+                    "v": "1c"
+                },
+                "secondPart": "edc5d4b641ee0e80115e267d440d640e19a57f8991e3fdc9ec69d8242be233c4"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R42",
+            "exist": true,
+            "merkleProof": {
+                "slice": "222.9d4af6b35b03dfa1b6ddbd7e4b1079ebd22792ebfaeb3ab1b5931bdbfdd8c4c5.d9d5f1e54a6db3c6ca1965da87a8544529e64e07885350a1b471322830346b41.a1d0448f051096f9625106a54a2919e3331089881d23735bb27541c8dff72b24.1a827e3efb595ec19d4b8adaa9b0fa02a99ae54bab53f417822dd635540be886.ac9b661c95a9c6c9ae977e0059132be1ae2135c4708af02a530f9a067d85af19.cc38aadf713d105662adcbfa8ab776eced37a8e7fccfd4ec1924842e59d6f86b.9c1cbd1fc2206768e932a84dd49963c3ea612a4f611bb1823a899bab55bd61ae.c2a1262b9757251e3bf3ec93757ffa821438876407900ce4ee202906c9b0b0bd.37f136407e0cc446ea295e690ec633481ad8105c15bd3296b191b6409705508d.c1fbccb9bfb5395b71167716da0ac5199ee224f0de909086f912140024063414.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "12378c6fa731c9f8e90c42153efad9173d3c1e2942a1740836f6e6a7882be657",
+                        "value": "88dcc56d4bd39e096405fe082425b64f5f8ff922ea566947ada0d93715a9271c"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "0e9adf3e8cdc462a667415393c941077c157664a8d730fe8c140cc6558e305f7",
+                        "value": "9e1213d6bc88e43dd8ef3ddf0f5e82900e3c64c311f500651ba8670bbc0cfdac"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "94815dbe3169ea975442190dc75a4e0c3eec2a211d810a335f9ef255d9da8905",
+                        "value": "ba918df7beebd278e41a418696381bac6728428fbe08fcb92e0a764fb863ffd9"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "e19429907824d8c549ca1665648c3625543cd8064953434e72afc3eabb0ef5ab",
+                    "s": "71ce1669b7ab630eb549ecf091342333b19356cae0e03f67407736657e6cab0d",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969703,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170543586,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170543393,\"latitude\":25.012649,\"longitude\":121.538694,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R42",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "6cba7224dabcec46c2a7926a7ae9f991eed014eed7f275f06b981daf7f802dbc",
+                    "s": "2b8dab9ff6d2d290a528e829dfd29c9b0a1a5a87b2700aa3bdf1a4782e3d47c9",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170544043,
+                "result": "ok",
+                "sigServer": {
+                    "r": "31944de94bec499945acc2f609a27c0248deb805aea0d8bac928a7124e32aefe",
+                    "s": "78127704d3186a15dc15ee49d8ca854f7facd64f154dff5671ad377b6fdbfde5",
+                    "v": "1b"
+                },
+                "secondPart": "0f2b5b3c2c4b04dec267589c59d9f4fd99eb9c703f0e97220bbb384a9b05770a"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R43",
+            "exist": true,
+            "merkleProof": {
+                "slice": "146.e2dec14fc64a84e85be390f370e92e6f253015d5376129f9975a0144ee71aea8.fcdc2c964592093a923266cd806eb6feecf13c954db33c8ffc1a0b0ff11af82a.32711af50cc2f804208f80dc33b725348210cf67e744c078eab8ea2550e33971.01dffe04d7c4d03c44c67c73635f06120f82c998af94958c25acbd68cf120155.f9481b9eec217ddaab31c3bcd3e644e6015ebb20ebd55e207d8b7487d49ad904.8d3e1b81940af8fe0d85a36f9ab5493a26dbe930fb1bfb68388e95ec6d8e83e2.4022ae759475ed8624c490fd4c1a2eefde97d9eb86e63827613ca11542bb56b1.8b6634e585e254dbc6272c43640a7db52ed80b62864c31cd0510a0488a0a46c8.b771927c3b61a86c8327d11c62e0a092d722c95fd69a613c9126b245b5c9a837.85762cf09a4444e666f761536fcd7347a2bf37fdf9eed756e2d9ca6c52becaff.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "d33096afaf7f9b2e764ef49942c125ca71b9d23805476c10277f9e527077112e",
+                        "value": "76c322adda96c9babf2d72dfb195b3f823b60bceb9addd1d37e8bf4bd9cba815"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "4dfd2f233ed2a1f5cb82c725696fe9efe29a0771c9e0768eeac198c0da2a4323",
+                        "value": "8eb0707653272064abf1e1099d27fe55b73de273a99b3cbf759701255c102e94"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "49fffb635e301393b62938941e7233f9291e9611ce6915b7807f26cd8f54ab0f",
+                    "s": "0ff7a74c2618d21242c135c554a2e7240c6b274c6ea4a9c63602411b5eb80485",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969706,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170546216,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170546022,\"latitude\":25.012946,\"longitude\":121.539274,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R43",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "52bd680bc5f7bb0c60ddb11cd46f383233c43553f6f12b7a90cd1d6941c20d55",
+                    "s": "092089d63adc9c5d23c5c8276912373da4d45c6dd9118b45bf879acec3551868",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170546673,
+                "result": "ok",
+                "sigServer": {
+                    "r": "44b20dd83a514227e3b6d6f8b3abe3836536b0f03382f27e569bc5fac0f504b7",
+                    "s": "436229918bd6fcacfb80d9df420921a75d89041870b36b04d580253adbf127eb",
+                    "v": "1c"
+                },
+                "secondPart": "26545e8d47096ac5464a5c903d83010845e991f83547404c886fa3e2d06777f2"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R45",
+            "exist": true,
+            "merkleProof": {
+                "slice": "147.e2dec14fc64a84e85be390f370e92e6f253015d5376129f9975a0144ee71aea8.fcdc2c964592093a923266cd806eb6feecf13c954db33c8ffc1a0b0ff11af82a.32711af50cc2f804208f80dc33b725348210cf67e744c078eab8ea2550e33971.01dffe04d7c4d03c44c67c73635f06120f82c998af94958c25acbd68cf120155.f9481b9eec217ddaab31c3bcd3e644e6015ebb20ebd55e207d8b7487d49ad904.8d3e1b81940af8fe0d85a36f9ab5493a26dbe930fb1bfb68388e95ec6d8e83e2.4022ae759475ed8624c490fd4c1a2eefde97d9eb86e63827613ca11542bb56b1.8b6634e585e254dbc6272c43640a7db52ed80b62864c31cd0510a0488a0a46c8.b771927c3b61a86c8327d11c62e0a092d722c95fd69a613c9126b245b5c9a837.85762cf09a4444e666f761536fcd7347a2bf37fdf9eed756e2d9ca6c52becaff.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "ac2b26a989a4ba63595c55184a665cd3cbee510a285b7aeeeba1b940fd8d3f74",
+                        "value": "e9eddfe42678cfe1b2cea9f6e9bf82a66e073b6d0bcd8749dddea5bf27988861"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "2dcdf66ee67c5b7cd1053739042b698afd6348c61265d8972138149397cb8ec7",
+                        "value": "a50fb64b311cc017e3a1ed282c6f50af0c6ccbfeae8a7d27f3d2713a851cae5e"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "63e500a9c5f3606e435d77feef8776cb8d70557b9cb4ad1567ddc5355c741a08",
+                    "s": "7465d6b44c23cdcf335067b499ed0022b5e5e8a04b7deeb1d41fcd0626139c71",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969711,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170553402,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170553191,\"latitude\":25.013821,\"longitude\":121.540013,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R45",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "3d29fbb9f1433309c8dfc4d07ab442805c1e28752827320b575717e7fb15cb2f",
+                    "s": "7ec599b2bb6c02fa7416be4058485b0d3b1d9c94f9b3c98ff201f9a9b30681ca",
+                    "v": "1b"
+                },
+                "timestampSPO": 1605170553856,
+                "result": "ok",
+                "sigServer": {
+                    "r": "4c539e7c404f35990272e8f3a883647641d09619d0a69940b43e8fa70e69a1d4",
+                    "s": "6f436376a62343819e4ea708ea25a9a89c62f01fe6631e4fc9dd088acb95f49f",
+                    "v": "1c"
+                },
+                "secondPart": "34c4abfe8b0ec1bb0955293fc6fc0ee4ff6b31bf1741f5c750ee9aa4f0ce5f33"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R46",
+            "exist": true,
+            "merkleProof": {
+                "slice": "222.9d4af6b35b03dfa1b6ddbd7e4b1079ebd22792ebfaeb3ab1b5931bdbfdd8c4c5.d9d5f1e54a6db3c6ca1965da87a8544529e64e07885350a1b471322830346b41.a1d0448f051096f9625106a54a2919e3331089881d23735bb27541c8dff72b24.1a827e3efb595ec19d4b8adaa9b0fa02a99ae54bab53f417822dd635540be886.ac9b661c95a9c6c9ae977e0059132be1ae2135c4708af02a530f9a067d85af19.cc38aadf713d105662adcbfa8ab776eced37a8e7fccfd4ec1924842e59d6f86b.9c1cbd1fc2206768e932a84dd49963c3ea612a4f611bb1823a899bab55bd61ae.c2a1262b9757251e3bf3ec93757ffa821438876407900ce4ee202906c9b0b0bd.37f136407e0cc446ea295e690ec633481ad8105c15bd3296b191b6409705508d.c1fbccb9bfb5395b71167716da0ac5199ee224f0de909086f912140024063414.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "12378c6fa731c9f8e90c42153efad9173d3c1e2942a1740836f6e6a7882be657",
+                        "value": "88dcc56d4bd39e096405fe082425b64f5f8ff922ea566947ada0d93715a9271c"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "0e9adf3e8cdc462a667415393c941077c157664a8d730fe8c140cc6558e305f7",
+                        "value": "9e1213d6bc88e43dd8ef3ddf0f5e82900e3c64c311f500651ba8670bbc0cfdac"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "94815dbe3169ea975442190dc75a4e0c3eec2a211d810a335f9ef255d9da8905",
+                        "value": "ba918df7beebd278e41a418696381bac6728428fbe08fcb92e0a764fb863ffd9"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "e19429907824d8c549ca1665648c3625543cd8064953434e72afc3eabb0ef5ab",
+                    "s": "71ce1669b7ab630eb549ecf091342333b19356cae0e03f67407736657e6cab0d",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969714,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170556023,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170555829,\"latitude\":25.01419,\"longitude\":121.540351,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R46",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "4a34404190ec5778f436774cfdc0f279fbb5f0f7e835e7af3574901aa8f2f240",
+                    "s": "1ac1cd3fdcc53d681f274c37de52bd4152663d08059cfb91f922cf55f92995cb",
+                    "v": "1b"
+                },
+                "timestampSPO": 1605170556481,
+                "result": "ok",
+                "sigServer": {
+                    "r": "8c6da5617efbe0773ee6adc0c5ed5db32c89bf62453840fd5ff9c41231de9e2e",
+                    "s": "4b0ad9e71badf1d810252aed7e0e74b43c34408860ebe1ec06d49ca5196df000",
+                    "v": "1c"
+                },
+                "secondPart": "5cf409dc2b630297411671b86a866e89cbc7d73af7a7a314930c4c8df26c8a94"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R47",
+            "exist": true,
+            "merkleProof": {
+                "slice": "237.51a54edef2973fa70a3b779d551dd5a5236b121c5ace609d35ff2789e24c204d.79ff07dee4fc62c53de562c7841eb7bda19d64c8787247047d39631cd11a34df.358b142eda65d43d3141600c89db3420264d8616297faaa9ffc2d1e23056d0b2.ecebf42b4e3ad8b2a298acc2afdbd58ea02d56b53c4766f9b255ba82cbb87793.d92eb9791df753dbb8431f031629cd9c98ba1f4c9ae44449d905c79728608a38.cd43ea9ac74ed0b538de38b6d8d8550f3ed1dd3ec5b848721930d188d5721f6b.b56a3ef8c995c98ac9eae76890d35a130141f5588b1a08130f4e77b918d7b6e3.03877968a1dd6a6eed2eccb8c1738198cad01d7a5be5f0244d8eeeefe1c0b67a.d41ef4e2a73447543281f678750e333a38469c03565be8bcefcc68f6d8ec5920.45ac5f1d002ddca3cbaa5317116c17fa98fdbcebc844f58e4c00cc70ea141c1b.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "480c91cf192ffac740b8f7375af09968dcf59d606ba626b1c118a1bda9ec5413",
+                        "value": "6d76bfcccc84b3814b676370ffc84ae043230c8f3e0ee6f0ef9a0a09f5b53b9f"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "81c890adf58f049d8adb27c7862e4d5174b3faafe4dc5ebace77a4959754c738",
+                        "value": "934f016e00a260808eb80cf7ea24c023b21daa505b32613b7013bc24e3f90389"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "6646f1773a550f8852ab313b7fc9fc0991ad4472de4a14db44cf9fd355b552f8",
+                        "value": "6430a6aee33b7a1ec97b4a62061028d17a972a2d1abc0d758610b3fd77713afe"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "47b65804b2d735453f281c5d70cfc0322e4476502996b2e772dded4d6cd87162",
+                    "s": "2449209926e27c19c5823814cc12e4810036278ba6fff986acc70a315fc3795a",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969716,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170558657,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170558462,\"latitude\":25.014579,\"longitude\":121.540941,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R47",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "20318d5332e4be0995a3a967a53aa4fdf32c4a8659b8ab0f794f9f248574df63",
+                    "s": "573aa15160cb677333b96932456b22ca674407312420b3e15e63ac806acdf8c3",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170559119,
+                "result": "ok",
+                "sigServer": {
+                    "r": "c3b558d94936078ed8145d0ac20bc9d45ffd45c36bfcce2fbd67b9789dc625cf",
+                    "s": "258cf024923209ebf9c8cf1c9942eb894f3cfafcea85fb524efe381e25a32f19",
+                    "v": "1c"
+                },
+                "secondPart": "cf1aedb34a4fcbf93f7c3e8eba05095c1c21dded632b36e4eb09d1e5695e81a9"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R48",
+            "exist": true,
+            "merkleProof": {
+                "slice": "145.aceb9a678d4f14ab028a28af61deb00052c80a4b2799b475fa6d6965df7f3b3b.ad3dd85f9ed4f1de9a40ff8ebf9a4a19c4656da6a637aa46fa4d76afe8448c8f.32711af50cc2f804208f80dc33b725348210cf67e744c078eab8ea2550e33971.01dffe04d7c4d03c44c67c73635f06120f82c998af94958c25acbd68cf120155.f9481b9eec217ddaab31c3bcd3e644e6015ebb20ebd55e207d8b7487d49ad904.8d3e1b81940af8fe0d85a36f9ab5493a26dbe930fb1bfb68388e95ec6d8e83e2.4022ae759475ed8624c490fd4c1a2eefde97d9eb86e63827613ca11542bb56b1.8b6634e585e254dbc6272c43640a7db52ed80b62864c31cd0510a0488a0a46c8.b771927c3b61a86c8327d11c62e0a092d722c95fd69a613c9126b245b5c9a837.85762cf09a4444e666f761536fcd7347a2bf37fdf9eed756e2d9ca6c52becaff.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "2417337d7c5c2c2e75278fb582479464aff20e9df42108e27547dfabbd01f852",
+                        "value": "33def6aa3e1e41baabf11533a6ecd98dc8275dbe6faa8e220d3a521b79571118"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "e06a321cf21430663763923deea4cb8f779124919eb605040c1d077aecdd743d",
+                        "value": "efcb89f17ce7743c59c14f80612be38a5e764ae2df495085e3a7accb34b17163"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "4cfef466529f39dafd0d31f6be86dc8db353530b95405a67b083826785f7f8f0",
+                    "s": "6deeec1945f6045ae9052046b1fbc08ef0e67701360a6b4847ec7dd18171f15f",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969718,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170561294,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170561102,\"latitude\":25.014851,\"longitude\":121.541552,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R48",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "f2ce4c002b9f7e6dd6e85fb0195f8227099533c059ec4e1e8d9310c24cfcbcca",
+                    "s": "0df67d6a60d952c787ea3728975d1ff2d9dd60dd758acc567e93405a347e2ed0",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170561750,
+                "result": "ok",
+                "sigServer": {
+                    "r": "c6d087c3db3cd97df8fba06bfd00dd296c8fdd3c4f52b63ed161a2f938c94910",
+                    "s": "3d52ecaf284bdfb49afdc610f3e84a5b6fdcf0db37b185847fd67098d6778ed1",
+                    "v": "1c"
+                },
+                "secondPart": "5db18935a22c63ad85632aabf845aad0a6dbffe40540aa7a4fb3e6b179ca407f"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R49",
+            "exist": true,
+            "merkleProof": {
+                "slice": "165.27f9a1c9229de935ba3db728ec9af59031825c257ff1dd048d252b8cab2d38ce.183971bc9ec8b4f86124d868be9545125ed74bedfe43ceb19443f555b3fc8a52.f7c3f579e2dbad052ea9b6d31ffe32c7ca64ddea633ac47a7befc146573433b5.ae084cd7e2339868cb0389429979529f662cc4acff41c27e440640b1d9a223e6.bfa2085a9fc28953fb35d760d18879d1d1c82cb1facdb5609c11a90c798af8e9.107d20be62fba5e440c24763a0f3332c702e8f1cfb8a83f97707c2d36b5bf8a7.6e46fe7455d881f7f7475211947574494b0284449e02c5e4902a002239754beb.bcdd450e47e6c88dc7ddf3f0a3f6496a1bd906dda915f32fbf85624944307398.a66f2429ec07acd2a5de89e36999dccf7afc87523402625f9f9b3679c326fd5c.759c2925f621f3304406348b504b124000e7444757e1059b62a67be22c74c668.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "cca43e3ab49e0218e3e1a8d4897eca0a01003222714adacfd4b133be02e47f19",
+                        "value": "ab4f04c3693af359c6c2ce148ed729a3c06c78377f23daaa0c054445db3b07be"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "240a9c3cbb7805e7983cf99b37df34e9e20e7430b8fc50d04e0d3964534cc2a0",
+                        "value": "6de11bee32731056108ad1a7a0b291014473211deb9c1c50ab3e708cccd0c272"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "d93e5224df509e752abcde055c2f9fb7b9430cf50420fae7fe586af32a363312",
+                    "s": "5f2103cf36a47447c6cee3da71c83511116498a0c0febf7d433fe975243dcfce",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969720,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170563925,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170563720,\"latitude\":25.015328,\"longitude\":121.542046,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R49",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "ffaeb365415add1fae82c4afb17c0bcf6c6ae4b7aeb6544126c1144ba6558924",
+                    "s": "4082f8089d256e60a41111858299fd96a764f29c511c7d052fbe4b9c99ccd89d",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170564386,
+                "result": "ok",
+                "sigServer": {
+                    "r": "354dd3c38f97da5b6dc48aee386e646c42a4fba7afe5a349997598654835194d",
+                    "s": "20cc88bc6a70652cc9f775ec67dd5eb75b91e1e2e9ef7671068c4a010c9d6b25",
+                    "v": "1c"
+                },
+                "secondPart": "ab9f2d104d6ce4be86e041c880e7c771eafaa22d4be3b05fd417f5d603b16ad5"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R51",
+            "exist": true,
+            "merkleProof": {
+                "slice": "186.3c7b98ff132b0743f8d3fe404698f4847f5faf1543cb1c8cd5cd0717c53585f3.be87fa5c3efb7c104f0f110d55cda9dc64b8bbe0d4bbe855312d9634d93d3875.73e40309b1e90e1509cea347e315f2cfd5713ad6ffefec2dd154c535e3eea090.5b8fece1459b0821aea6fba0459ea7cd73b9dda9866cb72eb927173a438f5a78.4705778a323a810d63c36ff02a76013b1d38677b190b67e9bd184a610b19f840.ff496344621aa7ddb3f9f1f395ddce9b5c015be1b0d677bb025265b06e256712.feefd5cb73ea0cf23c4bd4fe564a887e9580a6d5661e7322e7fe2c5f09f780f7.94819aab6255fb1d2684869444e952f91f2b70c02b3482d19dedf8b9a88bc330.a66f2429ec07acd2a5de89e36999dccf7afc87523402625f9f9b3679c326fd5c.759c2925f621f3304406348b504b124000e7444757e1059b62a67be22c74c668.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "a83c02d68e9af464d439460fa04ee400638869c11cb6f7834056ff587d352ccc",
+                        "value": "635a5a85ba902e02630e5efcdfb9dcfb17cd4c14bfad2fdba1aca1ef4bdc5e33"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "1265f65cb25b85e2d2754caefbd62750180763f5b5dff203e1155e83d612dcee",
+                        "value": "92a165cd8de015aef529d0f8179384a914c358b55e54e645e9d1780d20ed886b"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "4135d772765159f7ef1084adc0e316403438926b471e3cc2f196f9f3bf82cea5",
+                    "s": "6ec7e52606674d91ac988dd110c76fd5b02d1fd240bb7f162e614e9b49f866cb",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969725,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170569191,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170568988,\"latitude\":25.016179,\"longitude\":121.543016,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R51",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "e89697ba5076b1c7592d670ec20fd265f14ed1d97b2ff46fa6ce4b86f8d6e373",
+                    "s": "7ee5e5b57a702c7dd9a644cc96847b4b231cc4569d4b6dc34196de4dd86bb3d6",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170569647,
+                "result": "ok",
+                "sigServer": {
+                    "r": "e77e1913ddf1954f27030b08a26a0d4e6a17d6c38f9b14c7c97c552d5f8946bf",
+                    "s": "6cf2cb0a0be54aa5e8ee3d5b6d454d3c1cce45ea0ed81e10845108e5f1990708",
+                    "v": "1b"
+                },
+                "secondPart": "48e391daf747dc76b7ee4045c3ddbe546920fcad82285557579484dda208419a"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R52",
+            "exist": true,
+            "merkleProof": {
+                "slice": "255.5a1072fa9fef0c643424aaa899c95ca000235db0dd6f36ac5c40ce0983cb7a7e.16c81ffa97a6df43b6c66eea1f616f1c00fe6aafaca29f4d4b3dcdf2168deb70.ac8fdd2ba92d961adc3bb8a0611541d4a852338df3037061bf7573f39c7b2fd5.211bd768dbabfd7806a63cba7420e695d2b84d0ea1e37ea64ef006db2969592f.b5d81cf58ac81dc419a10efedd9658af49289a2303b32f2ee91ae94426a2515d.fc638da743f21f57867e0ecc661a0329119c28d2e77c76c865a2b3edb6a23b99.dbf40419e54fe8b35a7dd64253443e8f8ca5bc2f4daafd58bb4009ec434685c6.248d52d947721d607cc9a2cb61270f4dfa3d610509c1660ba3764df4f9b47768.d41ef4e2a73447543281f678750e333a38469c03565be8bcefcc68f6d8ec5920.45ac5f1d002ddca3cbaa5317116c17fa98fdbcebc844f58e4c00cc70ea141c1b.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "b78963dc30acff712159c077083cb0f24d71000f6b60d95acad349a081428333",
+                        "value": "9689acf276df37cf715c379d7292177e0b304eb0b0c314bda26786de11179cb5"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "c143c303d7d9764ef39e9b0d4cf0d89e1b414faa92b70de0aaf32ac5321e8da8",
+                        "value": "c0f29e5a5dad0050ebe2e782572dc4954cbaf1dc2288f037b9985b500885c0b4"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "82577c2c901898f6846ab77d0948a28f10e4b4dd8199b0521d758bf58d7f0dd9",
+                    "s": "115abe043dc0db374bc7394f707e3097e8f71132787594444fd9a6cfdc35abd3",
+                    "v": "1b"
+                }
+            },
+            "receipt": {
+                "id": 969727,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170571827,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170571626,\"latitude\":25.016636,\"longitude\":121.543472,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R52",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "080649d732da62fb02b2c7f91d32d2b85f5f6cf7a7c112513d8de10d71381d33",
+                    "s": "0eab9a88779909cbfe041c9e4dcdeda8010cbfeb01b119c99cbcb5ce5058b446",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170572283,
+                "result": "ok",
+                "sigServer": {
+                    "r": "683bac0d09571890874e0580a762327b5e26326cc7c950909f8a1f5f814c3f65",
+                    "s": "48ad8a11db621200a861c5e3725b9cdd2cf8bd15a2047f456616a82e79fbdb19",
+                    "v": "1c"
+                },
+                "secondPart": "f2639cf38bb1cb77aba113141e0348cd362f70308b74ad38c1f28fc9797c008e"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R53",
+            "exist": true,
+            "merkleProof": {
+                "slice": "139.03734023d8d4f83400209c652a978c03fcce3c4514d96d0f067f35786b8e9145.ff2979c1228f4c11b6ce40dcd5a50497b3231e736add3d948c64a2bc1243bf1c.9cf39c1029a8400b9a3e832df1c4a5ad75859002a779a4fff3b8859194c863a2.ca18c357be7a40da65849b2746e91d9a104906621fc551e1698c7995cda77228.ae64bca1c3b4a724b857a766b6fa10e9cf380af8d8cf50996b241b6072624975.e20487ecece3111e4bfe51f4a99ec6fb316e1eee2f093889bf2b79a22aeeecf8.7216ce52a4402652045d5279953b4a1666a01385723cb9e5c28dd02c5ffd18fc.0645bb51959fb75bb5fc6e072f8f7d5230cb76b260d22fa2afb4400255e22d5e.b771927c3b61a86c8327d11c62e0a092d722c95fd69a613c9126b245b5c9a837.85762cf09a4444e666f761536fcd7347a2bf37fdf9eed756e2d9ca6c52becaff.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "34a237641368a680a04ded8225ee3875962a8d6334e61d7af24be7fa0aa308a0",
+                        "value": "0d7d3c0866bb9f8b523a712f37e67447869a1b667e6634bab3044437bc37aa57"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "d9aa184136cf9731aadc324d36a97c550c7b650f4dfbcd1cf9cd012a0a3ea64c",
+                        "value": "e79601072f2d0f131ccfc7b2092dd2bb7a4d15931bd6af2b87d097ea00c507be"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "9580473a5db7fdfdc992b3aea03c7077d2de86e97af1853f49c11b080f0e8153",
+                        "value": "28f084e8b7cbe7484da74bf788908c68582a4e748cef0d15120672ac53a8346d"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "6b2b64fcc3677dbae1bc4e9171aaab87923e9d9f3c7542c848fda97b957645ce",
+                    "s": "23d2969f8bd44eabc3057811f27d05c53b8f7b4e1e88d479361a85aad8a9a8fd",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969730,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170574449,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170574253,\"latitude\":25.016572,\"longitude\":121.542995,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R53",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "b9bb3c46852ffc29a9476edff2a8d73d8febc8b4e845df3dedface6787e68329",
+                    "s": "6e9e2ebe29ccf92f1ac13fbc47f2dff807856ec8fcb84accd135a9054b0af0be",
+                    "v": "1b"
+                },
+                "timestampSPO": 1605170574903,
+                "result": "ok",
+                "sigServer": {
+                    "r": "efcf291f2161e1d82570b2e0f10d28ff7a2c6c2fb8c3b07ff8f9da2f73209fc4",
+                    "s": "2fbf42b3b064ebf41837d4d3fcd615929dbad71dde7dae05932bcadc2385940e",
+                    "v": "1b"
+                },
+                "secondPart": "00ede4db45abb2d66f10562e40fc91ef01b95844d7fe9b703e6f7d819eaad634"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R0",
+            "exist": true,
+            "merkleProof": {
+                "slice": "215.163e90b4bc73a824e9d7f44560f80ff032dcf294d2fa981597a2efdce0c77012.c780116afb9037750189a3c21dab7cb0646d4178ea972a51612f8e58cdb43e18.8f7e2ce835d3756d377b4362a79a3a61c10d7ce0349c311a2b2c28bcb006d66d.1261550dcaf9c14dfcfc82b250871921186714d851240dacfbb7d4ec1047394c.f50d735ea68054d2ef6df74d046aa06878337374de02e7d3323283c67bd7c7bd.8aefebb4b75188d206dfb718f421081c63424916aa601038c306cbb49defe805.9c1cbd1fc2206768e932a84dd49963c3ea612a4f611bb1823a899bab55bd61ae.c2a1262b9757251e3bf3ec93757ffa821438876407900ce4ee202906c9b0b0bd.37f136407e0cc446ea295e690ec633481ad8105c15bd3296b191b6409705508d.c1fbccb9bfb5395b71167716da0ac5199ee224f0de909086f912140024063414.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "e0cc4582c6e5942639aaec3544f0cdcec69917f56031a73c2db7111a4685d626",
+                        "value": "073baaa64c2aa6d984d62c292769ea7e0b7225316167dc6541da7b96f876e939"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "53168271643c05cc01b6b34c388f1366670a4cd7373bb66c84d7fcf58ed297fc",
+                        "value": "445ebdd8862c1c9168335b85b2713d86a2a49ce4852971714d01da13d18f4891"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "83d6fd94ce57b790139d4a040fe140f3711f015a1e08bf933af8e7fb5a4ff6bd",
+                        "value": "0262521abb73dd50f33d19c012b2e27cf761b855f2a3f502341945428d97e544"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "498be9e41b30bdb74d26ac260633866d042ab7f8357b98b479301bf6af5a8cb8",
+                    "s": "45fee6b0479d3517a42005a6c4c599c964df80daf3b13226ac09d4715c950fdf",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969609,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170431358,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170430486,\"latitude\":25.016417,\"longitude\":121.542362,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R0",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "db317bf4f3db2b4e5461da05065914003a2d4d9c9ac4cb3df078a89f840caad1",
+                    "s": "4e3aff6146c0c5cb90165e9076dec58593184e5b396ab1a5f91146564290e31d",
+                    "v": "1b"
+                },
+                "timestampSPO": 1605170432437,
+                "result": "ok",
+                "sigServer": {
+                    "r": "cc457573e7c09883b2d40106d11c20e8c33714c12813bd54efdb37394e4b74f4",
+                    "s": "033a9db66cd75d5287b3cd25cfecfd09a33b68cb9e810c2c5aec5b16507d323a",
+                    "v": "1b"
+                },
+                "secondPart": "f5b050c9f7e07e8fe3238337e96b3e0aafa82564d4bb2b5c187206d7ed6abbd3"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R1",
+            "exist": true,
+            "merkleProof": {
+                "slice": "196.1da699d5d89139d03573e11a6566b9f4b93272c4bb30eef1be3fd9ec95c9108e.c9ec93d86caf30a303275fee805c98550c43121e08d2933047d274630c3e9540.1ea195d1c2bd421eb5cd1e4cfbccff8462bf1957df6a682e710c5f7e0c8ca1ad.0d390e482c76e4d6fc75b27e2d073cff8b531ef94008f41346382b1ec5159a8f.cc84450085f5a741587e8c827c603f46756bad3337424ce85b241de9aa794387.271aa9043597e568d9be32bb05e4a8020375569f1562861b8f5433696bde177d.6895781f947428d210bdf7e4f6ba594f253c3048306d37b3c373610facedb157.8ba35ed929027f28583deeafdc3236414867354cb8cd9b342f3c5810261abf23.37f136407e0cc446ea295e690ec633481ad8105c15bd3296b191b6409705508d.c1fbccb9bfb5395b71167716da0ac5199ee224f0de909086f912140024063414.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "5cef18ea8e0827c8be722699a1107a5452670d8e07340d11329273df0afaed8c",
+                        "value": "73ba42f3b526271c43dfa25d7dee93aa8848f71d4ac03ec556ab2408d56f998f"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "761bfad49d730dc9ca457bbe6e4ec68a49a4070da11c3c73aeaeaedd610f6893",
+                        "value": "ff9cc9dabf021e3fe027f6b1c8731be00d698f22b6048a94f45dc13037d3a877"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "ff6be97bdb83d6f84b0def6b9ba4fd3411950661f141a44cb7093f8bb480c927",
+                    "s": "004e39937ae06ea50e5c93c6f1743b78c6025a862e69831f11b0a5b504a3497e",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969611,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170435299,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170435104,\"latitude\":25.016791,\"longitude\":121.541754,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R1",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "7a20a458f74b74afea9441ad788bbc290632d77fe5795e4b9502beb5889df4a0",
+                    "s": "7c51e4a76c5509c3d558d1a616d0f537b754fa23b75a98560a105e7eb4033c41",
+                    "v": "1b"
+                },
+                "timestampSPO": 1605170435755,
+                "result": "ok",
+                "sigServer": {
+                    "r": "49d04d8a66069943535bfcb86614b6f72711500ae6fb55454fa0db2155e0f551",
+                    "s": "03937d9831eca9ba2cc7d11de17a469d9c389e70ea3f999a25183fb6be927a61",
+                    "v": "1c"
+                },
+                "secondPart": "e19fcae4746e464de247ee693e69300a8dcf48a33b27ebd7e76043b335c7c3f9"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R4",
+            "exist": true,
+            "merkleProof": {
+                "slice": "233.6cc99b9fe609e302334189d8af44f1e1bff0d000a7daeacc219a73ef04b538cd.cfcae8d1f1016962a7381c28a324a67417390962a821d156257518e576c1cba2.447256bd2cb6804ae01ae94f2856eb61d963047ebfe790a50ceee151eef20cb1.b071c370dc617a3bf24b95ca208c3259f5460719bbb4bb14a723a50c76ac81db.d92eb9791df753dbb8431f031629cd9c98ba1f4c9ae44449d905c79728608a38.cd43ea9ac74ed0b538de38b6d8d8550f3ed1dd3ec5b848721930d188d5721f6b.b56a3ef8c995c98ac9eae76890d35a130141f5588b1a08130f4e77b918d7b6e3.03877968a1dd6a6eed2eccb8c1738198cad01d7a5be5f0244d8eeeefe1c0b67a.d41ef4e2a73447543281f678750e333a38469c03565be8bcefcc68f6d8ec5920.45ac5f1d002ddca3cbaa5317116c17fa98fdbcebc844f58e4c00cc70ea141c1b.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "71fd441c1cb860855c68eb64668eb2eb58765f11b89f62c553aea75f901ac9d7",
+                        "value": "da687e44ac0c6f151559ed1a5a16862c1bd2f712ec423a2046ad202723f4048a"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "db22b53cf26c344236e594a46f98bb2a15b7dfed1e69b508707ed575b13ac896",
+                        "value": "fbec1f8c8180e6cb93efef7d125b2e307504c5cf127a59b22e1974710df7d45d"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "507251f213d48b278ba5b94879e278f74d9627b76e8bbdbc1f2c342db3901a43",
+                        "value": "789d56b49218ca8af30ec76c63fe2e136f3f0249c3832405f58dc261a5f6cd65"
+                    },
+                    {
+                        "index": 4,
+                        "keyHash": "aacfa7dbc19127188784948999d14fbd1f4eb453145cf0efea536a342cf59f8e",
+                        "value": "6cb09f4d7789241630a3635c39a2937d25b9d39858aba59901859bfdaec6f0d0"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "6967cc6102c1fe07b2d10dc440ae140952334b6f78f3c3af067d2432deac6e7d",
+                    "s": "2b0f4306b51e520131c530401f1144d4f2fad5386d81685a2991245dea1a3a29",
+                    "v": "1b"
+                }
+            },
+            "receipt": {
+                "id": 969618,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170443218,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170443023,\"latitude\":25.017219,\"longitude\":121.540422,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R4",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "891239154cdfb112c2b2e712274024eadd8dc828a88d4a72d3d3547b2c5cc454",
+                    "s": "54fcc908167404f310e2548a430d6c6ac7daa7324a266bdc010bf2e64c9a5390",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170443679,
+                "result": "ok",
+                "sigServer": {
+                    "r": "ab93238a08b47665ce99d75fa5162a3e416e52bb6df5d2b34322219aae493631",
+                    "s": "5f14c4e3fe16f537d5b9f661d3a98c69cb3a29ca32f693c19009492f2b82a516",
+                    "v": "1c"
+                },
+                "secondPart": "93fba3a193ff7c2789c2e57be20e3c33959e063789d432c20c7386d5e5004685"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R6",
+            "exist": true,
+            "merkleProof": {
+                "slice": "229.fdc151fddc12e0c569cb8adb46b9cdacc5cbb8892a48376a701df2df0a1cec06.0e98c96218ab43994fa2c23d24fa21210c98574fb78bf5fd5507f7191b4d1b24.941112f401e19eab6ebf09c394200d5c81294084be4bd20ad99896827b8f3f9d.3e6703f10b6e25cbf365122c47fc8b5ca5ac15e4eb23aedbf3981abf7856df90.fe4b33cbbdb588f185a876b94e1a28f3d22c262c4c4cd26c3dae1256e4678431.b83dee3d8057b4131f8385e9ae9b891f18dccf6540406d6ceb96a54b337be622.b56a3ef8c995c98ac9eae76890d35a130141f5588b1a08130f4e77b918d7b6e3.03877968a1dd6a6eed2eccb8c1738198cad01d7a5be5f0244d8eeeefe1c0b67a.d41ef4e2a73447543281f678750e333a38469c03565be8bcefcc68f6d8ec5920.45ac5f1d002ddca3cbaa5317116c17fa98fdbcebc844f58e4c00cc70ea141c1b.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "dac0c0625edccfc1d41c6324bf9e86bbca5927ad20d71e0ffb87e60af9933568",
+                        "value": "b118d7ae07fa77673dd97618aa2f130a9bd9a435f3f80675ec77e25926fe32d3"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "ec48409c5b6f2c1d072281b8e6ba5c12400ffba3edc365c5f180581f8f5af71f",
+                        "value": "7e3680272dcf33e9400436add31f6d0b2766eceac706454ca9d4c42ededa54a1"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "bd5ca4615aacdd76057ab096a9bae9526b16b97eb55c50e64b58bb890835f49a",
+                        "value": "e851204317fb852234fd770587a25290de86a0b01d7fabcd7dcc84b04daf6c5b"
+                    },
+                    {
+                        "index": 4,
+                        "keyHash": "1eae1f80ea893439d9550ea715f5d34ad62909c7abcb071132369bec78bcd538",
+                        "value": "c088a382489369177237c7fdb24e075b3f7fe111e614c8bc25812dd780d4fe6a"
+                    },
+                    {
+                        "index": 5,
+                        "keyHash": "776750b48e3ad50decceb9a6dd1d58572a783dbb7ccfdd3e46f8901f1d262418",
+                        "value": "d8c9892404c30969d371b117ea943a31fd745e3419c3370c1f787dfe27e19d2f"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "a5bc3aba8d04be28bbd5b35e594d79bcc85ea07bf587648489dd6166cb4a33ce",
+                    "s": "304ab2e94648b35dc8ec5d779173b3036ce6a4a00a1155cc2ed13e79e2874432",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969623,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170448500,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170448307,\"latitude\":25.017642,\"longitude\":121.539248,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R6",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "f8d2793929c5bbb452adf89a8662f4c9428efa2b890727e660f765045a03fc81",
+                    "s": "6a67e30d5db9ec10fccea36906867c4528bff8a5150e1de23dd57ef060084ea3",
+                    "v": "1b"
+                },
+                "timestampSPO": 1605170448954,
+                "result": "ok",
+                "sigServer": {
+                    "r": "06e6389ad08e1e8dfc08460658603d605ba1b94a09d323586e0732e4f620b447",
+                    "s": "2fbcdb88e1b63d223fb70f0e3e8fa45ee0b42fa31c8b46828e5b01b49b6c0473",
+                    "v": "1b"
+                },
+                "secondPart": "19fa28e04448b19a708512ab2a6a7458c32c464e8589c24f7ff01737a7c565e2"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R7",
+            "exist": true,
+            "merkleProof": {
+                "slice": "229.fdc151fddc12e0c569cb8adb46b9cdacc5cbb8892a48376a701df2df0a1cec06.0e98c96218ab43994fa2c23d24fa21210c98574fb78bf5fd5507f7191b4d1b24.941112f401e19eab6ebf09c394200d5c81294084be4bd20ad99896827b8f3f9d.3e6703f10b6e25cbf365122c47fc8b5ca5ac15e4eb23aedbf3981abf7856df90.fe4b33cbbdb588f185a876b94e1a28f3d22c262c4c4cd26c3dae1256e4678431.b83dee3d8057b4131f8385e9ae9b891f18dccf6540406d6ceb96a54b337be622.b56a3ef8c995c98ac9eae76890d35a130141f5588b1a08130f4e77b918d7b6e3.03877968a1dd6a6eed2eccb8c1738198cad01d7a5be5f0244d8eeeefe1c0b67a.d41ef4e2a73447543281f678750e333a38469c03565be8bcefcc68f6d8ec5920.45ac5f1d002ddca3cbaa5317116c17fa98fdbcebc844f58e4c00cc70ea141c1b.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "dac0c0625edccfc1d41c6324bf9e86bbca5927ad20d71e0ffb87e60af9933568",
+                        "value": "b118d7ae07fa77673dd97618aa2f130a9bd9a435f3f80675ec77e25926fe32d3"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "ec48409c5b6f2c1d072281b8e6ba5c12400ffba3edc365c5f180581f8f5af71f",
+                        "value": "7e3680272dcf33e9400436add31f6d0b2766eceac706454ca9d4c42ededa54a1"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "bd5ca4615aacdd76057ab096a9bae9526b16b97eb55c50e64b58bb890835f49a",
+                        "value": "e851204317fb852234fd770587a25290de86a0b01d7fabcd7dcc84b04daf6c5b"
+                    },
+                    {
+                        "index": 4,
+                        "keyHash": "1eae1f80ea893439d9550ea715f5d34ad62909c7abcb071132369bec78bcd538",
+                        "value": "c088a382489369177237c7fdb24e075b3f7fe111e614c8bc25812dd780d4fe6a"
+                    },
+                    {
+                        "index": 5,
+                        "keyHash": "776750b48e3ad50decceb9a6dd1d58572a783dbb7ccfdd3e46f8901f1d262418",
+                        "value": "d8c9892404c30969d371b117ea943a31fd745e3419c3370c1f787dfe27e19d2f"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "a5bc3aba8d04be28bbd5b35e594d79bcc85ea07bf587648489dd6166cb4a33ce",
+                    "s": "304ab2e94648b35dc8ec5d779173b3036ce6a4a00a1155cc2ed13e79e2874432",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969625,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170451181,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170450939,\"latitude\":25.018167,\"longitude\":121.538878,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R7",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "a24a3c79c3c435bf088b9503a98df59e024f7d9dcaafb3428a76d8956e8926fc",
+                    "s": "67c547926b97564f99ea7fa6e53979a8f6c2430e3c1efb68ae498784646fa2f5",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170451636,
+                "result": "ok",
+                "sigServer": {
+                    "r": "3421eed4b1f5cc6beb2391205cfdbf55afa775830498e9f94f235fe8b1bea97e",
+                    "s": "3a65124d82a8cd23d08161e1064c0b430ea92a18e884ca9ab4adc3455bfa6544",
+                    "v": "1b"
+                },
+                "secondPart": "35abda6931b0061d4e6791d1aacf98ad1e833f9def9ffa624bd364b4dbbaa568"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R8",
+            "exist": true,
+            "merkleProof": {
+                "slice": "135.8f1073ec3ac79a891d541febd2ad5378d6673e9eacba07b00f32576789727eae.b033bfc42019beca0ea6c2d0f10e8bd583f6846218284d8e1b30a088b3f61453.8896b790cee5902009156f7fd216f421eb8ab0195a1aced4f7ce70192dde372f.a0bbbd3f3ac8bba43ed35088c0e0378ef09c80ac1937f8e69e7e42a30a0dca13.aa67292c8314112ba3ed2ab96f8eb35fb9d23dd8d88277bc5681750b6539b276.b0b5fc0c7f4f00660d149f8bbe2bf8db50d6f52a47124ba2921466eba69ba4c0.7216ce52a4402652045d5279953b4a1666a01385723cb9e5c28dd02c5ffd18fc.0645bb51959fb75bb5fc6e072f8f7d5230cb76b260d22fa2afb4400255e22d5e.b771927c3b61a86c8327d11c62e0a092d722c95fd69a613c9126b245b5c9a837.85762cf09a4444e666f761536fcd7347a2bf37fdf9eed756e2d9ca6c52becaff.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "d1c59af1fa3c4404233166ebc4b57744ec94166f47d54a489df06a4d9f37aaf8",
+                        "value": "b3e5bd48df8b06bf0bc413a35b348c8f4415dab2531c7ce2c4659a879ea51206"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "5af0e075e617ad09ff683635782f45f1d0e665e49abbb15aa5443eb8478f59bf",
+                        "value": "e192965ab981d0d5be0cfcf4074e1929d7a64829e6f4b2f9fd437c97fe7c8400"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "1fffb099227c715772efb36404a80166884c067b6670a3d8b2e886cb3851bb60",
+                        "value": "d46dba371a264a35e76d802fcc886ab35188f4fbcfc32a6a3ea2eaef698c87e9"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "6850800106a83f7a38d5056fc09088465621f64dc710e9c4baefc2cf34a3a836",
+                    "s": "4fa709a7ef860e4357af80414ac1ff1fc35381c86f0ae6530585bccf80325a9f",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969628,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170453811,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170453618,\"latitude\":25.018458,\"longitude\":121.538362,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R8",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "437d4ffe959b6d9b94d58d5f40f8a2ec16d8a7cbc99406341386047559eaee22",
+                    "s": "76d68a67d9d4de8ff31e1c4bdb19d9cf45033c36bce6b03a96ddedc7fbe91e1e",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170454265,
+                "result": "ok",
+                "sigServer": {
+                    "r": "a118c157542a84d95a8eccaa02091161747e731dc2998b5dc65bc59bb06d5c05",
+                    "s": "0405d3bef28da98ed284c133bd06315a2e4c5140e2f04aad6a2f303b8b33e82f",
+                    "v": "1c"
+                },
+                "secondPart": "84c3c1cf2a6d0d4303914c384b9870e7236b2412902910f6d81a99366ab0b29e"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R9",
+            "exist": true,
+            "merkleProof": {
+                "slice": "231.0a6c93a98c806e93e5e1810d622975489d8940d91fcb0bd89f7a858d5ffe8b9a.e5518f345f927c021e630c5fa766ba9a8274e09aa587543141675f9f0c7d8533.941112f401e19eab6ebf09c394200d5c81294084be4bd20ad99896827b8f3f9d.3e6703f10b6e25cbf365122c47fc8b5ca5ac15e4eb23aedbf3981abf7856df90.fe4b33cbbdb588f185a876b94e1a28f3d22c262c4c4cd26c3dae1256e4678431.b83dee3d8057b4131f8385e9ae9b891f18dccf6540406d6ceb96a54b337be622.b56a3ef8c995c98ac9eae76890d35a130141f5588b1a08130f4e77b918d7b6e3.03877968a1dd6a6eed2eccb8c1738198cad01d7a5be5f0244d8eeeefe1c0b67a.d41ef4e2a73447543281f678750e333a38469c03565be8bcefcc68f6d8ec5920.45ac5f1d002ddca3cbaa5317116c17fa98fdbcebc844f58e4c00cc70ea141c1b.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "bb55a81a3239bb54bfbf428a13c66f8a1c33b7b23ef5127ac1cffc14a1186c70",
+                        "value": "610da01256eec05686511784f9cf0f4d0910a884bf7869d57a1ee2d867118512"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "02c65f59cee0277acffcc385320004b5f887cf52b480ece12227bd8c93ca8d79",
+                        "value": "29e1b11c1133cc2d6c5c6195b24553e6b5c15521738c31af7a871f09da42c357"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "4ee34cabf5798c88fa0be7b30781921b5d584918bb55a0c5f198df470c79a744",
+                    "s": "00967556da300a185a2b4b2fb15b6805c15344bdeef10ef0698ee636425a7d81",
+                    "v": "1b"
+                }
+            },
+            "receipt": {
+                "id": 969630,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170456433,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170456239,\"latitude\":25.018347,\"longitude\":121.53759,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R9",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "64747f230a91eba9bdc612ac10462264a377d02e44cd41b8f84771c9716e983f",
+                    "s": "752b04a86cc344d79b87a9645336e93ae285009dfc007c747649bad1bd14c245",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170456927,
+                "result": "ok",
+                "sigServer": {
+                    "r": "5cf700874b5cacf2a576e01b1390b4678caca822c135fee1e93111b2a21051b2",
+                    "s": "3df5c898bee5a70d910d934bd2df4e371566184a05cc7ad7e1a7a0cfe422a830",
+                    "v": "1c"
+                },
+                "secondPart": "a1f2b397a92117ff5ec92a64786480c2c2daf47bbe906279d1adb5dac319456b"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R20",
+            "exist": true,
+            "merkleProof": {
+                "slice": "139.03734023d8d4f83400209c652a978c03fcce3c4514d96d0f067f35786b8e9145.ff2979c1228f4c11b6ce40dcd5a50497b3231e736add3d948c64a2bc1243bf1c.9cf39c1029a8400b9a3e832df1c4a5ad75859002a779a4fff3b8859194c863a2.ca18c357be7a40da65849b2746e91d9a104906621fc551e1698c7995cda77228.ae64bca1c3b4a724b857a766b6fa10e9cf380af8d8cf50996b241b6072624975.e20487ecece3111e4bfe51f4a99ec6fb316e1eee2f093889bf2b79a22aeeecf8.7216ce52a4402652045d5279953b4a1666a01385723cb9e5c28dd02c5ffd18fc.0645bb51959fb75bb5fc6e072f8f7d5230cb76b260d22fa2afb4400255e22d5e.b771927c3b61a86c8327d11c62e0a092d722c95fd69a613c9126b245b5c9a837.85762cf09a4444e666f761536fcd7347a2bf37fdf9eed756e2d9ca6c52becaff.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "34a237641368a680a04ded8225ee3875962a8d6334e61d7af24be7fa0aa308a0",
+                        "value": "0d7d3c0866bb9f8b523a712f37e67447869a1b667e6634bab3044437bc37aa57"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "d9aa184136cf9731aadc324d36a97c550c7b650f4dfbcd1cf9cd012a0a3ea64c",
+                        "value": "e79601072f2d0f131ccfc7b2092dd2bb7a4d15931bd6af2b87d097ea00c507be"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "9580473a5db7fdfdc992b3aea03c7077d2de86e97af1853f49c11b080f0e8153",
+                        "value": "28f084e8b7cbe7484da74bf788908c68582a4e748cef0d15120672ac53a8346d"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "6b2b64fcc3677dbae1bc4e9171aaab87923e9d9f3c7542c848fda97b957645ce",
+                    "s": "23d2969f8bd44eabc3057811f27d05c53b8f7b4e1e88d479361a85aad8a9a8fd",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969654,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170485657,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170485450,\"latitude\":25.016883,\"longitude\":121.53443,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R20",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "65e83067fb8aa961694edee46045e2041bcb82518141805867be874a4518b45b",
+                    "s": "5c81a6644b1ad0f6dc507ac95720129113cba6244aa176ba11f2cc6ff9d1b036",
+                    "v": "1b"
+                },
+                "timestampSPO": 1605170486124,
+                "result": "ok",
+                "sigServer": {
+                    "r": "a0bb08123aff18db5f02193055e7ec2652fbff53f03227d1e08a07212a5413f6",
+                    "s": "6da85fab9cad3fe39123ab2e32007fad19f8927a794a72c6ca37055a9c322369",
+                    "v": "1c"
+                },
+                "secondPart": "47f101ad3de7b04b2345adb1f296b1b8d1881e35d7e2f6c473e77e2b2a5f2901"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R21",
+            "exist": true,
+            "merkleProof": {
+                "slice": "239.56a9e01d694d3db2a82ab62ddf64dcbd8c59beaa6c25e3837d7d9b9bc4e96894.afd16a675e143d6f328c6e186dfa9b43c88c6d62ef33c4f0114b40ec2063ec46.358b142eda65d43d3141600c89db3420264d8616297faaa9ffc2d1e23056d0b2.ecebf42b4e3ad8b2a298acc2afdbd58ea02d56b53c4766f9b255ba82cbb87793.d92eb9791df753dbb8431f031629cd9c98ba1f4c9ae44449d905c79728608a38.cd43ea9ac74ed0b538de38b6d8d8550f3ed1dd3ec5b848721930d188d5721f6b.b56a3ef8c995c98ac9eae76890d35a130141f5588b1a08130f4e77b918d7b6e3.03877968a1dd6a6eed2eccb8c1738198cad01d7a5be5f0244d8eeeefe1c0b67a.d41ef4e2a73447543281f678750e333a38469c03565be8bcefcc68f6d8ec5920.45ac5f1d002ddca3cbaa5317116c17fa98fdbcebc844f58e4c00cc70ea141c1b.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "2d67148db8a64709a111a07b3f8cc6697b23d00d0e170b266bc1b520e219fb46",
+                        "value": "0d648c6faa73076b5a049608a7c558d3d7658e0920c3217f7aaeab5f0ae925c6"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "6d348ad9d330a337cc5cad75d8f303450e0a09b59ec92a1e23b143fdb1a942be",
+                        "value": "a67db000fdb16797c39dc1330e5020d04a4848b779d7f710fdc25f1579a984f6"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "8a8170b124d51df27bd242d26a42389943e13ce6ff4651c58a58c36d94459ba8",
+                    "s": "7cdb7d84b6fb0ed71937d7c42c2f43270c78917c621839db3ec73ee2bd3a776b",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969656,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170488299,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170488100,\"latitude\":25.016956,\"longitude\":121.534902,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R21",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "f477ab41297d6ec35404df56afc718ae1946cba729f04cd9a4c4aa4d84545ccb",
+                    "s": "1d095575cba76dda17f0d6fee557c21906d0d6056fea61ce0f7ee07f45b5ea1d",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170488759,
+                "result": "ok",
+                "sigServer": {
+                    "r": "ae61487ba312e5d1c458376b2f02c275cdd20df93a061b5e90ba29b7ae52e73c",
+                    "s": "69a69d849eb9eaf649101a96c1a8011b130e560dd7add07fb4d0a32da1a91dc7",
+                    "v": "1c"
+                },
+                "secondPart": "ae228a5b02e311cf967ee6acf746eb8faf9dce23af645d2f45799395e54f5a14"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R22",
+            "exist": true,
+            "merkleProof": {
+                "slice": "212.492cb7842373a80d6a389ec63555c962e9308dcd3feb2bfcc339d9ce346ce635.3154e00b2060165250212e0dcab75ce3763f452bdf88a6e7b7a871c04ed79113.8f7e2ce835d3756d377b4362a79a3a61c10d7ce0349c311a2b2c28bcb006d66d.1261550dcaf9c14dfcfc82b250871921186714d851240dacfbb7d4ec1047394c.f50d735ea68054d2ef6df74d046aa06878337374de02e7d3323283c67bd7c7bd.8aefebb4b75188d206dfb718f421081c63424916aa601038c306cbb49defe805.9c1cbd1fc2206768e932a84dd49963c3ea612a4f611bb1823a899bab55bd61ae.c2a1262b9757251e3bf3ec93757ffa821438876407900ce4ee202906c9b0b0bd.37f136407e0cc446ea295e690ec633481ad8105c15bd3296b191b6409705508d.c1fbccb9bfb5395b71167716da0ac5199ee224f0de909086f912140024063414.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "8925084b343641f3ffbe3ad01a3097b2fd2bbd1f5ba6cfbfa3b6c381aee407d4",
+                        "value": "26e63696922b4f22007ce4d9ec278ad976dc3da1263c5dd3564a4673785f8e82"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "e0552dc774ccec0a2f8f56dd363a1ab9cd3e94e0e308c79ff369fb8f03ef7719",
+                        "value": "dbaf85b6a3a65f78acf98092525d5a57a4788fc6aaac87f5bf52b77e87e7a806"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "4bd4137433afbd9432b30ae3f2e2265cea53f09789568a440aa50d2f9990025b",
+                    "s": "2879089686163f796887191ee1473ea63bbfc7a66314ef0ed5000de940526a5a",
+                    "v": "1b"
+                }
+            },
+            "receipt": {
+                "id": 969659,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170490943,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170490749,\"latitude\":25.016786,\"longitude\":121.535524,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R22",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "3e6121583f02c69b5077419f026877cbb6a2367ef67083cd966ab9b478dae9b6",
+                    "s": "63269d45e0b3f5aea4c07d75ae5f673b176e7602921124b7934721d029dd237f",
+                    "v": "1b"
+                },
+                "timestampSPO": 1605170491396,
+                "result": "ok",
+                "sigServer": {
+                    "r": "50524a6b615f59b19d3674a65df99e96252446f734157a7d76329b33ab49676e",
+                    "s": "433644f29af6537f8af8bbc643d58ac7d8f5a834fef207ae444914ffe0bfb47a",
+                    "v": "1b"
+                },
+                "secondPart": "f7578f31c1d22d2d40edc591ff0173eed0b73ea785fd7d7ebe05fd287ca48f1c"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R25",
+            "exist": true,
+            "merkleProof": {
+                "slice": "138.03734023d8d4f83400209c652a978c03fcce3c4514d96d0f067f35786b8e9145.ff2979c1228f4c11b6ce40dcd5a50497b3231e736add3d948c64a2bc1243bf1c.9cf39c1029a8400b9a3e832df1c4a5ad75859002a779a4fff3b8859194c863a2.ca18c357be7a40da65849b2746e91d9a104906621fc551e1698c7995cda77228.ae64bca1c3b4a724b857a766b6fa10e9cf380af8d8cf50996b241b6072624975.e20487ecece3111e4bfe51f4a99ec6fb316e1eee2f093889bf2b79a22aeeecf8.7216ce52a4402652045d5279953b4a1666a01385723cb9e5c28dd02c5ffd18fc.0645bb51959fb75bb5fc6e072f8f7d5230cb76b260d22fa2afb4400255e22d5e.b771927c3b61a86c8327d11c62e0a092d722c95fd69a613c9126b245b5c9a837.85762cf09a4444e666f761536fcd7347a2bf37fdf9eed756e2d9ca6c52becaff.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "4f3cd415b7eb105a8c04327481a1cafea986aa80c0c82df8569230dd9e9ba793",
+                        "value": "46486673d068bdcfa1c2458785fbdc152c581dd056bb347fd6f6f49bf5cf1f4b"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "e3a2394d4a8826f71128d81bbc72c578ac1abf082265ef7a8c631fd8e8303b27",
+                        "value": "9a7558aa2441c32d51d32f6ef026bb60716e8f57c2335bf06c0d5f4370a586dd"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "97d3623103ec783e059807cfdc484eeef04e1bf14b22deb9be2297bdd022f678",
+                    "s": "22ab659514c65f74e0d9df6f73b22e582d9ab37bbaf3aae3ed5da49255b325af",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969666,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170498865,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170498666,\"latitude\":25.015999,\"longitude\":121.535836,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R25",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "d1b43e52d0f461d2fce8ab2bb60e83cd2c40b814ddc7b7a9e446a4903b304c18",
+                    "s": "4df3ec886b5ed78dfd386bbf9035191096bc8aa457b8a9ce8831935b5bc2ae55",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170499321,
+                "result": "ok",
+                "sigServer": {
+                    "r": "85091ebc86018b2c4ccec011f4184539fd9197f8f97530cf1b104fb691a07fd9",
+                    "s": "3342f940f7c393f7e972ff35a0783c938b1e5890d34c6d63571b17c065ec666c",
+                    "v": "1b"
+                },
+                "secondPart": "a796b1c5edb285ea475a636b7a5c8ca00c9f4e372be54f59970e3bb18d757fc4"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R26",
+            "exist": true,
+            "merkleProof": {
+                "slice": "254.5a1072fa9fef0c643424aaa899c95ca000235db0dd6f36ac5c40ce0983cb7a7e.16c81ffa97a6df43b6c66eea1f616f1c00fe6aafaca29f4d4b3dcdf2168deb70.ac8fdd2ba92d961adc3bb8a0611541d4a852338df3037061bf7573f39c7b2fd5.211bd768dbabfd7806a63cba7420e695d2b84d0ea1e37ea64ef006db2969592f.b5d81cf58ac81dc419a10efedd9658af49289a2303b32f2ee91ae94426a2515d.fc638da743f21f57867e0ecc661a0329119c28d2e77c76c865a2b3edb6a23b99.dbf40419e54fe8b35a7dd64253443e8f8ca5bc2f4daafd58bb4009ec434685c6.248d52d947721d607cc9a2cb61270f4dfa3d610509c1660ba3764df4f9b47768.d41ef4e2a73447543281f678750e333a38469c03565be8bcefcc68f6d8ec5920.45ac5f1d002ddca3cbaa5317116c17fa98fdbcebc844f58e4c00cc70ea141c1b.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "826146e49ca894b6c8e0cf8cd12a8a747c6a31d81fe44c68f0f7c5e684c72021",
+                        "value": "d30367d27d1e5ec144c17b61b8f1c37f4f217f0109013c96313b29d0002626a9"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "997f94e71ed3c6bb204e4049c786ee46fa5b8430a7a2f5839631383205864602",
+                        "value": "768181827058a2c97f5abbb85b31cc4c026a0195f7a54abc0bdeee1de5ae5ff5"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "812787432bd4cf1f86fd4cc526403c061a725ea06d02a8f3db74d48c11272ab9",
+                        "value": "f4a97f4249c34aecab2ca20fc4041ef1b17d5d63806b0390337928ee40f29c08"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "60132e1cd28bd80eb33de1b024145085ed4b688e0781c9f423f34c4d7af62c63",
+                    "s": "205d4863c7a7fc965b3b200cff2f689db30a9713a8a7039642514a762e9fb406",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969668,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170501495,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170501302,\"latitude\":25.015508,\"longitude\":121.535943,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R26",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "ef9252d303f5569b50df3f04256df43d0c0a12b30751fbfd662be8ccf7ba4df0",
+                    "s": "6aaf80305dc0bb17c80d8f2c5a6751350685b42ee4208cb88a1e7858a234bcb3",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170501958,
+                "result": "ok",
+                "sigServer": {
+                    "r": "db023fd834bb090d347ff64afade6854d4f9ca0c229f01f53bf83f2b585da86c",
+                    "s": "298c7464b6ccc5e7b3246adf9461ef14afeb4bc0a521b7bef974c14e711e944d",
+                    "v": "1b"
+                },
+                "secondPart": "57771d3b5bf1f57229d8b6f49c019da52d4dd1f50808981680842ee465ad4200"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R28",
+            "exist": true,
+            "merkleProof": {
+                "slice": "163.12aec937574a36073a734e134ef52ed16f87bc68a480685761383f319c9ca18f.86ad8bae875e6712102a4a4a64e759b1b8caa6fead27592a2eee4800bddb87e7.7967b1995a71d04b88bd867d96903c81003a8ae164dcb93c3e72547f1fb61554.6926d5a27f0a406e2f0892f224429f6666a6e76ba2ec1063bb187766c89bd960.bfa2085a9fc28953fb35d760d18879d1d1c82cb1facdb5609c11a90c798af8e9.107d20be62fba5e440c24763a0f3332c702e8f1cfb8a83f97707c2d36b5bf8a7.6e46fe7455d881f7f7475211947574494b0284449e02c5e4902a002239754beb.bcdd450e47e6c88dc7ddf3f0a3f6496a1bd906dda915f32fbf85624944307398.a66f2429ec07acd2a5de89e36999dccf7afc87523402625f9f9b3679c326fd5c.759c2925f621f3304406348b504b124000e7444757e1059b62a67be22c74c668.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "8d70a14275f6ddf4d1c00461669c98f8b3d3882e81310f7d4fcdef4676285ef9",
+                        "value": "bcebd7b0f1c39806c2090ab32c5625d186a882514c2da4df2687fed804f1028c"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "231a4198c81a0b32c1f181e5738bd7b0d61e95df75ed3859b2a547735af84c19",
+                    "s": "7208a10310967bc05326866d706e32f9e1836257e1e0775b3f6e1c39c364a48e",
+                    "v": "1b"
+                }
+            },
+            "receipt": {
+                "id": 969672,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170506778,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170506580,\"latitude\":25.014769,\"longitude\":121.536018,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R28",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "a7084623e24271ec4e5f8ee78968539981407bf37e90cf8caf4701ca1af23cf6",
+                    "s": "253fdf39481c2e734eef8aadb026f2ec1ceb8d6116c02ddf718e1510a652e7eb",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170507234,
+                "result": "ok",
+                "sigServer": {
+                    "r": "e1bd401050742fc5ed8eaee125bdd6b5fe52ea286126bca540c25da8c275fc8d",
+                    "s": "01010899eed001e3e46ee71308961ea663a7d6f0877562f80e1cf39ae731f3da",
+                    "v": "1b"
+                },
+                "secondPart": "31549d45e441324b4f0e0ba8e541f5a296db5bff7bf0d534db64c1d874a775c1"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R29",
+            "exist": true,
+            "merkleProof": {
+                "slice": "197.1da699d5d89139d03573e11a6566b9f4b93272c4bb30eef1be3fd9ec95c9108e.c9ec93d86caf30a303275fee805c98550c43121e08d2933047d274630c3e9540.1ea195d1c2bd421eb5cd1e4cfbccff8462bf1957df6a682e710c5f7e0c8ca1ad.0d390e482c76e4d6fc75b27e2d073cff8b531ef94008f41346382b1ec5159a8f.cc84450085f5a741587e8c827c603f46756bad3337424ce85b241de9aa794387.271aa9043597e568d9be32bb05e4a8020375569f1562861b8f5433696bde177d.6895781f947428d210bdf7e4f6ba594f253c3048306d37b3c373610facedb157.8ba35ed929027f28583deeafdc3236414867354cb8cd9b342f3c5810261abf23.37f136407e0cc446ea295e690ec633481ad8105c15bd3296b191b6409705508d.c1fbccb9bfb5395b71167716da0ac5199ee224f0de909086f912140024063414.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "e83277266e97eb43c3385e4a1d959eda5eccd54621e9c64e624ea6da492c1868",
+                        "value": "fb356b09279dae118c4283c2446dace9f711e30b884633e1e57388205e59bf95"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "40f9f2c2124213fe01f53d7b1cb4cf5ee6d6d090630f26f479fdc2ec0644680b",
+                        "value": "58f8654299eb79d5650bf5a7b6d13c4e3aa24203bc2850c93ad734f9eb9df595"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "67c85d992f0e1586f52a11e6452f5da255f6af6ea512b7412981615c6c0f624c",
+                        "value": "94dbd858e22f0ac55b0b8b6cc91c242fe4decdc9700d92d8ee7f4ba7f1b4bd2b"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "7e8e11a7c9a6128d6d68cf2b57551ea2b82cc8a1f209eab437570add87df8f20",
+                    "s": "2d921e7884e56c01dbf956db88e2496449a2f1980ecd607c50654fd89ca42b22",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969675,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170509403,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170509210,\"latitude\":25.014633,\"longitude\":121.53567,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R29",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "a4b9db1abd0a1018a9c09ac76f5537399edd142575c83e83e557295a7064f24e",
+                    "s": "03284b46841b74e6e5d0cc5be476d773631f1b2203dc8ec669cd43341fe7995c",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170509859,
+                "result": "ok",
+                "sigServer": {
+                    "r": "497d40f766fbb4a044afbb115a8e15875d3d7fc7947ef5c2b381193488598599",
+                    "s": "1519198887e6be8c2e90066e43fb314dea7039fd5ee34dd6c903633367c59d38",
+                    "v": "1c"
+                },
+                "secondPart": "340006b150c2784e22d3238f489fb318d0b4806f67e34c67520a8c07734a267c"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R31",
+            "exist": true,
+            "merkleProof": {
+                "slice": "139.03734023d8d4f83400209c652a978c03fcce3c4514d96d0f067f35786b8e9145.ff2979c1228f4c11b6ce40dcd5a50497b3231e736add3d948c64a2bc1243bf1c.9cf39c1029a8400b9a3e832df1c4a5ad75859002a779a4fff3b8859194c863a2.ca18c357be7a40da65849b2746e91d9a104906621fc551e1698c7995cda77228.ae64bca1c3b4a724b857a766b6fa10e9cf380af8d8cf50996b241b6072624975.e20487ecece3111e4bfe51f4a99ec6fb316e1eee2f093889bf2b79a22aeeecf8.7216ce52a4402652045d5279953b4a1666a01385723cb9e5c28dd02c5ffd18fc.0645bb51959fb75bb5fc6e072f8f7d5230cb76b260d22fa2afb4400255e22d5e.b771927c3b61a86c8327d11c62e0a092d722c95fd69a613c9126b245b5c9a837.85762cf09a4444e666f761536fcd7347a2bf37fdf9eed756e2d9ca6c52becaff.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "34a237641368a680a04ded8225ee3875962a8d6334e61d7af24be7fa0aa308a0",
+                        "value": "0d7d3c0866bb9f8b523a712f37e67447869a1b667e6634bab3044437bc37aa57"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "d9aa184136cf9731aadc324d36a97c550c7b650f4dfbcd1cf9cd012a0a3ea64c",
+                        "value": "e79601072f2d0f131ccfc7b2092dd2bb7a4d15931bd6af2b87d097ea00c507be"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "9580473a5db7fdfdc992b3aea03c7077d2de86e97af1853f49c11b080f0e8153",
+                        "value": "28f084e8b7cbe7484da74bf788908c68582a4e748cef0d15120672ac53a8346d"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "6b2b64fcc3677dbae1bc4e9171aaab87923e9d9f3c7542c848fda97b957645ce",
+                    "s": "23d2969f8bd44eabc3057811f27d05c53b8f7b4e1e88d479361a85aad8a9a8fd",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969679,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170514657,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170514461,\"latitude\":25.014098,\"longitude\":121.535322,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R31",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "60b6fc8dc210101004def8ae2aaa139d03db4e8876f9a98de463a911f11a85a2",
+                    "s": "244248566be086a3812dbe758835ba2870f9aa052f109720ad1752d7a86c97a6",
+                    "v": "1b"
+                },
+                "timestampSPO": 1605170515111,
+                "result": "ok",
+                "sigServer": {
+                    "r": "ab80c1a4e0b7bb49a5bfcbc32dc025c7462db7e615e25548ab7c90515a45d9c6",
+                    "s": "16200dea53740873f10d73beb714e1a3bde1c686a86f4c5b28218a97c732fd47",
+                    "v": "1c"
+                },
+                "secondPart": "e6b3d0161c70ba2831a68adbf41039c8066479a07be66119869b0804778d4572"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R32",
+            "exist": true,
+            "merkleProof": {
+                "slice": "227.5d93b55a44386a7b858b836c840c40c1c7cd56bc23cf85ded61a1652d1afad94.75dcea086519a08b294d2bce73691a9de0f6c07769f264d088b8b3a3d56dd861.82e3d3fc07602844807d0737363f8c1597688a49e6c81a23d0d075e220b223d6.937d28079ccf007a8d2ec2de3cf0283f6d2f34f247fa451570bac25d68e821d2.fe4b33cbbdb588f185a876b94e1a28f3d22c262c4c4cd26c3dae1256e4678431.b83dee3d8057b4131f8385e9ae9b891f18dccf6540406d6ceb96a54b337be622.b56a3ef8c995c98ac9eae76890d35a130141f5588b1a08130f4e77b918d7b6e3.03877968a1dd6a6eed2eccb8c1738198cad01d7a5be5f0244d8eeeefe1c0b67a.d41ef4e2a73447543281f678750e333a38469c03565be8bcefcc68f6d8ec5920.45ac5f1d002ddca3cbaa5317116c17fa98fdbcebc844f58e4c00cc70ea141c1b.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "b8471882bece2bf14930b842421b198239d14b7139ebc9268c59a30c7d78386a",
+                        "value": "4fe88805422a7e05b531b6adc3adbaf0747ee9ae73d2bf4039a3d245dfca62a8"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "200905ef8338b68a8ac4cce3f9670e0b2e3f6edf7516eba14b889386b2a46f45",
+                        "value": "5d90a00738a22a21c5a402c08a0274317566f484a14af1c0b44edc3a3ec7e9a6"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "36ae8502cce819beddd258a94aa6a290b746ab9f7180b25ff27e7c78b2331ffa",
+                        "value": "8e6887dfcf29ab9c1ce9cb807a049038c6c2a184e6684141db007a1432f1db9c"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "bc745451d195739aaf149c26dde271926db981c27f3d7a3ac99a13dbb04b53c4",
+                    "s": "20baf6da85e0857ad6841fc0492ba71f1f5a9787913140d904ef9e20536a250c",
+                    "v": "1b"
+                }
+            },
+            "receipt": {
+                "id": 969681,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170517284,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170517091,\"latitude\":25.013865,\"longitude\":121.5356,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R32",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "b39e29b9095dd5fd25448f1284adcebc4ec57e2168fe040fad014246243bc818",
+                    "s": "6f78afbac93c9114534ae70d452f3a0bce4f6dc6112ee81a555c3277cc15a872",
+                    "v": "1b"
+                },
+                "timestampSPO": 1605170517738,
+                "result": "ok",
+                "sigServer": {
+                    "r": "beebe394e941e2ceda2b36511e00189537eeb688e0e392b9982d11047eec2614",
+                    "s": "743472ae44dde8ae98a9e3a19d32e525d0504bbbe1b8e3ef27ad03b77cd4b7d7",
+                    "v": "1b"
+                },
+                "secondPart": "22600c133bf5bc3392b997d47fe7be5119ac8915d4011d677f842b8e4e512b29"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R33",
+            "exist": true,
+            "merkleProof": {
+                "slice": "212.492cb7842373a80d6a389ec63555c962e9308dcd3feb2bfcc339d9ce346ce635.3154e00b2060165250212e0dcab75ce3763f452bdf88a6e7b7a871c04ed79113.8f7e2ce835d3756d377b4362a79a3a61c10d7ce0349c311a2b2c28bcb006d66d.1261550dcaf9c14dfcfc82b250871921186714d851240dacfbb7d4ec1047394c.f50d735ea68054d2ef6df74d046aa06878337374de02e7d3323283c67bd7c7bd.8aefebb4b75188d206dfb718f421081c63424916aa601038c306cbb49defe805.9c1cbd1fc2206768e932a84dd49963c3ea612a4f611bb1823a899bab55bd61ae.c2a1262b9757251e3bf3ec93757ffa821438876407900ce4ee202906c9b0b0bd.37f136407e0cc446ea295e690ec633481ad8105c15bd3296b191b6409705508d.c1fbccb9bfb5395b71167716da0ac5199ee224f0de909086f912140024063414.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "8925084b343641f3ffbe3ad01a3097b2fd2bbd1f5ba6cfbfa3b6c381aee407d4",
+                        "value": "26e63696922b4f22007ce4d9ec278ad976dc3da1263c5dd3564a4673785f8e82"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "e0552dc774ccec0a2f8f56dd363a1ab9cd3e94e0e308c79ff369fb8f03ef7719",
+                        "value": "dbaf85b6a3a65f78acf98092525d5a57a4788fc6aaac87f5bf52b77e87e7a806"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "4bd4137433afbd9432b30ae3f2e2265cea53f09789568a440aa50d2f9990025b",
+                    "s": "2879089686163f796887191ee1473ea63bbfc7a66314ef0ed5000de940526a5a",
+                    "v": "1b"
+                }
+            },
+            "receipt": {
+                "id": 969682,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170519909,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170519718,\"latitude\":25.013588,\"longitude\":121.535879,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R33",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "853da42a772ca1320c6ed1a6575698735b57d300937c70c6ade60b5d61ff62b1",
+                    "s": "6b5891a10ad0730c27fd382fe94f8ab5caaab8adbd345415eb8e49d43f6b76cb",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170520364,
+                "result": "ok",
+                "sigServer": {
+                    "r": "ae4be4c0acb0a9bc742e820b1490d06a33e1b5de65708c0d023915e516c1f5e8",
+                    "s": "4a0aa7111e370bc01316457b16f4e977d7215f1c5282452c818e940e5672dab3",
+                    "v": "1c"
+                },
+                "secondPart": "a7fcd6b686bc2e294fb9991da6fc5b855edddfe80326cc70ac105c857ce14048"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R39",
+            "exist": true,
+            "merkleProof": {
+                "slice": "181.38240fb3429a53a3056076326bc1a7720942f0a4f48d4cb500d90c1ceaebd5e6.1e46b5a89408c026bb49e6b74b398d68e12f761802d7f940f246ab421688d4c6.ef7337971419bf9c3b4e5ba5759b41b6fa23765070b975def7c4034760ebebb1.999b40aba1e1512baaa5dbe15832c414adb67b2b33fced5da98ded2bf8df45e4.6d34249423673e9447a43f40b0d127f9244d34fb8782aff1ce2ea3b174f5a8e6.19dfda3b1ac97607821db67dbf2a56e7af109018e86e1b25dd4c42d97dab3a5a.feefd5cb73ea0cf23c4bd4fe564a887e9580a6d5661e7322e7fe2c5f09f780f7.94819aab6255fb1d2684869444e952f91f2b70c02b3482d19dedf8b9a88bc330.a66f2429ec07acd2a5de89e36999dccf7afc87523402625f9f9b3679c326fd5c.759c2925f621f3304406348b504b124000e7444757e1059b62a67be22c74c668.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "57a4c140841edf7ae3d70d83d43e25f28cbf83f820ac223c19a8f2c82ed12655",
+                        "value": "2b310cc024a89f0142fec0c8ddb4aa33713610c5e657deed32ed3c62ce0df30d"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "0ecc80aa444edf3b08eef5f29098578f0c16d330b0837fc23cd5a4e05cca6dc2",
+                        "value": "ad5217b9accb5d68e5b53046f5b0dbb49807dfce966ac8e1c77c57832e13f94a"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "dd56bcbef05a937e8c9c699e879917fa7abd8e0df262065b52fc780148716bea",
+                        "value": "d4399bee8ace833974dad397801b0c7d4c9f9b07e219c23d01037eb0d3fc6663"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "affe9747afdafc34b504e2a0b029e197e841de04ac8ba4101d27c3036d4e11c8",
+                    "s": "0f1b7cd69657509b2178a80ba7c5919ebe0a295709c109583a528fccb43d5a6b",
+                    "v": "1b"
+                }
+            },
+            "receipt": {
+                "id": 969697,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170535688,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170535494,\"latitude\":25.011653,\"longitude\":121.537461,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R39",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "ad8254de3bab8116086137e084b72026d3428d6f2eb82a252de9f75521254960",
+                    "s": "433f6146182bed1ba2ed10710819022d8c95aa81d2222e68e514c390461b2b02",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170536143,
+                "result": "ok",
+                "sigServer": {
+                    "r": "68190ccbacd0c128f43491f7702a66d4ed6b7069f531c0d9d26362d0bddcef42",
+                    "s": "1531c479e89967f1b0e0dcbebf1ec9e28c8eec4dddc7776da158be8ddbbb9d62",
+                    "v": "1b"
+                },
+                "secondPart": "b9747056d07197a826ab62fb53d81e6b773dfceca16645272c5e1c950700dc90"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R40",
+            "exist": true,
+            "merkleProof": {
+                "slice": "172.ffbbc90c8b1437acf2ffe0e420942c880d44e284d7c36c652b81efd83ffaf2f8.8ec26f18ff541822702d34ba7872027b56a7d2ab23cf019e1befc47e93c232a1.1e85d7ae4ec8c22ab6174472eaccb904f1f27c08191acf72b286c8ed30d5ca22.98fb0f16b7076aa49d6e4f16ea6a15b03a75024b38fb26062c83d2eac4d2e3a0.4b07c4249b775e8cd2e84e8dccf9d6cc2ce22e6e365bdbaa29c9ee3e58597641.eeb566445228feb985e85978bce60a36f9db2a50f129ff855604d7e4e3d3111f.6e46fe7455d881f7f7475211947574494b0284449e02c5e4902a002239754beb.bcdd450e47e6c88dc7ddf3f0a3f6496a1bd906dda915f32fbf85624944307398.a66f2429ec07acd2a5de89e36999dccf7afc87523402625f9f9b3679c326fd5c.759c2925f621f3304406348b504b124000e7444757e1059b62a67be22c74c668.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "41c352106473fc9b80d0db50e6aba11333d261216960623b3ebc066a16114195",
+                        "value": "accbe61a4d2cc9922655dd51b157e558187831a5cb53c6ff4e969221e08185c9"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "bd2e4456ee75a89adbec31914bf3b28496b78c7484ac0ce51a47fb20bd330668",
+                        "value": "96de8f79149a1199294cb6dfd77ae31a8b661aedc078f862ca1b257dd6ed3c93"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "be4731e5faa89ba30954243d8a2a887d21fa08aabc07d41f0e5633128f7e4612",
+                        "value": "9f2d06241180a4c69d254dcb2317cfa993706b657a615b2eaa4b7629f79e2087"
+                    },
+                    {
+                        "index": 4,
+                        "keyHash": "ac5f89b47e52db47b596adb3c51a8e8e9cf45bfe60fd97ec9f2e1622d1e43892",
+                        "value": "ce46cdc74c71b7f747671aaacf219150f30dae04fd8ecbd2fc61463a29f2f043"
+                    },
+                    {
+                        "index": 5,
+                        "keyHash": "e3de2c25ee5a69bfb1289194bc536a2571bda240dd5be80bff387a941d50c41e",
+                        "value": "6b341096ff169946d45227f10f93da30f7823e21493b9f41035ee78150f13b78"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "558b4d796355647bf7cc86f486ffd73ca265baac05db397aa343a665382bd285",
+                    "s": "2e017947b45c8b08e5f38782414ff77b658e13dd3418465bbea591e7a252a226",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969700,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170538304,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170538111,\"latitude\":25.012163,\"longitude\":121.537836,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R40",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "8ac47c3c3cc5592d9c898ca2952f258a260b758a999bfa7b1a38dc503d77b56a",
+                    "s": "362e8e53ff8af29b110ce2c4f767dcc2906c02dd5529fce883beec22544d483c",
+                    "v": "1b"
+                },
+                "timestampSPO": 1605170538761,
+                "result": "ok",
+                "sigServer": {
+                    "r": "04cfe751c971eb56ea96505a4be3eba137db229fe51196b50164333dccd85009",
+                    "s": "18e11f0a1f56e538f8c9d0b06f8815a5bada6bb91e3d87485e86d26e311d6c72",
+                    "v": "1b"
+                },
+                "secondPart": "081664ff19bbed20759d1aece849234e887bc3833507898e2e84ae6c93ed39b9"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R44",
+            "exist": true,
+            "merkleProof": {
+                "slice": "196.1da699d5d89139d03573e11a6566b9f4b93272c4bb30eef1be3fd9ec95c9108e.c9ec93d86caf30a303275fee805c98550c43121e08d2933047d274630c3e9540.1ea195d1c2bd421eb5cd1e4cfbccff8462bf1957df6a682e710c5f7e0c8ca1ad.0d390e482c76e4d6fc75b27e2d073cff8b531ef94008f41346382b1ec5159a8f.cc84450085f5a741587e8c827c603f46756bad3337424ce85b241de9aa794387.271aa9043597e568d9be32bb05e4a8020375569f1562861b8f5433696bde177d.6895781f947428d210bdf7e4f6ba594f253c3048306d37b3c373610facedb157.8ba35ed929027f28583deeafdc3236414867354cb8cd9b342f3c5810261abf23.37f136407e0cc446ea295e690ec633481ad8105c15bd3296b191b6409705508d.c1fbccb9bfb5395b71167716da0ac5199ee224f0de909086f912140024063414.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "5cef18ea8e0827c8be722699a1107a5452670d8e07340d11329273df0afaed8c",
+                        "value": "73ba42f3b526271c43dfa25d7dee93aa8848f71d4ac03ec556ab2408d56f998f"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "761bfad49d730dc9ca457bbe6e4ec68a49a4070da11c3c73aeaeaedd610f6893",
+                        "value": "ff9cc9dabf021e3fe027f6b1c8731be00d698f22b6048a94f45dc13037d3a877"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "ff6be97bdb83d6f84b0def6b9ba4fd3411950661f141a44cb7093f8bb480c927",
+                    "s": "004e39937ae06ea50e5c93c6f1743b78c6025a862e69831f11b0a5b504a3497e",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969708,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170549475,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170548644,\"latitude\":25.013427,\"longitude\":121.539601,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R44",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "0e0bf176f2403fbe28b228613b3de6b70e6f0eaffcd4cee470dfa0d153a3893f",
+                    "s": "326159253c8e4e765246d84f2e63acccd90a4a2382c206319c676e2c1d2610f7",
+                    "v": "1b"
+                },
+                "timestampSPO": 1605170550543,
+                "result": "ok",
+                "sigServer": {
+                    "r": "dd2e5bc427dd60a1807a89fe17740fd99d12b566c034869ae6d7378a0ac84cbe",
+                    "s": "29d058f3e2dcb3a0c4b5297bd61836b07e4483cf266f28ecdf6aa29aa7519407",
+                    "v": "1b"
+                },
+                "secondPart": "c96df1f611aec3b780e1cacfe63ecd58b0f499bd095b13824fdf31fec376308d"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R50",
+            "exist": true,
+            "merkleProof": {
+                "slice": "180.38240fb3429a53a3056076326bc1a7720942f0a4f48d4cb500d90c1ceaebd5e6.1e46b5a89408c026bb49e6b74b398d68e12f761802d7f940f246ab421688d4c6.ef7337971419bf9c3b4e5ba5759b41b6fa23765070b975def7c4034760ebebb1.999b40aba1e1512baaa5dbe15832c414adb67b2b33fced5da98ded2bf8df45e4.6d34249423673e9447a43f40b0d127f9244d34fb8782aff1ce2ea3b174f5a8e6.19dfda3b1ac97607821db67dbf2a56e7af109018e86e1b25dd4c42d97dab3a5a.feefd5cb73ea0cf23c4bd4fe564a887e9580a6d5661e7322e7fe2c5f09f780f7.94819aab6255fb1d2684869444e952f91f2b70c02b3482d19dedf8b9a88bc330.a66f2429ec07acd2a5de89e36999dccf7afc87523402625f9f9b3679c326fd5c.759c2925f621f3304406348b504b124000e7444757e1059b62a67be22c74c668.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "ad43d88504b8eca674dabe8ebfd8c9c3aabaf9b415fc729b91d9a48286cc5f1f",
+                        "value": "3bd7aa7983d58071356ec75fdd21ddc110cbff93aa7129fa04fbfbeb0e8dd106"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "8be18e5dbe03d1e096e82164813f276b4fc4057509f57cdd57a06ca6bd659541",
+                        "value": "c8f18af0e3b800f902e40cf76a64406ba799a2ea235dc9b9e28544b6bc72fb8d"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "e24935c8c947618d7fa6e22abc549cc45eb1e9726b6b39d813f548d5e47f9991",
+                        "value": "52aa47453d2f2bd6cb9e49c328f5810b178500d171f6b388b661201ef350e515"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "f18d564f64277c92ce6cdb4dfd02757f48f83dfdc2fe7a68cd13fad4ec7f71a5",
+                    "s": "2b46baa008bf69372beddd9e22d37da9f0d9ca3fe6909ae31cc496d044842a70",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969722,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170566562,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170566369,\"latitude\":25.015829,\"longitude\":121.542475,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R50",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "1c5cd944499ed2aaccd9b4669e5057bd38bdad0ac8ea5ac29ddd8ccc84f1bf6e",
+                    "s": "33576c3a5292cccd7cf830a841db79a9e08317292b142e9e7a92a753f3fcfe10",
+                    "v": "1b"
+                },
+                "timestampSPO": 1605170567017,
+                "result": "ok",
+                "sigServer": {
+                    "r": "e971a1ae049e6ccc472b9ab3d2caf991c19bcd28a0ff4bb06b2ae4fbf325352d",
+                    "s": "0b56f9383d36e8d9dd5898dddd2831ea9927d4b6d9409fca827641b8b8374250",
+                    "v": "1b"
+                },
+                "secondPart": "3e0a49b82db0e1f24cae2335e0e8de649dc6eb84e299c13f5a7b0f7676954f9b"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R3",
+            "exist": true,
+            "merkleProof": {
+                "slice": "160.a7c2b1670c1543c9298f9fa16ced7056990408bb2c0c572773a1dffe6db2f50c.2356ccdd9698e1973e905a50844509afdc5f8c6f4e42bd212d216d325bdde153.7967b1995a71d04b88bd867d96903c81003a8ae164dcb93c3e72547f1fb61554.6926d5a27f0a406e2f0892f224429f6666a6e76ba2ec1063bb187766c89bd960.bfa2085a9fc28953fb35d760d18879d1d1c82cb1facdb5609c11a90c798af8e9.107d20be62fba5e440c24763a0f3332c702e8f1cfb8a83f97707c2d36b5bf8a7.6e46fe7455d881f7f7475211947574494b0284449e02c5e4902a002239754beb.bcdd450e47e6c88dc7ddf3f0a3f6496a1bd906dda915f32fbf85624944307398.a66f2429ec07acd2a5de89e36999dccf7afc87523402625f9f9b3679c326fd5c.759c2925f621f3304406348b504b124000e7444757e1059b62a67be22c74c668.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "43d7c7d0078a4a52c6bd7da8bfa3f05da78f8220aee4ca46c3018aa548809a99",
+                        "value": "3e06ce6d96647bd9c21af3d1cb4fc3af7093c3eb0f42adad37d675636dbbf900"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "0bd3a5190db3151ac5f108a7d783edc5b62a536f796df4f086e437f7af779b93",
+                        "value": "fba23b741d3e7e79498d30a93c92f623217df04d1084187ab51552766d0326ed"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "58141a4c70e9e0ad2747258d365ba609b629cd7ec24e0f0990d646d5c502ec95",
+                        "value": "77e9d9e22fe6999281a0ebed6572bdf5b3eae7d6ea3548112ed53260edccece2"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "686ee398df78ebf90641c6b85a48b3428b279c6f5fbf96fbe97a546040c505d6",
+                    "s": "691bc92084d27ffcaa0faf9e2c28e6ea6149749693f723214d97d55866922799",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969616,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170440571,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170440372,\"latitude\":25.016786,\"longitude\":121.540771,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R3",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "16e0de9ff38058e07c0093b592cea51f9d3c566f1a0ccec08d078e83f31c9cee",
+                    "s": "6115e11831164e9e08fa72a8e2eaeae6ad1d8bd297997128041128e9c7f60014",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170441027,
+                "result": "ok",
+                "sigServer": {
+                    "r": "febfab453370b299e48e8f744fa7255b38e42879249daa81ab88ca1a3fb47dde",
+                    "s": "296e1e2bd24fd80521b9154e295ebdcd7a977678804b078016836d132dba014a",
+                    "v": "1c"
+                },
+                "secondPart": "8d18dcfdabd01095eb5c4f627a049deca576c342721812dd5da78c90240448da"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R5",
+            "exist": true,
+            "merkleProof": {
+                "slice": "162.12aec937574a36073a734e134ef52ed16f87bc68a480685761383f319c9ca18f.86ad8bae875e6712102a4a4a64e759b1b8caa6fead27592a2eee4800bddb87e7.7967b1995a71d04b88bd867d96903c81003a8ae164dcb93c3e72547f1fb61554.6926d5a27f0a406e2f0892f224429f6666a6e76ba2ec1063bb187766c89bd960.bfa2085a9fc28953fb35d760d18879d1d1c82cb1facdb5609c11a90c798af8e9.107d20be62fba5e440c24763a0f3332c702e8f1cfb8a83f97707c2d36b5bf8a7.6e46fe7455d881f7f7475211947574494b0284449e02c5e4902a002239754beb.bcdd450e47e6c88dc7ddf3f0a3f6496a1bd906dda915f32fbf85624944307398.a66f2429ec07acd2a5de89e36999dccf7afc87523402625f9f9b3679c326fd5c.759c2925f621f3304406348b504b124000e7444757e1059b62a67be22c74c668.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "52883e9e959a924227e9e61fe03ad7047a3a3a9075228580e80a5fe4155fac93",
+                        "value": "30ce15441d92ef92eb59cc2288fe8438e67595dbff0f2285405829c01488f8ff"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "2e25f19f1f12c6727c80ab80e3da8930d2f260f0452886cd8c794f11ae4919c3",
+                    "s": "7b4827c9a730ee6cf57f9a9e5b9507e9ce195e702c5e801f4fd61a2180f343dc",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969620,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170445854,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170445658,\"latitude\":25.017559,\"longitude\":121.539913,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R5",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "140eda08b95f3bae667aeb19b1f7aba68d8cd2b0c8cb18081a3ce38d5d2deb28",
+                    "s": "371ce8bf14c8d497baea14ba6c449965213ac3c487c9d7f5690bc342da73fbc7",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170446309,
+                "result": "ok",
+                "sigServer": {
+                    "r": "628a9d4a0c34e766cb41553c6a7f9a1cde5dfa976be0cdd6309155f74cd8020e",
+                    "s": "6d2b2038ddf1c56e61a6bed1eb0587a3d2b304ef6544ec0511aa4c513ee7f17e",
+                    "v": "1c"
+                },
+                "secondPart": "7b300217316527197adb35d8195e83e4fbcc0a79babec53ae586fae0da01c048"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R10",
+            "exist": true,
+            "merkleProof": {
+                "slice": "137.a4686cba79b6cb30b2102a43089ffeccb6963a35e010bd8d8033761308b543d4.56e3a8c11264e0db4017ce7b851377dda174d69f64bb04e30215af1024d9df8e.9cf39c1029a8400b9a3e832df1c4a5ad75859002a779a4fff3b8859194c863a2.ca18c357be7a40da65849b2746e91d9a104906621fc551e1698c7995cda77228.ae64bca1c3b4a724b857a766b6fa10e9cf380af8d8cf50996b241b6072624975.e20487ecece3111e4bfe51f4a99ec6fb316e1eee2f093889bf2b79a22aeeecf8.7216ce52a4402652045d5279953b4a1666a01385723cb9e5c28dd02c5ffd18fc.0645bb51959fb75bb5fc6e072f8f7d5230cb76b260d22fa2afb4400255e22d5e.b771927c3b61a86c8327d11c62e0a092d722c95fd69a613c9126b245b5c9a837.85762cf09a4444e666f761536fcd7347a2bf37fdf9eed756e2d9ca6c52becaff.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "3ce1a84a893be617935f4f78d5a3be19e6e8974f73c2b558d93cb359ab9e52a7",
+                        "value": "9bc91cf3815f48a1cfce28dc9110cc6930e3974385feb963d27b1a95156892a1"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "53c37aa07d33c40442b81064cfb5ea15f2190be47eb63bcb135a3430fdf300bc",
+                        "value": "0f7af28da8ac0aa6d96c825acab8610e12108452a68a57c32d20bacfe745fc0b"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "aefa9ed94695cc05f82b8b95e49af0176d83f764d102f13ad82744db7b36f717",
+                    "s": "52e393f815568c76b81f9c14673f95ce0008264dad1a258c27f51958af010b3a",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969631,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170459112,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170458918,\"latitude\":25.018347,\"longitude\":121.536931,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R10",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "ab92d10a167761fa1e8dd5e3378e5dfcc479d98baa117e848a2040e0670aef60",
+                    "s": "1b4529e84d92ea105012f262e6b15f466afec8d625f98568fd6df5089ca0b699",
+                    "v": "1b"
+                },
+                "timestampSPO": 1605170459565,
+                "result": "ok",
+                "sigServer": {
+                    "r": "9a25bfc7873539d06c194afaaec52ad437fcc1819899e8f1fab41b1cf14e0b8a",
+                    "s": "668b4d7e6eebe7b9452906b964bfe29b6fb06396306b979c6ab75c7584abc036",
+                    "v": "1c"
+                },
+                "secondPart": "289f6e5d261c2d4af6b849ab1ce99edfad09a5b720e52b1a9e0c6d281e74be6d"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R13",
+            "exist": true,
+            "merkleProof": {
+                "slice": "164.27f9a1c9229de935ba3db728ec9af59031825c257ff1dd048d252b8cab2d38ce.183971bc9ec8b4f86124d868be9545125ed74bedfe43ceb19443f555b3fc8a52.f7c3f579e2dbad052ea9b6d31ffe32c7ca64ddea633ac47a7befc146573433b5.ae084cd7e2339868cb0389429979529f662cc4acff41c27e440640b1d9a223e6.bfa2085a9fc28953fb35d760d18879d1d1c82cb1facdb5609c11a90c798af8e9.107d20be62fba5e440c24763a0f3332c702e8f1cfb8a83f97707c2d36b5bf8a7.6e46fe7455d881f7f7475211947574494b0284449e02c5e4902a002239754beb.bcdd450e47e6c88dc7ddf3f0a3f6496a1bd906dda915f32fbf85624944307398.a66f2429ec07acd2a5de89e36999dccf7afc87523402625f9f9b3679c326fd5c.759c2925f621f3304406348b504b124000e7444757e1059b62a67be22c74c668.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "492710c0b359291dc57e424bd766d6e8388f5a7198cb126cfa80b7a7f66974e1",
+                        "value": "f85954590e303b4bd2d6e4a13817238b48d36badb72706602b120ddacf43f6f6"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "3734d7a708c41b91797bd3142816ca3f528ae44110199cc9078a93c7c8325106",
+                        "value": "d6935080f203ef3c0940dd1cee9ae061c5709f229cc1cd81a1880d552dc3bfeb"
+                    },
+                    {
+                        "index": 3,
+                        "keyHash": "b9b74e6b2393928af8274b0a7221611be01b97fdb7c068ae56492c6ea194598b",
+                        "value": "bc732772f2cd5cf6200a9f76236533a11514847080b3e93dc58032bede7657f0"
+                    },
+                    {
+                        "index": 4,
+                        "keyHash": "920963966b41c31fe1338c17bed01f573ed25e1564fef260f9682367bc808f24",
+                        "value": "03606050de331bf7e315ec2581d5d981b8bbfb8b0246f9ec8281d81b81916b75"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "affc371ffe5554d4853278d4f7f2f0cf01457d308384ca7dd73d3df968ea63fa",
+                    "s": "5b464f10afcbb0beb747f7aad0ff76c59bec2182869414945047e193213292a1",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969638,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170467115,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170466908,\"latitude\":25.018395,\"longitude\":121.535075,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R13",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "7366df9ec47301e23604f8caad56865f8143845550470ce99ff701df31a87880",
+                    "s": "018ee353ff1b37431149ee568a3700f17e8874a16e6be66c5ae4f22899be68d5",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170467577,
+                "result": "ok",
+                "sigServer": {
+                    "r": "3df5cf5030190a2cb3632893d29ecc8d07fb0edfb8538976cb6cffe5ec073f8a",
+                    "s": "0b31d00e7fcdd565ae5caf006af88794ad81c2760f3ff82ab430d462e881107b",
+                    "v": "1c"
+                },
+                "secondPart": "319f4abd7c3c04d6d4d64cdb82bbf0da94cb51911c3c46ab37b6be71c1fce350"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R14",
+            "exist": true,
+            "merkleProof": {
+                "slice": "223.9d4af6b35b03dfa1b6ddbd7e4b1079ebd22792ebfaeb3ab1b5931bdbfdd8c4c5.d9d5f1e54a6db3c6ca1965da87a8544529e64e07885350a1b471322830346b41.a1d0448f051096f9625106a54a2919e3331089881d23735bb27541c8dff72b24.1a827e3efb595ec19d4b8adaa9b0fa02a99ae54bab53f417822dd635540be886.ac9b661c95a9c6c9ae977e0059132be1ae2135c4708af02a530f9a067d85af19.cc38aadf713d105662adcbfa8ab776eced37a8e7fccfd4ec1924842e59d6f86b.9c1cbd1fc2206768e932a84dd49963c3ea612a4f611bb1823a899bab55bd61ae.c2a1262b9757251e3bf3ec93757ffa821438876407900ce4ee202906c9b0b0bd.37f136407e0cc446ea295e690ec633481ad8105c15bd3296b191b6409705508d.c1fbccb9bfb5395b71167716da0ac5199ee224f0de909086f912140024063414.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "ce8d7ab95efebcaf3bfcd03701752cac78edb26ce0c0df437a1bdfd0f8fc4fc6",
+                        "value": "7756d50d7a401f2593aa4676fba57beae2f2c72077e94a74eafd6284038b8928"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "f0d8f52e1d31488108de5019b1b49cb71fc15b154657c11ddc8e748faf4d2b73",
+                    "s": "3b30b6899f8d386b8a23f25d33646d1b3e3325beb2ea47e8cbcc213111c043a1",
+                    "v": "1c"
+                }
+            },
+            "receipt": {
+                "id": 969641,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170469753,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170469560,\"latitude\":25.018424,\"longitude\":121.534512,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R14",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "aba078707e69d6e4757240006a871bb81d6b1725afd7c9341ffe655ae2948630",
+                    "s": "61bfbf907b3d85c2c4411559679a33c8fb047f6de6607749cd48b0313ff808d3",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170470207,
+                "result": "ok",
+                "sigServer": {
+                    "r": "6546276cb5085f551ec01448fce066785e07e9d15ce71719f46c6cd68a6886ce",
+                    "s": "09f6b4d8ed4030234d4e995cdabf89c6db210fbbbaa0a77ac71fd009f3e9c95c",
+                    "v": "1c"
+                },
+                "secondPart": "a0aea75f5fed2e59e8ea094d52814cd04062235655ea5b29723ec70ed03b52cb"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R17",
+            "exist": true,
+            "merkleProof": {
+                "slice": "202.fb165f4bf31b9f9c3904490bcfb8fcccc1c8361782d0a4e1bcab32b7ca9cc584.2d06f5eefff3378e4bf1ec0ae5f196206c1d803dc91658c9cb65ad033d30d23e.21fba0ff7d297a92f90fddbf9acb38792db37b694cb508b397697779c34c1faa.2d883f5cbe3607735f14dd1e0d54bda8d9837736eba2466e75e8e8979307d5a0.f64a2bf5dc50b1548e80c231f7f996a2aa82b54fc074e042f24ed274d86ded38.37f6435c0a631ab5c3c1f771a18a8e3f09111e826ef40de9db996bad16810bd2.6895781f947428d210bdf7e4f6ba594f253c3048306d37b3c373610facedb157.8ba35ed929027f28583deeafdc3236414867354cb8cd9b342f3c5810261abf23.37f136407e0cc446ea295e690ec633481ad8105c15bd3296b191b6409705508d.c1fbccb9bfb5395b71167716da0ac5199ee224f0de909086f912140024063414.7aa69c94e2c3d68b3411182356ff7026b72272edbf4252a7399d5a203db19c6b.13d1b4fd3dbbdc44f7d48897dfc0c71f78fcc5e9ef85ac30a02e57f9a754d018.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [
+                    {
+                        "index": 1,
+                        "keyHash": "d99ec8dfc84c5b709dd125bca5a23bb79cdfeee4fa76cd7ed2e0879a81a73c58",
+                        "value": "621c3b5288dba53e01e773363dd1fdea26ce2ff7c3935da125e633ddd6a96f2f"
+                    },
+                    {
+                        "index": 2,
+                        "keyHash": "5368766435c0e1a94208d61d5d1aa58325c4b874da3d881e592dad0074da2a41",
+                        "value": "560ea4890ecd65b4b756aca658a0540168110639f0d177b24513125e9b5328b7"
+                    }
+                ],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "a2ad9b1318eb15a457274d3f89fd89c48e012fd68818c62bb2afbc0819558595",
+                    "s": "71c9b19b2153bea460c169f424924ee51b14f82d788cfed63188d9dfd0e31cb5",
+                    "v": "1b"
+                }
+            },
+            "receipt": {
+                "id": 969648,
+                "callerAddress": "0x725f9523b2b1321310a769422a340eedae976e78",
+                "timestamp": 1605170477707,
+                "cmd": "{\"deviceId\":\"SPO_TRACKER_TEST\",\"timestamp\":1605170477496,\"latitude\":25.017608,\"longitude\":121.533648,\"hAccuracy\":4588.0,\"altitude\":0.024,\"vAccuracy\":192.0}",
+                "indexValue": "SPO_TRACKER_TEST_R17",
+                "metadata": "",
+                "clearanceOrder": 33397,
+                "sigClient": {
+                    "r": "a30d7518220d54678ac70b061184a95bc2f5843536891bdada27f2c224bead23",
+                    "s": "2371cd8ca29bfb6682194c8b6525296c660b5f4145ac48a60b8b35f9df7a0e78",
+                    "v": "1c"
+                },
+                "timestampSPO": 1605170478165,
+                "result": "ok",
+                "sigServer": {
+                    "r": "b6b41d4f31df02ff0974aa6da661cc90872e40a770e4157af7936e70140cf14a",
+                    "s": "414290445f2db5153c9baecdc7387ce86fbd6d6884430a293ebdf606cf7f4ad4",
+                    "v": "1b"
+                },
+                "secondPart": "aa856b65100314285532a82cf7c28075aac6db33f678f5a0647796e5dc63aeab"
+            }
+        },
+        {
+            "clearanceOrder": 33397,
+            "indexValue": "SPO_TRACKER_TEST_R54",
+            "exist": false,
+            "merkleProof": {
+                "slice": "191.5240d3ca84a93e753e9894e7a811de5466820a5352aed0cd0c1f9a2407adf7f0.c05154e4e3bb70a604685a324e0d75e81be0e32d6ef89b6abbbe76b435fb528b.d06013707a1a60f93c28cd895a80cc0feed5b756aa17c5d078198e01669ff1e9.5f2056d198b167f61bb9fd97ea0a58c706d93936634022bec10fa3bc7327f3ce.4705778a323a810d63c36ff02a76013b1d38677b190b67e9bd184a610b19f840.ff496344621aa7ddb3f9f1f395ddce9b5c015be1b0d677bb025265b06e256712.feefd5cb73ea0cf23c4bd4fe564a887e9580a6d5661e7322e7fe2c5f09f780f7.94819aab6255fb1d2684869444e952f91f2b70c02b3482d19dedf8b9a88bc330.a66f2429ec07acd2a5de89e36999dccf7afc87523402625f9f9b3679c326fd5c.759c2925f621f3304406348b504b124000e7444757e1059b62a67be22c74c668.25b6a642f06baf66285e8eae88d2ceb7e07f531530e37beadeeb89251402eb59.df1f0753a107aced8d04d21c6171f7af5569fde8fb22f56b873594d6ae5f8641.7e246662b9cbb98a2eb66803db4780efffdf8b050d1e56706db7433cd7002882.a363f9839936ef33946aae62e17e0760395b58f360a22c40f3a8cf17c0dfa3d2.71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+                "pbPair": [],
+                "clearanceOrder": 33397,
+                "sigServer": {
+                    "r": "651802d2727f91bc3bf35d686d066c7c91eac5eb00671ebcaab73e73fe38196f",
+                    "s": "3862329577b350eb784c77f7436529271523c92cc97ff6ffd1362f622ac16821",
+                    "v": "1c"
+                }
+            },
+            "receipt": null
+        }
+    ],
+    "clearanceRecords": [
+        {
+            "id": 4860,
+            "clearanceOrder": 33397,
+            "rootHash": "71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45",
+            "chainHash": "00a651fdab3740868ecdc005d49df45ef63ec547a1832bc673f35b6b3f71a879",
+            "description": "\n[ITM,RH:71ebaa31ab97eaf1750dc2c92c0fdc2ee438a88cba5eb1df84a1127dc10a1c45,TS:1605170605379,CO:33397]",
+            "createTime": 1605170615000,
+            "txHash": "0xd7f3a5c2cefab0e731608068c2775b9463e024025762cf456f6f070fdd6c972c"
+        }
+    ],
+    "sigServer": {
+        "r": "e02e97cff7cf8104e32b592f61d35643056fe0fcf7824f3d1296ff2a333d4d95",
+        "s": "0fb15a1ce0a196eb83b260cd0aa82001cea5ebcc5ffea68a0cb1a3c8a6e0810a",
+        "v": "1c"
+    }
+}

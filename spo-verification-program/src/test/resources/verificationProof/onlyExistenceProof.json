@@ -1,0 +1,269 @@
+{
+  "status": "ok",
+  "description": "",
+  "version": "2.2.0.SNAPSHOT",
+  "query": "IV_Key=SPO_C_Client_Example,FromCO=32170,ToCO=32170",
+  "timestamp": 1604653374821,
+  "contractAddress": "0xd91ad5999CF874453d3dD891b2d8b45580F9ac6d",
+  "serverWalletAddress": "0x9ed9920bc480baa6b709bd4afbf4013ead7d3e19",
+  "env": "RINKEBY",
+  "nodeConnectionString": "N/A",
+  "existenceProofs": [
+    {
+      "clearanceOrder": 32170,
+      "indexValue": "SPO_C_Client_Example_R4",
+      "exist": true,
+      "merkleProof": {
+        "slice": "212.d6123b15701bc91e0810244ea7982a90b015d98f9d1fbad449c8b8fc19101b39.907465a109141a714c2b765cd86af26526b613392c3b7882a05e3c85af4920a2.150d2bd54901ee6193638299acfb75cb909291d825943e2ce187e47de79063e6.39f02809603e30059889f086b180bc49dae5b8223cac1e31bbaa37ac641af1da.b05b381cc126c855a55945aac2f4df0dc14da8a4ad526d11e62879a066cb10a7.b022970b6fde56f9cffd3a0066028977ede3b6fdb6601f843b426a8c90c3e68c.627e04dbb2a44a44b275f9d111d9d5d3431f35ab3dd3ae78428ac79136c75ec9.f56258182957106839ec582ff91e4245a13d5ec445d2b319e5767399f87d832e.8c5e68889d4e4dfa6aed5b1b9d39f8ad12fb0ccae441954c183e9415931d17af.22091e630accf09cc55e0fdff734c678cca43b02b6ac03c3eed614d0e7c54230.87fe192988344b510cfbdd4f32434002edd0fc108e7e594fd8b1f5638b4cbf20.6d7cf6ccca37864fb0bca57ee5f8c39e4f8e24012c5d83fcb5252b9b9ab47e8d.6c970f449a18f0ad775f82410f455314418553c150d5d1eb37bb538f60b480b9.115eda5095c54ec8bcfc96c4c81cf23c3f1b9e0b1ad1d9a8e2bc78a500f7dd04.54c4c774956f2ccdea7dc81e59222e19620d8648115a0591dcbc565940c560ec",
+        "pbPair": [
+          {
+            "index": 1,
+            "keyHash": "803e7dd44e4470ec8d02b43c8a7d2785cc1e208a08072cf8c172455ca30abc62",
+            "value": "04c6e5306c3389cd46f640f0d02f4e3bfeb8a8509e595a7477323f8afd343741"
+          }
+        ],
+        "clearanceOrder": 32170,
+        "sigServer": {
+          "r": "1c6cd04439fc86370ca438a1770b4ff8672e4086445700df4ce13927021f9a3f",
+          "s": "6a4f3c7a00e16d2e51b25efc6e33f5b3ccf895836bac1a1e345058e3d9baa651",
+          "v": "1c"
+        }
+      },
+      "receipt": {
+        "id": 725307,
+        "callerAddress": "0xa6eed2716f27a77219d58c96701c184a357caa7a",
+        "timestamp": 1604649839000,
+        "cmd": "{\"deviceId\":\"SPO_C_Client_Example\",\"timestamp\":1604649839000}",
+        "indexValue": "SPO_C_Client_Example_R4",
+        "metadata": "",
+        "clearanceOrder": 32170,
+        "sigClient": {
+          "r": "dc3c9d73f0664dfddab3887330ddb2a93951e169daefb0122693170e6bd14985",
+          "s": "3e280cb8637462e2042abcbdcd68d30c53bc79c547f9db68c9dc4403f9bc7fa3",
+          "v": "1c"
+        },
+        "timestampSPO": 1604649841669,
+        "result": "ok",
+        "sigServer": {
+          "r": "35f1945025d67ccef4bdc0c6649e3705c613de206574ead5d637b406707dddaa",
+          "s": "2e97b3d4153a93e309527f8f87acbaf7b0e93ece0aff1dd70d6e7f4637debf6d",
+          "v": "1c"
+        },
+        "secondPart": "00188b14eab8b034f9fe5225d2b8ee87a5aa3eec67641b7c0f4ddeaad2430c61"
+      }
+    },
+    {
+      "clearanceOrder": 32170,
+      "indexValue": "SPO_C_Client_Example_R5",
+      "exist": true,
+      "merkleProof": {
+        "slice": "136.86fd5c3d766cd6372f69245897a74061e2095b3a631319f792b647647026a0e7.fd66211085e764e852a5f8cd6376b0a04ea81e8e44e8d98fd3d668773b36dbaa.c339d60e0074d9a026dbd9b9b7d026842f5b24243c61ec303bc49e0d4979d6fd.423c32531a40d73b6bf233a421b3e4f68e2002d7b793dc9b2e0e8e03b22ce3d6.adf576e96a9da67e1a64555fe7943e32d449e07aec1d48a47b0e78972492f19b.7f4e3588aecd95d8dee945a68458d2d18b7236132305d688a070ed39c3965f6f.063bf206713ba40eac9f3261a1359b3f4bc1b9160af8b98d7df4e7d0be33506b.a377179e736d77d2a1ece7870e954e2738b48e85af66fc26ceca211a7edd2f1a.2f255c1febb325f2b74443110f1ef70da9c508876a93976f981bdf59d20ac963.0eb35eba7fc81b80f0878046d82586d58111d30103f311b8e3964df7fc3aa877.97ae1b15670fea925279300697b063efd4c3097fdefb25a600afd4c30f7f1ccb.bb673ab36a2a2c684a5257066306a949ad7f0d0c85894ddcd47c672a53375a4e.6c970f449a18f0ad775f82410f455314418553c150d5d1eb37bb538f60b480b9.115eda5095c54ec8bcfc96c4c81cf23c3f1b9e0b1ad1d9a8e2bc78a500f7dd04.54c4c774956f2ccdea7dc81e59222e19620d8648115a0591dcbc565940c560ec",
+        "pbPair": [
+          {
+            "index": 1,
+            "keyHash": "5dcecfbc8c31d12b6a40f01e71f39b4d1650df700c98a1bf41298d146e2518dc",
+            "value": "cd9b8f8e5375f12f1eb607e43d2334952ab1b28ebd4f8ca1013d17428854bd8a"
+          },
+          {
+            "index": 2,
+            "keyHash": "a5c03b3d78e35a8a637a05cd8de2f17a185b508913321223e387ce56c62395c4",
+            "value": "eefde086a0867fed8ec011fd8fb71ad66c81646d9a657e429ebb848a3669b13c"
+          }
+        ],
+        "clearanceOrder": 32170,
+        "sigServer": {
+          "r": "96052b0a9f7650e687347807aedfb7337756f45cf076dbdb2005ee144a10111f",
+          "s": "14ddf506cac69348da275f66b05b2ad3b17de4e116c1340cec7428eb0ddf4047",
+          "v": "1c"
+        }
+      },
+      "receipt": {
+        "id": 725308,
+        "callerAddress": "0xa6eed2716f27a77219d58c96701c184a357caa7a",
+        "timestamp": 1604649840000,
+        "cmd": "{\"deviceId\":\"SPO_C_Client_Example\",\"timestamp\":1604649840000}",
+        "indexValue": "SPO_C_Client_Example_R5",
+        "metadata": "",
+        "clearanceOrder": 32170,
+        "sigClient": {
+          "r": "19b7b7ba052e14166fc01373b2a8efcfa09eed1d6c173c18200cdcc615b23bc2",
+          "s": "1447f00bfece55424a522360d3dede93bc5d9f1a360ebea97df78ba00a0f6c87",
+          "v": "1b"
+        },
+        "timestampSPO": 1604649842601,
+        "result": "ok",
+        "sigServer": {
+          "r": "44f0cbd9151f10a452891ca3f3186e3da95647608355aabac6d152e0d4f1f994",
+          "s": "6f88e76f44b41fa68c2c7a311a7d027e893d6a7f09a4189c61b213ea36ebb754",
+          "v": "1c"
+        },
+        "secondPart": "8a389ccfe12f6e77a4dc5eda79c368356c8ca69306e82ea527a2e3f6d0851fd0"
+      }
+    },
+    {
+      "clearanceOrder": 32170,
+      "indexValue": "SPO_C_Client_Example_R6",
+      "exist": true,
+      "merkleProof": {
+        "slice": "195.5df4a1d6e1112069ffa851b74ddcce85acdcc8c49f61d8e024e2a9346c51876a.2c1773a1d05b8956bd8ad72cd190f3de635f41a29a4150721a2a717507866ead.6d2824ade79020442b34f2055d2c2db940c7bffea0e606c48c9af7ef303ee501.733ea331c4d887233f5fe7dc21cb96f145cdcc4d7e8cfde097cb3e69c9d2f1ef.4110ceed2ecc77c42a13d255af72af3e3e7cd8907c54b98d45c3f65f5610f07c.e113348df77553d215c988a4ab3aa88cf7c648c7e4f161cdd9eb001746fc1e83.be707c2cf52afe714b7515dcabbb11cab4107131c47eee1d5f39c09dbd8a36c5.57ceefa46bfbbf5ac0db24fa48e2740715b32499099ded7b7d3bbdaaeb14d99c.8c5e68889d4e4dfa6aed5b1b9d39f8ad12fb0ccae441954c183e9415931d17af.22091e630accf09cc55e0fdff734c678cca43b02b6ac03c3eed614d0e7c54230.87fe192988344b510cfbdd4f32434002edd0fc108e7e594fd8b1f5638b4cbf20.6d7cf6ccca37864fb0bca57ee5f8c39e4f8e24012c5d83fcb5252b9b9ab47e8d.6c970f449a18f0ad775f82410f455314418553c150d5d1eb37bb538f60b480b9.115eda5095c54ec8bcfc96c4c81cf23c3f1b9e0b1ad1d9a8e2bc78a500f7dd04.54c4c774956f2ccdea7dc81e59222e19620d8648115a0591dcbc565940c560ec",
+        "pbPair": [
+          {
+            "index": 1,
+            "keyHash": "b06828db22dd8d0e4cf6707fd8585f4bbb966c63a313dd995f551be1c3973219",
+            "value": "0c03f9a7170a4a58150535334a4566d7b0ee31fefddbc12df741064b1b2e5e77"
+          },
+          {
+            "index": 2,
+            "keyHash": "7b58e06fc11aff45905d1460ef0304778f046158358c17c63e93fa68e8da9a69",
+            "value": "38b87d34067e4245eb86d74af4c73541b191016c831f3110fe5b1888be961130"
+          }
+        ],
+        "clearanceOrder": 32170,
+        "sigServer": {
+          "r": "51282fbc06d162b6875a31ff0df116200382c01899e30d0c559316f9b4cd0645",
+          "s": "17141d059802f12c7c739a4671de90a1a0978e2a9124b73f7fcc4de221672837",
+          "v": "1c"
+        }
+      },
+      "receipt": {
+        "id": 725310,
+        "callerAddress": "0xa6eed2716f27a77219d58c96701c184a357caa7a",
+        "timestamp": 1604649841000,
+        "cmd": "{\"deviceId\":\"SPO_C_Client_Example\",\"timestamp\":1604649841000}",
+        "indexValue": "SPO_C_Client_Example_R6",
+        "metadata": "",
+        "clearanceOrder": 32170,
+        "sigClient": {
+          "r": "ca789ab92284be50fe6726559e9e8212c312b4561ecbfdd9c3f5afbe299000a7",
+          "s": "1151d6dec61797ae6bb54524e0a5f4bb9b8bcbb9b8bac40eb261bc8280f8f7d6",
+          "v": "1c"
+        },
+        "timestampSPO": 1604649843492,
+        "result": "ok",
+        "sigServer": {
+          "r": "d1c9239ad6926ba6a1351df3be51343cfcea98ef66df5e56af7db148b6cf7c1a",
+          "s": "31af932f85e50419b60f6264a5be9bb6ad8b79a5ba2af28bd179e986a07c170d",
+          "v": "1b"
+        },
+        "secondPart": "f178fa69f6dc71e578d73c5345fa5995736286e56fe4f268ad6ab8ea614700e3"
+      }
+    },
+    {
+      "clearanceOrder": 32170,
+      "indexValue": "SPO_C_Client_Example_R3",
+      "exist": true,
+      "merkleProof": {
+        "slice": "149.946bc9bef1956421766280c69e971a6a33c39f848ecb43b15866e1c59f07617d.49e09b82f173214895341f6d30879d130e75ef942fd73a695d3ef6fdcceb2f8b.cec0254c9b53b053c760e95d9cb39a4c1985d83131f27d3186d9fe5f748d088d.8373a619e024e6826c4e09eb4eb33d9f4e0491ba820f7eaeabe8614e4377efbf.a36a369667bef4596ffbeeeb110113d362f85851f6471d2aa668505f745c4422.df9b4150fa1a10b8c233f8e74433e67e64f047cf1d85a4d664a1cdbf2e27679c.75cb63396f11883240b59568fea037a119f0b1e9d982e6a5a941150e15626c37.ea6d34827fbad85d6eb901c009cbc79dda742eb1fc5e9c4235199d0b88b2e196.2f255c1febb325f2b74443110f1ef70da9c508876a93976f981bdf59d20ac963.0eb35eba7fc81b80f0878046d82586d58111d30103f311b8e3964df7fc3aa877.97ae1b15670fea925279300697b063efd4c3097fdefb25a600afd4c30f7f1ccb.bb673ab36a2a2c684a5257066306a949ad7f0d0c85894ddcd47c672a53375a4e.6c970f449a18f0ad775f82410f455314418553c150d5d1eb37bb538f60b480b9.115eda5095c54ec8bcfc96c4c81cf23c3f1b9e0b1ad1d9a8e2bc78a500f7dd04.54c4c774956f2ccdea7dc81e59222e19620d8648115a0591dcbc565940c560ec",
+        "pbPair": [
+          {
+            "index": 1,
+            "keyHash": "bdf65e405a0ac9743b65788ba5a8c00ab82ff2901f47309c36df63908eea2434",
+            "value": "e67917bd051b02c9800af622680afbead56f01811e4c421582cb951d29582ccf"
+          },
+          {
+            "index": 2,
+            "keyHash": "b20d0bfb3b3aa9269a815f2c038ade5d4a4d9bc27c23fd9eeb67dfc2ba449c50",
+            "value": "66fc8e092eb66f67614c144d8645da1b5edd67dbdfa6e9ac907b82e2d85ce558"
+          }
+        ],
+        "clearanceOrder": 32170,
+        "sigServer": {
+          "r": "bdda4fb741e956169653a82860abbb22adc02fab64c410e293d72f159b57b693",
+          "s": "00997ce5121fb8fa205324e2d6bf99c3b77a701d74458f3c274f0788f6cd3aaf",
+          "v": "1c"
+        }
+      },
+      "receipt": {
+        "id": 725306,
+        "callerAddress": "0xa6eed2716f27a77219d58c96701c184a357caa7a",
+        "timestamp": 1604649838000,
+        "cmd": "{\"deviceId\":\"SPO_C_Client_Example\",\"timestamp\":1604649838000}",
+        "indexValue": "SPO_C_Client_Example_R3",
+        "metadata": "",
+        "clearanceOrder": 32170,
+        "sigClient": {
+          "r": "5d1a24d779dba6a3fb87812e9da1216db850fb9c773eb43fe4215a8b00908fe6",
+          "s": "55f32f0c73c74e5023ecbb311a4e294c78ceda435e15da64b6e11452b67fbad7",
+          "v": "1c"
+        },
+        "timestampSPO": 1604649840758,
+        "result": "ok",
+        "sigServer": {
+          "r": "acf614035685c73ddc9e6aeb3dec41ba840d6526245f9bbac0569bee3e4e7366",
+          "s": "49c1c745be054ba69b1e0abc0587efb75304d67aaf4014c5db316814ccb1cd42",
+          "v": "1b"
+        },
+        "secondPart": "0cc519e82c81688748debc949194d09b6d7de4de0f6c1321a366e4076499ddfc"
+      }
+    },
+    {
+      "clearanceOrder": 32170,
+      "indexValue": "SPO_C_Client_Example_R1",
+      "exist": true,
+      "merkleProof": {
+        "slice": "252.32806450cd7adbfcca3c01028e09650dd455365d99312792652a5990046cd5c5.b51bca0a268bc8ae85726d336564059f8ccab5b30ce87bffb2d2fd173b6f2d91.df6c8f0f81f088f938931acbee30b9a9d1f29b100385aa179c0df5924940d93d.843fe2f481bffa50be3f22fbaa366e8be47a4a5e121827cd38f4f006ffc0efe5.52b16b371824e9c87887d812569f2ac6642bcecdb550280ec5bb60173fbf3326.41ed5e629642f6f4cc61c55bba6f085ddec9280530b13778e4513ad1d9b17b95.bdc79d789581669af15c4e42b3b614a85b6dbe40d5a0b96f84eb0a02e5a2b555.e2d661d2c9e43c4a7fd979a4f56796fdef8e8ffc9db5e7c5c171d9c0283dd83d.c436c3d3ac621da4c08eb6621991eaf532b18be689b97d8f90d4841e11f21ed0.806679326a8c5f772ce9de2b10fe98fd9f10796ab297a633a3f27db05c76b88e.87fe192988344b510cfbdd4f32434002edd0fc108e7e594fd8b1f5638b4cbf20.6d7cf6ccca37864fb0bca57ee5f8c39e4f8e24012c5d83fcb5252b9b9ab47e8d.6c970f449a18f0ad775f82410f455314418553c150d5d1eb37bb538f60b480b9.115eda5095c54ec8bcfc96c4c81cf23c3f1b9e0b1ad1d9a8e2bc78a500f7dd04.54c4c774956f2ccdea7dc81e59222e19620d8648115a0591dcbc565940c560ec",
+        "pbPair": [
+          {
+            "index": 1,
+            "keyHash": "b5449ab773d3511415b57b5d6753f764c9b726f9ca660591d00a7175157feff2",
+            "value": "0c35e9470cdd2a9b82c7839c2eba056ee4e5e6bc9f3a1dcfe885ca4002eb498b"
+          },
+          {
+            "index": 2,
+            "keyHash": "8de9c42b2df50fb07baf6277275651c40849b87942054e27a0603d951959dfd4",
+            "value": "8f713f52084226386d68306f40012f585f908aa32eb29a66c2159bb8163d7228"
+          },
+          {
+            "index": 3,
+            "keyHash": "6fe16fe854ae0ac0accf9fa2c9ea990d5e2f65755849ff29884d6d764c880913",
+            "value": "2587bb1797dfca70302162ef49546935120dd04dea7b0754224d31ab1729b679"
+          }
+        ],
+        "clearanceOrder": 32170,
+        "sigServer": {
+          "r": "f815beeabe186a309d2baf62795462c9eb5f5b7b644a8faeb9ad0ec645325e3b",
+          "s": "0ec4b5754a1d764578a6769c4c6080312b8489e23697f245608ba92e34f5f188",
+          "v": "1b"
+        }
+      },
+      "receipt": {
+        "id": 725303,
+        "callerAddress": "0xa6eed2716f27a77219d58c96701c184a357caa7a",
+        "timestamp": 1604649837000,
+        "cmd": "{\"deviceId\":\"SPO_C_Client_Example\",\"timestamp\":1604649836000}",
+        "indexValue": "SPO_C_Client_Example_R1",
+        "metadata": "",
+        "clearanceOrder": 32170,
+        "sigClient": {
+          "r": "aa00cb5e2d0aafeadca5d342b42ee1268c3657c1081453115b5b61d03decb50c",
+          "s": "2327221fd54579077c309c415cf0fd2247ec4330dad80c61bb5edd90d5f60df1",
+          "v": "1c"
+        },
+        "timestampSPO": 1604649838876,
+        "result": "ok",
+        "sigServer": {
+          "r": "f15f42b570d6701da347600397107198d0fd2e6d720a7b1a059a877820c0ed68",
+          "s": "493143f190f624b217fed5b7753012097e19ea69f0bae169b897d0e6c65549f3",
+          "v": "1b"
+        },
+        "secondPart": "1ef1fb57bd859fac74577de1da4044772be6a034f5d62593479e215d4ed2f575"
+      }
+    }
+  ],
+  "clearanceRecords": [
+    {
+      "id": 3633,
+      "clearanceOrder": 32170,
+      "rootHash": "54c4c774956f2ccdea7dc81e59222e19620d8648115a0591dcbc565940c560ec",
+      "chainHash": "6592ecb4e3735a3b71258726b27b91007511ffdf812e7f064b7b6ad87c9460eb",
+      "description": "\n[ITM,RH:54c4c774956f2ccdea7dc81e59222e19620d8648115a0591dcbc565940c560ec,TS:1604649844012,CO:32170]",
+      "createTime": 1604649858000,
+      "txHash": "0x04f3f477ce4c1e1fd1353294c456cbb0b1780b739bf40bef2b2df72ad39375f4"
+    }
+  ],
+  "sigServer": {
+    "r": "e7fef26cc55fd56584cc4f28fd41516eed2c52c8a057b50322d10e833ffe2c26",
+    "s": "2c48d9e6019a7222c1cdd3e7ddaef64743c66c965723059187d76e0b424f7168",
+    "v": "1b"
+  }
+}

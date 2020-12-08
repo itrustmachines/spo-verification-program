@@ -17,5 +17,7 @@ public class ActivationHistory implements Serializable {
   private Long toTimestamp;
   private Long txCount;
   private Long maxRegisterCount;
+  private Long createHistoryTime;
+  private String adminName;
   
 }

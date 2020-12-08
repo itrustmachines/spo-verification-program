@@ -1,6 +1,8 @@
 package com.itrustmachines.verification.service;
 
-import com.itrustmachines.common.constants.StatusConstants;
+import java.nio.charset.StandardCharsets;
+
+import com.itrustmachines.common.constants.StatusConstantsString;
 import com.itrustmachines.common.ethereum.service.ClientContractService;
 import com.itrustmachines.common.tpm.PBPair;
 import com.itrustmachines.common.util.HashUtils;
@@ -8,8 +10,11 @@ import com.itrustmachines.common.util.SignatureUtil;
 import com.itrustmachines.common.vo.ClearanceRecord;
 import com.itrustmachines.common.vo.MerkleProof;
 import com.itrustmachines.common.vo.Receipt;
+import com.itrustmachines.verification.constants.ExistenceType;
+import com.itrustmachines.verification.constants.VerifyStatus;
 import com.itrustmachines.verification.util.ClearanceRecordVerifyUtil;
 import com.itrustmachines.verification.util.SliceValidationUtil;
+import com.itrustmachines.verification.vo.ExistenceProof;
 import com.itrustmachines.verification.vo.VerifyReceiptAndMerkleProofResult;
 
 import lombok.NonNull;
@@ -30,9 +35,13 @@ public class VerifyReceiptAndMerkleProofService {
     log.info("new instance={}", this);
   }
   
+  public ClearanceRecord obtainClearanceRecord(final long clearanceOrder) {
+    return clearanceRecordService.obtainClearanceRecord(clearanceOrder);
+  }
+  
   public VerifyReceiptAndMerkleProofResult verify(@NonNull final Receipt receipt,
       @NonNull final MerkleProof merkleProof) {
-    log.debug("verify() begin, receipt={}, merkleProof={}", receipt, merkleProof);
+    log.debug("verify() start, receipt={}, merkleProof={}", receipt, merkleProof);
     final ClearanceRecord clearanceRecord = clearanceRecordService.obtainClearanceRecord(receipt.getClearanceOrder());
     if (clearanceRecord == null) {
       final String errMsg = String.format("clearanceRecord is null, CO=%d", receipt.getClearanceOrder());
@@ -42,28 +51,55 @@ public class VerifyReceiptAndMerkleProofService {
     return verify(receipt, merkleProof, clearanceRecord);
   }
   
+  public VerifyReceiptAndMerkleProofResult verify(@NonNull final ExistenceProof existenceProof,
+      final ClearanceRecord clearanceRecord) {
+    log.debug("verify() start, existenceProof={}, clearanceRecord={}", existenceProof, clearanceRecord);
+    final Receipt receipt = existenceProof.getReceipt();
+    VerifyReceiptAndMerkleProofResult result = this.verify(receipt, existenceProof.getMerkleProof(), clearanceRecord);
+    boolean clearanceOrderAndIndexValueOk = existenceProof.getClearanceOrder()
+                                                          .equals(receipt.getClearanceOrder())
+        && existenceProof.getIndexValue()
+                         .equals(receipt.getIndexValue());
+    result.setPass(result.isPass() && existenceProof.isExist() && clearanceOrderAndIndexValueOk);
+    result.setVerifyStatus(result.isPass() ? VerifyStatus.PASS : VerifyStatus.MODIFIED);
+    result.setTxHash(clearanceRecord.getTxHash());
+    log.debug("verify() end, result={}", result);
+    return result;
+  }
+  
   public VerifyReceiptAndMerkleProofResult verify(@NonNull final Receipt receipt,
-      @NonNull final MerkleProof merkleProof, @NonNull final ClearanceRecord clearanceRecord) {
-    log.debug("verify() begin, receipt={}, merkleProof={}, clearanceRecord={}", receipt, merkleProof, clearanceRecord);
+      @NonNull final MerkleProof merkleProof, final ClearanceRecord clearanceRecord) {
+    log.debug("verify() start, receipt={}, merkleProof={}, clearanceRecord={}", receipt, merkleProof, clearanceRecord);
     
-    boolean isMerkleProofSignatureOk = false;
-    boolean isReceiptSignatureOk = false;
-    boolean isClearanceOrderCorrect = false;
-    boolean isPbPairOk = false;
-    boolean isSliceOk = false;
-    boolean isRootHashCorrect = false;
+    boolean isMerkleProofSignatureOk;
+    boolean isReceiptSignatureOk;
+    boolean isClearanceOrderCorrect;
+    boolean isPbPairOk;
+    boolean isSliceOk;
+    boolean isRootHashCorrect;
+    String rootHash;
     
     final long timestamp = System.currentTimeMillis();
     
     final VerifyReceiptAndMerkleProofResult result = VerifyReceiptAndMerkleProofResult.builder()
+                                                                                      .existenceType(
+                                                                                          ExistenceType.EXIST)
                                                                                       .pass(false)
+                                                                                      .status(
+                                                                                          StatusConstantsString.ERROR)
                                                                                       .timestamp(timestamp)
+                                                                                      .ledgerInputTimestamp(
+                                                                                          receipt.getTimestamp())
+                                                                                      .receiptTimestamp(
+                                                                                          receipt.getTimestampSPO())
                                                                                       .clearanceOrder(
                                                                                           receipt.getClearanceOrder())
                                                                                       .indexValue(
                                                                                           receipt.getIndexValue())
-                                                                                      .status(
-                                                                                          StatusConstants.ERROR.name())
+                                                                                      .cmd(receipt.getCmd())
+                                                                                      .verifyStatus(
+                                                                                          VerifyStatus.MODIFIED)
+                                                                                      .description("verify fail")
                                                                                       .build();
     log.debug("verify() initiate verify result={}", result);
     
@@ -123,43 +159,51 @@ public class VerifyReceiptAndMerkleProofService {
       result.setClearanceRecordRootHashOk(true);
     }
     
+    rootHash = clearanceRecord.getRootHash();
+    
     // overall result
     result.setPass(true);
-    result.setStatus(StatusConstants.OK.name());
+    result.setStatus(StatusConstantsString.OK);
+    result.setVerifyStatus(VerifyStatus.PASS);
+    result.setDescription(StatusConstantsString.OK);
+    result.setRootHash(rootHash);
     log.debug("verify() result={}", result);
     return result;
   }
   
   boolean verifyRootHash(final MerkleProof merkleProof, final ClearanceRecord clearanceRecord) {
-    log.debug("verifyRootHash() begin, merkleProof={}, clearanceRecord={}", merkleProof, clearanceRecord);
-    boolean result;
+    log.debug("verifyRootHash() start, merkleProof={}, clearanceRecord={}", merkleProof, clearanceRecord);
     final byte[] merkleProofRootHash = SliceValidationUtil.getRootHash(merkleProof.getSlice());
-    result = ClearanceRecordVerifyUtil.isRootHashEqual(clearanceRecord, merkleProofRootHash);
+    boolean result = ClearanceRecordVerifyUtil.isRootHashEqual(clearanceRecord, merkleProofRootHash);
     log.debug("verifyRootHash() end, result={}", result);
     return result;
   }
   
   boolean verifyMerkleProofSlice(final MerkleProof merkleProof) {
-    log.debug("verifySlice() begin, merkleProof={}", merkleProof);
-    boolean result;
-    result = SliceValidationUtil.evalRootHashFromSlice(merkleProof.getSlice());
-    log.debug("verify() result={}", result);
+    log.debug("verifyMerkleProofSlice() start, merkleProof={}", merkleProof);
+    boolean result = SliceValidationUtil.evalRootHashFromSlice(merkleProof.getSlice());
+    log.debug("verifyMerkleProofSlice() result={}", result);
     return result;
   }
   
   boolean verifyPbPair(final Receipt receipt, final MerkleProof merkleProof) {
-    log.debug("verifyPbPair() begin, receipt={}, merkleProof={}", receipt, merkleProof);
+    log.debug("verifyPbPair() start, receipt={}, merkleProof={}", receipt, merkleProof);
     boolean result = false;
     for (PBPair.PBPairValue pbPairValue : merkleProof.getPbPair()) {
-      final String indexValue = HashUtils.byte2hex(HashUtils.sha256(receipt.getIndexValue()
-                                                                           .getBytes()));
-      final String key = pbPairValue.getKeyHash();
-      result = indexValue.equalsIgnoreCase(key);
+      final String indexValueHash = HashUtils.byte2hex(HashUtils.sha256(receipt.getIndexValue()
+                                                                               .getBytes(StandardCharsets.UTF_8)));
+      final String keyHash = pbPairValue.getKeyHash();
+      
+      result = indexValueHash.equalsIgnoreCase(keyHash);
+      log.debug("verify IV digest={}: indexValueHash={}, pbPairKeyHash={}", result, indexValueHash, keyHash);
       if (result) {
         break;
       }
     }
-    result &= SliceValidationUtil.isLeafNode(merkleProof.getSlice(), merkleProof.getPbPair(), receipt.toDigestValue());
+    final boolean verifyReceiptDigest = SliceValidationUtil.isLeafNode(merkleProof.getSlice(), merkleProof.getPbPair(),
+        receipt.toDigestValue());
+    log.debug("verify Receipt digest={}", verifyReceiptDigest);
+    result &= verifyReceiptDigest;
     log.debug("verifyPbPair() end, result={}", result);
     return result;
   }
@@ -167,29 +211,26 @@ public class VerifyReceiptAndMerkleProofService {
   boolean verifyClearanceOrder(final Long receiptClearanceOrder, final Long merkleProofClearanceOrder,
       final Long clearanceRecordClearanceOrder) {
     log.debug(
-        "verifyClearanceOrder() begin, receiptClearanceOrder={}, merkleProofClearanceOrder={}, clearanceRecordClearanceOrder={}",
+        "verifyClearanceOrder() start, receiptClearanceOrder={}, merkleProofClearanceOrder={}, clearanceRecordClearanceOrder={}",
         receiptClearanceOrder, merkleProofClearanceOrder, clearanceRecordClearanceOrder);
-    boolean result;
-    result = merkleProofClearanceOrder.equals(clearanceRecordClearanceOrder)
+    boolean result = merkleProofClearanceOrder.equals(clearanceRecordClearanceOrder)
         && receiptClearanceOrder.equals(merkleProofClearanceOrder);
     log.debug("verifyClearanceOrder() end, result={}", result);
     return result;
   }
   
   boolean verifyReceiptSignature(final Receipt receipt, final String serverWalletAddress) {
-    log.debug("verifyReceiptSignature() begin, receipt={}, serverWalletAddress={}", receipt, serverWalletAddress);
-    boolean result = false;
-    result = SignatureUtil.verifySignature(serverWalletAddress, receipt.getSigServer(), receipt.toSignDataSha3());
+    log.debug("verifyReceiptSignature() start, receipt={}, serverWalletAddress={}", receipt, serverWalletAddress);
+    boolean result = SignatureUtil.verifySignature(serverWalletAddress, receipt.getSigServer(),
+        receipt.toSignDataSha3());
     log.debug("verifyReceiptSignature() end, result={}", result);
     return result;
   }
   
   boolean verifyMerkleProofSignature(final MerkleProof merkleProof, final String serverWalletAddress) {
-    log.debug("verifyMerkleProofSignature() begin, merkleProof={}, serverWalletAddress={}", merkleProof,
+    log.debug("verifyMerkleProofSignature() start, merkleProof={}, serverWalletAddress={}", merkleProof,
         serverWalletAddress);
-    boolean result = false;
-    
-    result = SignatureUtil.verifySignature(serverWalletAddress, merkleProof.getSigServer(),
+    boolean result = SignatureUtil.verifySignature(serverWalletAddress, merkleProof.getSigServer(),
         merkleProof.toSignDataSha3());
     log.debug("verifyMerkleProofSignature() end, result={}", result);
     return result;

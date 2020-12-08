@@ -1,11 +1,15 @@
 package com.itrustmachines.common.ethereum.service;
 
 import java.math.BigInteger;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.ReentrantLock;
 
 import org.apache.commons.lang3.StringUtils;
 import org.web3j.crypto.Credentials;
 import org.web3j.tuples.generated.Tuple5;
 
+import com.google.common.cache.Cache;
+import com.google.common.cache.CacheBuilder;
 import com.itrustmachines.common.ethereum.EvmEnv;
 import com.itrustmachines.common.ethereum.contract.LedgerBooster;
 import com.itrustmachines.common.util.HashUtils;
@@ -24,18 +28,39 @@ public class ClientContractService {
   private final EvmEnv evmEnv;
   
   private final LedgerBooster contract;
+  private final Cache<Long, ClearanceRecord> clearanceRecordCache;
+  private final ReentrantLock lock;
+  private final int retryDelaySec;
   
   public ClientContractService(@NonNull final String contractAddress, @NonNull final String privateKey,
-      @NonNull final String nodeUrl) {
-    this(contractAddress, privateKey, nodeUrl, false, "", "");
+      @NonNull final String nodeUrl, final double gasPriceMultiply, final int retryDelaySec) {
+    this(contractAddress, privateKey, nodeUrl, gasPriceMultiply, false, "", "", retryDelaySec);
   }
   
   public ClientContractService(@NonNull final String contractAddress, @NonNull final String privateKey,
-      @NonNull final String nodeUrl, final Boolean nodeNeedAuth, final String nodeUserName, final String nodePassword) {
-    this.evmEnv = EvmEnv.getInstance(nodeUrl, nodeNeedAuth, nodeUserName, nodePassword);
+      @NonNull final String nodeUrl, final double gasPriceMultiply, final Boolean nodeNeedAuth,
+      final String nodeUserName, final String nodePassword, final int retryDelaySec) {
+    this(contractAddress, privateKey,
+        EvmEnv.getInstance(nodeUrl, gasPriceMultiply, nodeNeedAuth, nodeUserName, nodePassword), retryDelaySec);
+  }
+  
+  public ClientContractService(@NonNull final String contractAddress, @NonNull final String privateKey,
+      @NonNull final EvmEnv evmEnv, final int retryDelaySec) {
+    this.evmEnv = evmEnv;
     this.contract = LedgerBooster.load(contractAddress, evmEnv.getWeb3j(), Credentials.create(privateKey),
         evmEnv.getContractGasProvider());
+    this.clearanceRecordCache = CacheBuilder.newBuilder()
+                                            .maximumSize(10)
+                                            .build();
+    this.lock = new ReentrantLock();
+    this.retryDelaySec = retryDelaySec;
     log.info("new instance={}", this);
+  }
+  
+  @SneakyThrows
+  public String getContractVersion() {
+    return contract.version()
+                   .send();
   }
   
   @SneakyThrows
@@ -46,18 +71,26 @@ public class ClientContractService {
   }
   
   @SneakyThrows
-  public ClearanceRecord obtainClearanceRecord(long clearanceOrder) {
-    log.debug("obtainClearanceRecord() start clearanceOrder={}", clearanceOrder);
-    ClearanceRecord result = getClearanceRecordFromContract(clearanceOrder);
-    log.debug("obtainClearanceRecord() clearanceOrder={}, result={}", clearanceOrder, result);
-    return result;
+  public ClearanceRecord obtainClearanceRecord(final long clearanceOrder) {
+    lock.lock();
+    try {
+      log.debug("obtainClearanceRecord() start, CO={}", clearanceOrder);
+      ClearanceRecord result = clearanceRecordCache.getIfPresent(clearanceOrder);
+      if (result == null) {
+        result = getClearanceRecordFromContract(clearanceOrder);
+      }
+      log.debug("obtainClearanceRecord() CO={}, result={}", clearanceOrder, result);
+      return result;
+    } finally {
+      lock.unlock();
+    }
   }
   
   @SneakyThrows
-  private ClearanceRecord getClearanceRecordFromContract(long clearanceOrder) {
+  private ClearanceRecord getClearanceRecordFromContract(final long clearanceOrder) {
     ClearanceRecord result = null;
     for (int retryCount = 1; retryCount <= MAX_RETRY_TIMES; retryCount++) {
-      log.debug("getClearanceRecordFromContract() retryCount={}", retryCount);
+      log.debug("getClearanceRecordFromContract() CO={}, retryCount={}", clearanceOrder, retryCount);
       try {
         final Tuple5<BigInteger, byte[], BigInteger, byte[], String> crTuple5 = contract.clearanceRecords(
             BigInteger.valueOf(clearanceOrder))
@@ -78,12 +111,16 @@ public class ClientContractService {
         }
       } catch (Exception e) {
         if (retryCount == MAX_RETRY_TIMES) {
-          log.error("getClearanceRecordFromContract() fail", e);
+          log.error("getClearanceRecordFromContract() fail, CO={}", clearanceOrder, e);
           throw e;
         }
+        TimeUnit.SECONDS.sleep(retryDelaySec);
       }
     }
-    log.debug("getClearanceRecordFromContract() result={}", result);
+    if (result != null) {
+      clearanceRecordCache.put(clearanceOrder, result);
+    }
+    log.debug("getClearanceRecordFromContract() CO={}, result={}", clearanceOrder, result);
     return result;
   }
   

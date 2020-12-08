@@ -20,11 +20,11 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class License implements Serializable {
   
-  // TODO use mac address or not
-  // private String macAddress;
-  
   private String spoWalletAddress;
+  private String contractAddress;
   private String itmWalletAddress;
+  private String productName;
+  private String company;
   private Long startTime;
   private List<ActivationHistory> activationHistoryList;
   
@@ -32,7 +32,10 @@ public class License implements Serializable {
   
   public String toSignData() {
     return new StringBuilder().append(spoWalletAddress)
+                              .append(contractAddress)
                               .append(itmWalletAddress)
+                              .append(productName)
+                              .append(company)
                               .append(startTime)
                               .append(activationHistoryList.toString())
                               .toString();

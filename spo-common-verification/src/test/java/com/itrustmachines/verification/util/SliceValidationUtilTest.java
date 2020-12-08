@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
 
+import com.itrustmachines.common.tpm.Slice;
 import com.itrustmachines.common.util.HashUtils;
 
 import lombok.extern.slf4j.Slf4j;
@@ -39,6 +40,16 @@ public class SliceValidationUtilTest {
     // then
     final boolean equals = Arrays.equals(HashUtils.hex2byte(correctRootHash), rootHash);
     assertThat(equals).isFalse();
+  }
+  
+  @Test
+  public void test_getLeafNode() {
+    String sliceString = "1.3b67778b017a85eb2291832a46b8db5ccb911f8bc902b5911716b7ef446f83dc";
+    final Slice slice = Slice.fromString(sliceString);
+    log.debug("slice={}", slice);
+    final String leafNode = SliceValidationUtil.getLeafNode(slice);
+
+    assertThat(leafNode).isNotNull();
   }
   
 }

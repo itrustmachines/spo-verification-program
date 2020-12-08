@@ -1,13 +1,13 @@
 package com.itrustmachines.common.util;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.security.DigestInputStream;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Collection;
 
+import lombok.NonNull;
 import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
 
@@ -18,17 +18,18 @@ public class HashUtils {
   private final char[] HEX_ARRAY = "0123456789ABCDEF".toCharArray();
   
   public byte[] hex2byte(String input) {
-    byte[] b = new byte[input.length() / 2];
     try {
+      byte[] b = new byte[input.length() / 2];
       for (int i = 0; i < b.length; i++) {
         int index = i * 2;
         int v = Integer.parseInt(input.substring(index, index + 2), 16);
         b[i] = (byte) v;
       }
-    } catch (Exception e) {
+      return b;
+    } catch (NumberFormatException e) {
       log.warn("hex2byte() error, input={}", input, e);
     }
-    return b;
+    return null;
   }
   
   public String byte2HEX(byte[] bytes) {
@@ -45,6 +46,10 @@ public class HashUtils {
     return byte2HEX(bytes).toLowerCase();
   }
   
+  public String byte2hex(String data) {
+    return byte2hex(data.getBytes(StandardCharsets.UTF_8));
+  }
+  
   public byte[] sha256(Collection<byte[]> bytesCollection) {
     try {
       MessageDigest md = MessageDigest.getInstance("SHA-256");
@@ -54,8 +59,8 @@ public class HashUtils {
       }
       
       return md.digest();
-    } catch (Exception e) {
-      log.warn("sha256 Collection<byte[]> error", e);
+    } catch (NoSuchAlgorithmException e) {
+      log.warn("sha256() Collection<byte[]> error", e);
     }
     return null;
   }
@@ -70,31 +75,40 @@ public class HashUtils {
       
       return md.digest();
     } catch (NoSuchAlgorithmException ex) {
-      log.warn("sha256 byte[]... error", ex);
+      log.warn("sha256() byte[]... error", ex);
+    }
+    return null;
+  }
+  
+  public byte[] sha256(@NonNull final InputStream is) {
+    try {
+      MessageDigest md = MessageDigest.getInstance("SHA-256");
+      BufferedInputStream bis = new BufferedInputStream(is);
+      
+      try (DigestInputStream dis = new DigestInputStream(bis, md)) {
+        // noinspection StatementWithEmptyBody
+        while (dis.read() != -1)
+          ;
+      }
+      
+      return md.digest();
+    } catch (NoSuchAlgorithmException | IOException e) {
+      log.warn("sha256() InputStream error", e);
     }
     return null;
   }
   
   public String sha256(File file) {
     try {
-      MessageDigest md = MessageDigest.getInstance("SHA-256");
-      InputStream is = new FileInputStream(file);
-      byte[] buffer = new byte[8192];
-      
-      try (DigestInputStream dis = new DigestInputStream(is, md)) {
-        while (dis.read(buffer) != -1)
-          ;
-      }
-      
-      return byte2hex(md.digest());
-    } catch (Exception e) {
-      log.warn("sha256 error, file={}", file, e);
+      return byte2hex(sha256(new FileInputStream(file)));
+    } catch (FileNotFoundException e) {
+      log.warn("sha256() File error, file={}", file, e);
     }
     return null;
   }
   
   public String sha256(String data) {
-    return byte2hex(data.getBytes());
+    return byte2hex(sha256(data.getBytes(StandardCharsets.UTF_8)));
   }
   
 }
