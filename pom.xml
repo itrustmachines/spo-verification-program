@@ -9,8 +9,8 @@
 
     <packaging>pom</packaging>
 
-    <name>itm-spo-verification-program</name>
-    <description>ITM SPO Verificaion Program</description>
+    <name>ITM SPO Verificaion Program</name>
+    <description>Verify Verification Proofs</description>
 
     <organization>
         <name>International Trust Machines Corporation</name>
