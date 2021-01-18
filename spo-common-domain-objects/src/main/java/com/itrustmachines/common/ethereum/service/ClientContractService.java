@@ -22,8 +22,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ClientContractService {
   
-  private static final int MAX_RETRY_TIMES = 5;
-  
   @Getter(AccessLevel.PACKAGE)
   private final EvmEnv evmEnv;
   
@@ -31,6 +29,13 @@ public class ClientContractService {
   private final Cache<Long, ClearanceRecord> clearanceRecordCache;
   private final ReentrantLock lock;
   private final int retryDelaySec;
+  private final int maxRetryTimes;
+  
+  public ClientContractService(@NonNull final String contractAddress, @NonNull final String privateKey,
+      @NonNull final String nodeUrl, final double gasPriceMultiply, final int retryDelaySec, final int maxRetryTimes) {
+    this(contractAddress, privateKey, EvmEnv.getInstance(nodeUrl, gasPriceMultiply, false, "", ""), retryDelaySec,
+        maxRetryTimes);
+  }
   
   public ClientContractService(@NonNull final String contractAddress, @NonNull final String privateKey,
       @NonNull final String nodeUrl, final double gasPriceMultiply, final int retryDelaySec) {
@@ -41,11 +46,11 @@ public class ClientContractService {
       @NonNull final String nodeUrl, final double gasPriceMultiply, final Boolean nodeNeedAuth,
       final String nodeUserName, final String nodePassword, final int retryDelaySec) {
     this(contractAddress, privateKey,
-        EvmEnv.getInstance(nodeUrl, gasPriceMultiply, nodeNeedAuth, nodeUserName, nodePassword), retryDelaySec);
+        EvmEnv.getInstance(nodeUrl, gasPriceMultiply, nodeNeedAuth, nodeUserName, nodePassword), retryDelaySec, 5);
   }
   
   public ClientContractService(@NonNull final String contractAddress, @NonNull final String privateKey,
-      @NonNull final EvmEnv evmEnv, final int retryDelaySec) {
+      @NonNull final EvmEnv evmEnv, final int retryDelaySec, final int maxRetryTimes) {
     this.evmEnv = evmEnv;
     this.contract = LedgerBooster.load(contractAddress, evmEnv.getWeb3j(), Credentials.create(privateKey),
         evmEnv.getContractGasProvider());
@@ -54,6 +59,7 @@ public class ClientContractService {
                                             .build();
     this.lock = new ReentrantLock();
     this.retryDelaySec = retryDelaySec;
+    this.maxRetryTimes = maxRetryTimes;
     log.info("new instance={}", this);
   }
   
@@ -89,7 +95,7 @@ public class ClientContractService {
   @SneakyThrows
   private ClearanceRecord getClearanceRecordFromContract(final long clearanceOrder) {
     ClearanceRecord result = null;
-    for (int retryCount = 1; retryCount <= MAX_RETRY_TIMES; retryCount++) {
+    for (int retryCount = 0; retryCount <= maxRetryTimes; retryCount++) {
       log.debug("getClearanceRecordFromContract() CO={}, retryCount={}", clearanceOrder, retryCount);
       try {
         final Tuple5<BigInteger, byte[], BigInteger, byte[], String> crTuple5 = contract.clearanceRecords(
@@ -110,7 +116,7 @@ public class ClientContractService {
           break;
         }
       } catch (Exception e) {
-        if (retryCount == MAX_RETRY_TIMES) {
+        if (retryCount == maxRetryTimes) {
           log.error("getClearanceRecordFromContract() fail, CO={}", clearanceOrder, e);
           throw e;
         }

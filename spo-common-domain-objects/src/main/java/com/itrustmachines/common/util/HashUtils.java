@@ -18,6 +18,9 @@ public class HashUtils {
   private final char[] HEX_ARRAY = "0123456789ABCDEF".toCharArray();
   
   public byte[] hex2byte(String input) {
+    if (input == null) {
+      return null;
+    }
     try {
       byte[] b = new byte[input.length() / 2];
       for (int i = 0; i < b.length; i++) {

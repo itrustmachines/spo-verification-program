@@ -16,8 +16,10 @@ public class Query {
     CLEARANCE_ORDER,
     
     // query by timestamp
-    TIMESTAMP
-  
+    TIMESTAMP,
+    
+    // error
+    ERROR
   }
   
   QueryType type;

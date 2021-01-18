@@ -19,7 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 @Builder
 @Slf4j
 public class SpoSignature implements Serializable, Cloneable {
-
+  
   private String r;
   private String s;
   private String v;
@@ -44,4 +44,10 @@ public class SpoSignature implements Serializable, Cloneable {
                        .build();
   }
   
+  public String toSignData() {
+    return new StringBuilder().append(this.getR())
+                              .append(this.getS())
+                              .append(this.getV())
+                              .toString();
+  }
 }

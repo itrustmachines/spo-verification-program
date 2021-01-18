@@ -30,7 +30,7 @@ public class MerkleProof implements Serializable {
   
   public String toSignData() {
     return new StringBuilder().append(slice)
-                              .append(PBPairUtil.toPbPairString(pbPair))
+                              .append(pbPair != null ? PBPairUtil.toPbPairString(pbPair) : pbPair)
                               .append(clearanceOrder)
                               .toString();
   }

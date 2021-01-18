@@ -55,12 +55,9 @@ public class Receipt implements Serializable, Cloneable {
                                                  .append(this.getMetadata())
                                                  .append(this.getTimestampSPO())
                                                  .append(this.getResult())
-                                                 .append(this.getSigClient()
-                                                             .getR())
-                                                 .append(this.getSigClient()
-                                                             .getS())
-                                                 .append(this.getSigClient()
-                                                             .getV())
+                                                 .append(this.getSigClient() != null ? this.getSigClient()
+                                                                                           .toSignData()
+                                                     : this.getSigClient())
                                                  .toString();
     return HashUtils.byte2hex(HashUtils.sha256(secondPart.getBytes(StandardCharsets.UTF_8)));
   }
@@ -71,12 +68,9 @@ public class Receipt implements Serializable, Cloneable {
   
   public byte[] toDigestValue() {
     final String toDigestContent = new StringBuilder().append(toSignData())
-                                                      .append(this.getSigServer()
-                                                                  .getR())
-                                                      .append(this.getSigServer()
-                                                                  .getS())
-                                                      .append(this.getSigServer()
-                                                                  .getV())
+                                                      .append(this.getSigServer() != null ? this.getSigServer()
+                                                                                                .toSignData()
+                                                          : this.getSigClient())
                                                       .toString();
     return HashUtils.sha256(toDigestContent.getBytes(StandardCharsets.UTF_8));
   }

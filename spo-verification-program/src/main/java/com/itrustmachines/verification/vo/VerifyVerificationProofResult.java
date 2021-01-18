@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.itrustmachines.verification.constants.ExistenceType;
+import com.itrustmachines.verification.constants.VerifyVerificationProofStatus;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,13 +21,12 @@ public class VerifyVerificationProofResult {
   
   private Query.QueryType queryType;
   
-  private boolean pass;
-  
-  private boolean clearanceRecordPass;
+  private VerifyVerificationProofStatus status;
   
   private List<VerifyReceiptAndMerkleProofResult> verifyReceiptResults;
+  private List<Long> errorClearanceOrderInClearanceRecordList;
   
-  private Long proofCount;
+  private Long totalCount;
   private Long successCount;
   private Long modifiedCount;
   private Long removedCount;

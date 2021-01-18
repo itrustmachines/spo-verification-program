@@ -1,6 +1,7 @@
 package com.itrustmachines.verification.service;
 
 import java.nio.charset.StandardCharsets;
+import java.util.Objects;
 
 import com.itrustmachines.common.constants.StatusConstantsString;
 import com.itrustmachines.common.tpm.PBPair;
@@ -11,8 +12,8 @@ import com.itrustmachines.common.vo.MerkleProof;
 import com.itrustmachines.common.vo.Receipt;
 import com.itrustmachines.common.vo.SpoSignature;
 import com.itrustmachines.verification.constants.ExistenceType;
+import com.itrustmachines.verification.constants.ProofExistStatus;
 import com.itrustmachines.verification.constants.VerifyNotExistProofStatus;
-import com.itrustmachines.verification.constants.VerifyStatus;
 import com.itrustmachines.verification.util.ClearanceRecordVerifyUtil;
 import com.itrustmachines.verification.util.SliceValidationUtil;
 import com.itrustmachines.verification.vo.ExistenceProof;
@@ -45,15 +46,22 @@ public class VerifyNotExistProofService {
       pass = false;
     }
     
+    String merkleProofRootHash = null;
+    if (Objects.nonNull(proof.getMerkleProof())) {
+      merkleProofRootHash = SliceValidationUtil.getRootHashString(proof.getMerkleProof()
+                                                                       .getSlice());
+    }
     return VerifyReceiptAndMerkleProofResult.builder()
                                             .pass(pass)
-                                            .verifyStatus(pass ? VerifyStatus.PASS : VerifyStatus.MODIFIED)
+                                            .proofExistStatus(pass ? ProofExistStatus.PASS : ProofExistStatus.MODIFIED)
                                             .status(pass ? StatusConstantsString.OK : StatusConstantsString.ERROR)
                                             .existenceType(ExistenceType.NOT_EXIST)
                                             .clearanceOrder(proof.getClearanceOrder())
                                             .indexValue(proof.getIndexValue())
                                             .verifyNotExistProofResult(verifyNotExistProofStatus)
                                             .merkleproofSignatureOk(isMerkleProofSignature)
+                                            .merkleProofRootHash(merkleProofRootHash)
+                                            .contractRootHash(contractClearanceRecord.getRootHash())
                                             .txHash(contractClearanceRecord.getTxHash())
                                             .build();
   }

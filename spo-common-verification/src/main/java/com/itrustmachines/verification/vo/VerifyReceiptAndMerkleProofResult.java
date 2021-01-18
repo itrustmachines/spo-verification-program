@@ -1,8 +1,8 @@
 package com.itrustmachines.verification.vo;
 
 import com.itrustmachines.verification.constants.ExistenceType;
+import com.itrustmachines.verification.constants.ProofExistStatus;
 import com.itrustmachines.verification.constants.VerifyNotExistProofStatus;
-import com.itrustmachines.verification.constants.VerifyStatus;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,7 +20,7 @@ public class VerifyReceiptAndMerkleProofResult {
   private ExistenceType existenceType;
   private boolean pass;
   private String status;
-  private VerifyStatus verifyStatus;
+  private ProofExistStatus proofExistStatus;
   private String txHash;
   
   /**
@@ -29,7 +29,8 @@ public class VerifyReceiptAndMerkleProofResult {
   private Long timestamp;
   private Long ledgerInputTimestamp;
   private Long receiptTimestamp;
-  private String rootHash;
+  private String merkleProofRootHash;
+  private String contractRootHash;
   
   // TODO
   private String description;

@@ -2,6 +2,10 @@ package com.itrustmachines.verification.service;
 
 import java.nio.charset.StandardCharsets;
 
+import com.itrustmachines.verification.constants.ProofExistStatus;
+import org.apache.commons.lang3.StringUtils;
+
+import com.google.common.base.Objects;
 import com.itrustmachines.common.constants.StatusConstantsString;
 import com.itrustmachines.common.ethereum.service.ClientContractService;
 import com.itrustmachines.common.tpm.PBPair;
@@ -11,7 +15,6 @@ import com.itrustmachines.common.vo.ClearanceRecord;
 import com.itrustmachines.common.vo.MerkleProof;
 import com.itrustmachines.common.vo.Receipt;
 import com.itrustmachines.verification.constants.ExistenceType;
-import com.itrustmachines.verification.constants.VerifyStatus;
 import com.itrustmachines.verification.util.ClearanceRecordVerifyUtil;
 import com.itrustmachines.verification.util.SliceValidationUtil;
 import com.itrustmachines.verification.vo.ExistenceProof;
@@ -36,7 +39,15 @@ public class VerifyReceiptAndMerkleProofService {
   }
   
   public ClearanceRecord obtainClearanceRecord(final long clearanceOrder) {
-    return clearanceRecordService.obtainClearanceRecord(clearanceOrder);
+    log.debug("obtainClearanceRecord() start, clearanceOrder={}", clearanceOrder);
+    ClearanceRecord clearanceRecord = null;
+    try {
+      clearanceRecord = clearanceRecordService.obtainClearanceRecord(clearanceOrder);
+    } catch (Exception e) {
+      log.error("obtainClearanceRecord() error, obtainClearanceRecord error", e);
+    }
+    log.debug("obtainClearanceRecord() end, clearanceRecord={}", clearanceRecord);
+    return clearanceRecord;
   }
   
   public VerifyReceiptAndMerkleProofResult verify(@NonNull final Receipt receipt,
@@ -56,13 +67,13 @@ public class VerifyReceiptAndMerkleProofService {
     log.debug("verify() start, existenceProof={}, clearanceRecord={}", existenceProof, clearanceRecord);
     final Receipt receipt = existenceProof.getReceipt();
     VerifyReceiptAndMerkleProofResult result = this.verify(receipt, existenceProof.getMerkleProof(), clearanceRecord);
-    boolean clearanceOrderAndIndexValueOk = existenceProof.getClearanceOrder()
-                                                          .equals(receipt.getClearanceOrder())
-        && existenceProof.getIndexValue()
-                         .equals(receipt.getIndexValue());
+    
+    boolean clearanceOrderAndIndexValueOk = Objects.equal(existenceProof.getClearanceOrder(),
+        receipt.getClearanceOrder()) && StringUtils.equals(existenceProof.getIndexValue(), receipt.getIndexValue());
     result.setPass(result.isPass() && existenceProof.isExist() && clearanceOrderAndIndexValueOk);
-    result.setVerifyStatus(result.isPass() ? VerifyStatus.PASS : VerifyStatus.MODIFIED);
-    result.setTxHash(clearanceRecord.getTxHash());
+    result.setProofExistStatus(result.isPass() ? ProofExistStatus.PASS : ProofExistStatus.MODIFIED);
+    result.setClearanceOrder(existenceProof.getClearanceOrder());
+    result.setIndexValue(existenceProof.getIndexValue());
     log.debug("verify() end, result={}", result);
     return result;
   }
@@ -77,7 +88,7 @@ public class VerifyReceiptAndMerkleProofService {
     boolean isPbPairOk;
     boolean isSliceOk;
     boolean isRootHashCorrect;
-    String rootHash;
+    final String rootHash = SliceValidationUtil.getRootHashString(merkleProof.getSlice());
     
     final long timestamp = System.currentTimeMillis();
     
@@ -87,6 +98,8 @@ public class VerifyReceiptAndMerkleProofService {
                                                                                       .pass(false)
                                                                                       .status(
                                                                                           StatusConstantsString.ERROR)
+                                                                                      .txHash(
+                                                                                          clearanceRecord.getTxHash())
                                                                                       .timestamp(timestamp)
                                                                                       .ledgerInputTimestamp(
                                                                                           receipt.getTimestamp())
@@ -97,8 +110,11 @@ public class VerifyReceiptAndMerkleProofService {
                                                                                       .indexValue(
                                                                                           receipt.getIndexValue())
                                                                                       .cmd(receipt.getCmd())
-                                                                                      .verifyStatus(
-                                                                                          VerifyStatus.MODIFIED)
+                                                                                      .proofExistStatus(
+                                                                                          ProofExistStatus.MODIFIED)
+                                                                                      .contractRootHash(
+                                                                                          clearanceRecord.getRootHash())
+                                                                                      .merkleProofRootHash(rootHash)
                                                                                       .description("verify fail")
                                                                                       .build();
     log.debug("verify() initiate verify result={}", result);
@@ -159,14 +175,11 @@ public class VerifyReceiptAndMerkleProofService {
       result.setClearanceRecordRootHashOk(true);
     }
     
-    rootHash = clearanceRecord.getRootHash();
-    
     // overall result
     result.setPass(true);
     result.setStatus(StatusConstantsString.OK);
-    result.setVerifyStatus(VerifyStatus.PASS);
+    result.setProofExistStatus(ProofExistStatus.PASS);
     result.setDescription(StatusConstantsString.OK);
-    result.setRootHash(rootHash);
     log.debug("verify() result={}", result);
     return result;
   }

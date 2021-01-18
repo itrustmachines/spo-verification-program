@@ -11,7 +11,7 @@
     <description>Verification Program API</description>
 
     <properties>
-        <revision>2.2.1</revision>
+        <revision>2.2.2</revision>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>

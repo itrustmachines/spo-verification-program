@@ -59,9 +59,12 @@ public class SignatureUtil {
    *          sign message
    * @return boolean
    */
-  public boolean verifySignature(@NonNull final String serverWalletAddress, @NonNull final SpoSignature sig,
+  public boolean verifySignature(@NonNull final String serverWalletAddress, final SpoSignature sig,
       @NonNull final byte[] message) {
     log.debug("verifySignature() serverWalletAddress={}, sig={}", serverWalletAddress, sig);
+    if (sig == null) {
+      return false;
+    }
     final ECDSASignature ecdsaSignature = transferToECDSASignature(sig);
     boolean match = false;
     String addressRecovered;

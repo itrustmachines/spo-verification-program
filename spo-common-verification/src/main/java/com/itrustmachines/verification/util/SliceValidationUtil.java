@@ -3,11 +3,12 @@ package com.itrustmachines.verification.util;
 import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
-import com.itrustmachines.common.util.HashUtils;
 import com.itrustmachines.common.tpm.PBPair;
 import com.itrustmachines.common.tpm.Slice;
+import com.itrustmachines.common.util.HashUtils;
 
 import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
@@ -69,6 +70,9 @@ public class SliceValidationUtil {
   }
   
   public byte[] getRootHash(String sliceString) throws NoSuchElementException {
+    if (Objects.isNull(sliceString) || sliceString.isEmpty()) {
+      return null;
+    }
     final String[] tokens = sliceString.split(String.valueOf("\\" + SLICE_DELIMITER));
     int index = Integer.parseInt(tokens[0]);
     int parentIndex = 1;
@@ -83,6 +87,16 @@ public class SliceValidationUtil {
       
     }
     return parentDigest;
+  }
+  
+  public String getRootHashString(String sliceString) throws NoSuchElementException {
+    final byte[] rootHashByte = getRootHash(sliceString);
+    String rootHash = null;
+    if (Objects.nonNull(rootHashByte)) {
+      rootHash = HashUtils.byte2hex(rootHashByte);
+    }
+    
+    return rootHash;
   }
   
 }
