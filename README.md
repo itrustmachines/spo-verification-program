@@ -128,9 +128,9 @@ Using `verification-proof-api` to obtain verification with json string then stor
 
 #### Establish Verifcation Service
 
-    ```java
-    final VerificationApi verificationApi = VerificationApi.getInstance();
-    ```
+  ```java
+  final VerificationApi verificationApi = VerificationApi.getInstance();
+  ```
 
 #### Verify
 
