@@ -138,8 +138,8 @@ If the verification proof is using private chain, you can assign `null` to infur
 
 ##### Method 1 : Use json file to verify
 
-`filePath` : Path of verification file
-`infuraProjectId` : Enter the infuraProjectId
+- `filePath` : Path of verification file
+- `infuraProjectId` : Enter the infuraProjectId
 
 ```java
 final VerifyVerificationProofResult result = verificationApi.verify(filePath, infuraProjectId);
@@ -147,8 +147,8 @@ final VerifyVerificationProofResult result = verificationApi.verify(filePath, in
 
 ##### Method 2 : Use json string to verify
 
-`jsonString` : String wtih json data type
-`infuraProjectId` : Enter the infuraProjectId
+- `jsonString` : String wtih json data type
+- `infuraProjectId` : Enter the infuraProjectId
 
 ```java
 final VerifyVerificationProofResult result = verificationApi.verifyJsonString(jsonString, infuraProjectId);
