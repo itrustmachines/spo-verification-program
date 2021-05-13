@@ -1,10 +1,10 @@
-# SPO VERIFICATION PROGRAM USER GUIDE ENGLISH VERSION
+# SPO Verification Program User Guide English Version
 
-- [SPO Verification Prgram User Guide Chinese Version](./README_zh.md)
+- [SPO Verification Prgram User Guide Traditional Chinese Version](./README_zh.md)
 
 ## Outline
 
-- [SPO VERIFICATION PROGRAM USER GUIDE ENGLISH VERSION](#spo-verification-program-user-guide-english-version)
+- [SPO Verification Program User Guide English Version](#spo-verification-program-user-guide-english-version)
   - [Outline](#outline)
   - [Requirement](#requirement)
   - [Prepare Verification Data](#prepare-verification-data)
