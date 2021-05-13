@@ -1,150 +1,176 @@
-# SPO VERIFICATION PROGRAM使用手冊
+# SPO VERIFICATION PROGRAM USER GUIDE ENGLISH VERSION
 
-## 環境需求
+- [SPO Verification Prgram User Guide Chinese Version](./README_zh.md)
 
-1. **Java** 
-    - 版本 8 以上
-    - 需安裝 Maven
-2. **建立私鑰**
-    - 可使用線上開源的工具來產生
-         - [VANITY-ETH](https://vanity-eth.tk/)
-3. **取得infura endpoint**
-    - 若要驗證的證據使用私有鏈，則可跳過此步驟
-    - [infura 教學](./infura.md)
+## Outline
 
-## 選定驗證資料
+- [SPO VERIFICATION PROGRAM USER GUIDE ENGLISH VERSION](#spo-verification-program-user-guide-english-version)
+  - [Outline](#outline)
+  - [Requirement](#requirement)
+  - [Prepare Verification Data](#prepare-verification-data)
+    - [SPO Server](#spo-server)
+    - [Dashboard](#dashboard)
+  - [Verify Procedure](#verify-procedure)
+    - [Verify by program](#verify-by-program)
+      - [Establish Verifcation Service](#establish-verifcation-service)
+      - [Verify](#verify)
+        - [Method 1 : Use json file to verify](#method-1--use-json-file-to-verify)
+        - [Method 2 : Use json string to verify](#method-2--use-json-string-to-verify)
+      - [Verify Result](#verify-result)
+    - [Verify by Command Line Interface](#verify-by-command-line-interface)
 
-- **SPO Server**
+## Requirement
 
-    透過API取得證據的json字串後存成json檔
-    
-    可使用SPO Server提供的Swagger UI來進行操作，路徑為/swagger-ui/#/verification-proof-api
-    
-    - 使用多個ClearanceOrder及IndexValue取得證據
-    
-        - API Path：/ledger/verify/verificationProof
-        
-        - Request Body：
-        
-            ```
-                {
-                  "clearanceOrderAndIndexValuePairs": [
-                    {
-                      "clearanceOrder": 0,
-                      "indexValue": "string"
-                    }
-                  ]
-                }
-            ```
-          
-            - Example：
-            
-                ```
-                {
-                  "clearanceOrderAndIndexValuePairs": [
-                    {
-                      "clearanceOrder": 1,
-                      "indexValue": "Example_R0"
-                    },
-                    {
-                      "clearanceOrder": 1,
-                      "indexValue": "Example_R1"
-                    }
-                  ]
-                }
-                ```
-          
-    - 使用ClearanceOrder區間來取得證據
-    
-        - API Path：/ledger/verify/verificationProofClearanceOrder
-        
-        - Request Body：
-        
-            ```
+- Java 8 or higher
+- Maven
+- Private Key
+  - You can use [VANITY-ETH](https://vanity-eth.tk/) to generate the private key
+- Infure Node URL
+  - Please refer to [Infura Tutorial](./doc/infura_en.md)
+
+## Prepare Verification Data
+
+### SPO Server
+
+Using `verification-proof-api` to obtain verification with json string then store in file with json format. Please refer to [SPO Server API](https://azure-prod-rinkeby.itm.monster:4430/swagger-ui/) for more informations
+
+1. Obtain verification proof by multi ClearanceOrder and IndexValue
+
+   - API Path：`/ledger/verify/verificationProof`
+   - Request Body：
+
+        ```json
+        {
+            "clearanceOrderAndIndexValuePairs": [
             {
-              "fromClearanceOrder": 0,
-              "indexValueKey": "string",
-              "toClearanceOrder": 0
+                "clearanceOrder": 0,
+                "indexValue": "string"
             }
-            ```
-          
-            - Example：
-                ```
-                {
-                  "fromClearanceOrder": 1,
-                  "indexValueKey": "Example",
-                  "toClearanceOrder": 2
-                }
-                ```
+            ]
+        }
+        ```
 
-    - 使用時間區間取得證據
-    
-        - API Path：/ledger/verify/verificationProofQuery
-        
-        - Request Body：
-        
-            ```
+   - Example :
+
+        ``` json
+        {
+            "clearanceOrderAndIndexValuePairs": [
             {
-              "fromTimestamp": 0,
-              "indexValueKey": "string",
-              "toTimestamp": 0
+                "clearanceOrder": 1,
+                "indexValue": "Example_R0"
+            },
+            {
+                "clearanceOrder": 1,
+                "indexValue": "Example_R1"
             }
-            ```
-          
-            - Example：
-                ```
-                {
-                  "fromTimestamp": 1606780800000,
-                  "indexValueKey": "Example",
-                  "toTimestamp": 1606867200000
-                }
-                ```
-
--  **Dashboard**
-    1. 首先，至 Dashboard 選定欲驗證之資料
-    2. 下載此筆資料之 Off-Chain Proof (即為 verificationProof )
-
-## [驗證流程](./src/main/java/com/itrustmachines/verification/VerificationApi.java)
-
--  使用程式碼驗證
-
-    1. 建立驗證服務
-
-        ```
-        final VerificationApi verificationApi = VerificationApi.getInstance();
+            ]
+        }
         ```
 
-    2. 驗證
-        若該證據使用的是私有鏈，infuraProjectId可以輸入null
-        - 方法一：使用json檔案驗證，其中filePath為證據的檔案路徑，infuraProjectId為環境需求3.取得的ID
+2. Obtain verification proof by ClearanceOrder interval
 
-            ```
-            final VerifyVerificationProofResult result = verificationApi.verify(filePath, infuraProjectId);
-            ```
+   - API Path：`/ledger/verify/verificationProofClearanceOrder`
 
-        - 方法二：使用json字串驗證，其中jsonString為驗證的Json字串，infuraProjectId為環境需求3.取得的ID
+   - Request Body：
 
-            ```
-            final VerifyVerificationProofResult result = verificationApi.verifyJsonString(jsonString, infuraProjectId);
-            ```
+        ```json
+        {
+            "fromClearanceOrder": 0,
+            "indexValueKey": "string",
+            "toClearanceOrder": 0
+        }
+        ```
 
-    3. 驗證結果
+   - Example：
 
-        若result.isPass()結果為true，表示驗證成功，若結果為false，可以從result.getVerifyReceiptResults()中確認是哪一筆資料有誤
-    
-- 使用CLI進行驗證
+        ```json
+        {
+            "fromClearanceOrder": 1,
+            "indexValueKey": "Example",
+            "toClearanceOrder": 2
+        }
+        ```
 
-    若該證據使用的是私有鏈，無須輸入infuraProjectId
-    
+3. Obtain verification Proof by time interval
+
+    - API Path：`/ledger/verify/verificationProofQuery`
+
+    - Request Body：
+
+        ```json
+        {
+            "fromTimestamp": 0,
+            "indexValueKey": "string",
+            "toTimestamp": 0
+        }
+        ```
+
+    - Example：
+
+        ```json
+        {
+            "fromTimestamp": 1606780800000,
+            "indexValueKey": "Example",
+            "toTimestamp": 1606867200000
+        }
+        ```
+
+### Dashboard
+
+1. Enter to Dashboard to choose the data you want to verify
+2. Download the Off-Chain Proof data, namely, verification proof
+
+## Verify Procedure
+
+### Verify by program
+
+  For the following code, pleaser refer to [VerificationApi.java](./src/main/java/com/itrustmachines/verification/VerificationApi.java)
+
+#### Establish Verifcation Service
+
+  ```java
+  final VerificationApi verificationApi = VerificationApi.getInstance();
+  ```
+
+#### Verify
+
+If the verification proof is using private chain, you can assign `null` to infuraProjectId
+
+##### Method 1 : Use json file to verify
+
+- `filePath` : Path of verification file
+- `infuraProjectId` : Enter the infuraProjectId
+
+```java
+final VerifyVerificationProofResult result = verificationApi.verify(filePath, infuraProjectId);
+```
+
+##### Method 2 : Use json string to verify
+
+- `jsonString` : String wtih json data type
+- `infuraProjectId` : Enter the infuraProjectId
+
+```java
+final VerifyVerificationProofResult result = verificationApi.verifyJsonString(jsonString, infuraProjectId);
+```
+
+#### Verify Result
+
+If verified successfully, the `result.isPass()` will return `true`, otherwise return `false`.
+If `result.isPass()` is return `false`, you can check which data is error by calling `result.getVerifyReceiptResults()`
+### Verify by Command Line Interface
+
+Enter the following command in CLI with your informations
+
+```shell
+java -jar spo-verification-program-{VERSION}.jar --proof sample/queryByCO.json --result result.json --infuraProjectId {INFURA_PROJECT_ID}
+```
+
+- help
+
+    ```shell
+    usage: verification-api
+        --infuraProjectId <infuraProjectId>   required if env is MAINNET, KOVAN, GOERLI, RINKEBY, ROPSTEN
+        --proof <filePath>                    input verification proof file path (sample/queryByCO.json)
+        --result <filePath>                   output verify result file path (result.json)
     ```
-    java -jar spo-verification-program-{VERSION}.jar --proof sample/queryByCO.json --result result.json --infuraProjectId {INFURA_PROJECT_ID}
-    ```
-
-    - help
-
-        ```
-        usage: verification-api
-            --infuraProjectId <infuraProjectId>   required if env is MAINNET, KOVAN, GOERLI, RINKEBY, ROPSTEN
-            --proof <filePath>                    input verification proof file path (sample/queryByCO.json)
-            --result <filePath>                   output verify result file path (result.json)
-        ```
