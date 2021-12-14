@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.itrustmachines</groupId>
@@ -11,11 +10,13 @@
     <description>Verification Program API</description>
 
     <properties>
-        <revision>2.2.2</revision>
+        <revision>3.1.3-RC1</revision>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>8</java.version>
+
+        <spo-common.version>3.1.3-RC1</spo-common.version>
 
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <lombok.version>1.18.16</lombok.version>
@@ -30,13 +31,13 @@
         <commons-cli.version>1.4</commons-cli.version>
 
         <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
-        <junit.version>5.6.2</junit.version>
+        <junit.version>5.7.0</junit.version>
 
         <!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
-        <assertj.version>3.17.2</assertj.version>
+        <assertj.version>3.18.1</assertj.version>
 
         <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
-        <mockito-core.version>3.5.11</mockito-core.version>
+        <mockito-core.version>3.7.7</mockito-core.version>
 
         <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
@@ -50,7 +51,7 @@
         <dependency>
             <groupId>com.itrustmachines</groupId>
             <artifactId>spo-common-verification</artifactId>
-            <version>${version}</version>
+            <version>${spo-common.version}</version>
         </dependency>
 
         <!-- Util -->
@@ -102,6 +103,13 @@
         </dependency>
     </dependencies>
 
+    <repositories>
+        <repository>
+            <id>kuro-nexus-releases</id>
+            <url>http://itm-kuro.itm.monster:8081/repository/maven-releases</url>
+        </repository>
+    </repositories>
+
     <build>
         <plugins>
             <plugin>
@@ -141,8 +149,7 @@
                                 </filter>
                             </filters>
                             <transformers>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <mainClass>com.itrustmachines.verification.VerificationApi</mainClass>
                                 </transformer>
                             </transformers>
