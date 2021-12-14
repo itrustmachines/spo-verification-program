@@ -30,7 +30,7 @@ public class VerificationApi {
   private final VerifyVerificationProofService service;
   
   private VerificationApi() {
-    this.service = new VerifyVerificationProofService();
+    this.service = VerifyVerificationProofService.getInstance();
     log.info("new instance: {}", this);
   }
   
@@ -70,12 +70,12 @@ public class VerificationApi {
                                         .argName("filePath")
                                         .longOpt(PROOF_OPT)
                                         .hasArg()
-                                        .desc("input verification proof file path (sample/queryByCO.json)")
+                                        .desc("input verification proof file path (sample/queryByCO.itm)")
                                         .optionalArg(false)
                                         .required()
                                         .build();
     final Option resultPathOption = Option.builder()
-                                          .argName("filePath")
+                                          .argName("resultPath")
                                           .longOpt(RESULT_OPT)
                                           .hasArg()
                                           .desc("output verify result file path (result.json)")
@@ -118,7 +118,7 @@ public class VerificationApi {
       final HelpFormatter formatter = new HelpFormatter();
       formatter.printHelp("verification-api", options);
     } catch (Exception e) {
-      log.error("verifiy error", e);
+      log.error("verify error", e);
     }
   }
   

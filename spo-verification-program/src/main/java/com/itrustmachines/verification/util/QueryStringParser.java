@@ -23,6 +23,8 @@ public class QueryStringParser {
     } else {
       if (queryString.contains(",FromTS=") && queryString.contains(",ToTS=")) {
         queryBuilder.type(Query.QueryType.TIMESTAMP);
+      } else if (queryString.contains(",FromSN=") && queryString.contains(",ToSN=")) {
+        queryBuilder.type(Query.QueryType.CLEARANCE_ORDER_AND_SN);
       } else {
         queryBuilder.type(Query.QueryType.CLEARANCE_ORDER);
       }
@@ -40,6 +42,10 @@ public class QueryStringParser {
           queryBuilder.fromCO(NumberUtils.toLong(split[1]));
         } else if ("ToCO".equals(split[0])) {
           queryBuilder.toCO(NumberUtils.toLong(split[1]));
+        } else if ("FromSN".equals(split[0])) {
+          queryBuilder.fromSN(NumberUtils.toLong(split[1]));
+        } else if ("ToSN".equals(split[0])) {
+          queryBuilder.toSN(NumberUtils.toLong(split[1]));
         }
       }
     }

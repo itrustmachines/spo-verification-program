@@ -6,15 +6,13 @@ import java.util.stream.Collectors;
 import com.itrustmachines.verification.constants.ExistenceType;
 import com.itrustmachines.verification.constants.VerifyVerificationProofStatus;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@ToString(exclude = { "verifyReceiptResults" })
 public class VerifyVerificationProofResult {
   
   private String query;
@@ -31,6 +29,8 @@ public class VerifyVerificationProofResult {
   private Long modifiedCount;
   private Long removedCount;
   private Long addedCount;
+  
+  private VerifyReport verifyReport;
   
   // TODO verify merkleProofVerifyStatus and data for display
   

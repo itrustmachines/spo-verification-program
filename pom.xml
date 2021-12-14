@@ -26,8 +26,6 @@
     </properties>
 
     <modules>
-        <module>spo-common-domain-objects</module>
-        <module>spo-common-verification</module>
         <module>spo-verification-program</module>
     </modules>
 

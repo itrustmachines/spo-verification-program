@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 public class VerifiedClearanceRecordInfo {
   
   private boolean pass;
+  
   private ClearanceRecord clearanceRecord;
   
 }

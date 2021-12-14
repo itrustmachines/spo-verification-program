@@ -12,6 +12,20 @@
     - 若要驗證的證據使用私有鏈，則可跳過此步驟
     - [infura 教學](./infura.md)
 
+## 建立package 連線設定檔
+此設定檔將導入ITM函式庫，請在您的 .m2 資料夾中建立 settings.xml 檔，並將下列內容複製貼上。
+```
+<settings>
+  <servers>
+    <server>
+      <id>kuro-nexus-releases</id>
+      <username>guest</username>
+      <password>guest</password>
+    </server>
+  </servers>
+</settings>
+```
+
 ## 選定驗證資料
 
 - **SPO Server**

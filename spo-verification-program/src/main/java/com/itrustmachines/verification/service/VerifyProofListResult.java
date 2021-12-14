@@ -4,25 +4,21 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.itrustmachines.verification.constants.ExistenceType;
+import com.itrustmachines.verification.vo.VerifyProofCount;
 import com.itrustmachines.verification.vo.VerifyReceiptAndMerkleProofResult;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-class VerifyExistenceProofResult {
+@ToString(exclude = { "proofResultList" })
+class VerifyProofListResult {
   
   private boolean pass;
   
-  private Long successCount;
-  private Long modifiedCount;
-  private Long removedCount;
-  private Long addedCount;
+  private VerifyProofCount count;
   
   private List<VerifyReceiptAndMerkleProofResult> proofResultList;
   

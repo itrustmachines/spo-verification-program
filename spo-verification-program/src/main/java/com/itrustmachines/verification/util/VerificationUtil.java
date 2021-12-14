@@ -5,10 +5,7 @@ import java.util.List;
 
 import com.itrustmachines.common.constants.StatusConstantsString;
 import com.itrustmachines.verification.constants.*;
-import com.itrustmachines.verification.vo.Query;
-import com.itrustmachines.verification.vo.VerificationProof;
-import com.itrustmachines.verification.vo.VerifyReceiptAndMerkleProofResult;
-import com.itrustmachines.verification.vo.VerifyVerificationProofResult;
+import com.itrustmachines.verification.vo.*;
 
 import lombok.NonNull;
 import lombok.experimental.UtilityClass;
@@ -37,6 +34,11 @@ public class VerificationUtil {
     if (exceptionMessage.contains("verify() error")) {
       status = VerifyVerificationProofStatus.CONTRACT_CONNECTION_ERROR;
     }
+    final VerifyReport verifyReport = VerifyReport.builder()
+                                                  .verifyProofSigReport(
+                                                      String.format("[Error] exception happened, exception reason=%s",
+                                                          exceptionMessage))
+                                                  .build();
     
     final VerifyVerificationProofResult result = VerifyVerificationProofResult.builder()
                                                                               .errorClearanceOrderInClearanceRecordList(
@@ -51,6 +53,7 @@ public class VerificationUtil {
                                                                                   buildErrorVerifyReceiptAndMerkleProofResult())
                                                                               .query("")
                                                                               .status(status)
+                                                                              .verifyReport(verifyReport)
                                                                               .build();
     log.debug("buildExceptionResult() end, result={}", result);
     return result;

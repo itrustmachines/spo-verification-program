@@ -18,6 +18,9 @@ public class Query {
     // query by timestamp
     TIMESTAMP,
     
+    // query by clearanceOrder and sn
+    CLEARANCE_ORDER_AND_SN,
+    
     // error
     ERROR
   }
@@ -25,7 +28,9 @@ public class Query {
   QueryType type;
   String indexValueKey;
   long fromCO;
+  long fromSN;
   long toCO;
+  long toSN;
   long fromTS;
   long toTS;
   

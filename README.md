@@ -28,6 +28,22 @@
 - Infure Node URL
   - Please refer to [Infura Tutorial](./doc/infura_en.md)
 
+## Configure the settings for Sample Code
+This configuration file is very important. Main program use this configuration file to import ITM packages.
+
+Create settings.xml in your .m2 folder and copy following setting into the file
+```
+<settings>
+  <servers>
+    <server>
+      <id>kuro-nexus-releases</id>
+      <username>guest</username>
+      <password>guest</password>
+    </server>
+  </servers>
+</settings>
+```
+
 ## Prepare Verification Data
 
 ### SPO Server

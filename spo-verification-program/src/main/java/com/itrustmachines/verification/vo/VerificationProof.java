@@ -1,17 +1,19 @@
 package com.itrustmachines.verification.vo;
 
-import java.nio.charset.StandardCharsets;
 import java.util.List;
-
-import org.web3j.crypto.Hash;
+import java.util.Objects;
 
 import com.itrustmachines.common.ethereum.EthereumEnv;
 import com.itrustmachines.common.util.SignatureUtil;
 import com.itrustmachines.common.vo.ClearanceRecord;
 import com.itrustmachines.common.vo.SpoSignature;
-import com.itrustmachines.common.web3j.Web3jSignature;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
 @Data
@@ -19,6 +21,7 @@ import lombok.extern.slf4j.Slf4j;
 @NoArgsConstructor
 @Builder
 @Slf4j
+@ToString(exclude = { "existenceProofs", "clearanceRecords" })
 public class VerificationProof {
   
   // SPO Server Version
@@ -49,7 +52,7 @@ public class VerificationProof {
   
   private SpoSignature sigServer;
   
-  public String toSignData() {
+  public String toSignDataWithLombok() {
     return new StringBuilder().append(version)
                               .append(query)
                               .append(timestamp)
@@ -62,10 +65,24 @@ public class VerificationProof {
                               .toString();
   }
   
+  public String toSignData() {
+    final StringBuilder stringBuilder = new StringBuilder().append(version)
+                                                           .append(query)
+                                                           .append(timestamp)
+                                                           .append(contractAddress)
+                                                           .append(serverWalletAddress)
+                                                           .append(env)
+                                                           .append(nodeConnectionString);
+    this.getExistenceProofs()
+        .forEach(existenceProof -> stringBuilder.append(existenceProof.toSignData()));
+    this.getClearanceRecords()
+        .forEach(clearanceRecord -> stringBuilder.append(clearanceRecord.toSignData()));
+    return stringBuilder.toString();
+  }
+  
   public VerificationProof sign(@NonNull final String privateKey) {
     try {
-      final Web3jSignature web3jSignature = SignatureUtil.signData(privateKey, toSignData());
-      this.setSigServer(SpoSignature.fromByte(web3jSignature));
+      this.setSigServer(SignatureUtil.signEthereumMessage(privateKey, toSignData()));
     } catch (Exception e) {
       final String errMsg = String.format("sign() error, input=%s", this);
       log.error(errMsg, e);
@@ -74,18 +91,33 @@ public class VerificationProof {
     return this;
   }
   
-  public byte[] toSignDataSha3() {
-    return Hash.sha3(toSignData().getBytes(StandardCharsets.UTF_8));
-  }
-  
   public String obtainPublicKey() {
     String result = null;
     try {
-      result = SignatureUtil.getPublicKey(serverWalletAddress, SignatureUtil.transferToECDSASignature(sigServer),
-          toSignDataSha3())
-                            .toString(16);
+      result = SignatureUtil.recoverEthereumPublicKeyString(serverWalletAddress, sigServer, toSignData());
     } catch (Exception ex) {
       log.error("obtainPublicKey() error, input={}", this, ex);
+    }
+    if (Objects.isNull(result)) {
+      try {
+        result = SignatureUtil.recoverEthereumPublicKeyString(serverWalletAddress, sigServer, toSignDataWithLombok());
+      } catch (Exception ex) {
+        log.error("obtainPublicKey() error, input={}", this, ex);
+      }
+    }
+    if (Objects.isNull(result)) {
+      try {
+        result = SignatureUtil.recoverPublicKeyString(serverWalletAddress, sigServer, toSignData());
+      } catch (Exception ex) {
+        log.error("obtainPublicKey() error, input={}", this, ex);
+      }
+    }
+    if (Objects.isNull(result)) {
+      try {
+        result = SignatureUtil.recoverPublicKeyString(serverWalletAddress, sigServer, toSignDataWithLombok());
+      } catch (Exception ex) {
+        log.error("obtainPublicKey() error, input={}", this, ex);
+      }
     }
     return result;
   }
