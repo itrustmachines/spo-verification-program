@@ -172,8 +172,23 @@ final VerifyVerificationProofResult result = verificationApi.verifyJsonString(js
 
 #### Verify Result
 
-If verified successfully, the `result.isPass()` will return `true`, otherwise return `false`.
-If `result.isPass()` is return `false`, you can check which data is error by calling `result.getVerifyReceiptResults()`
+You can check verify result status by calling `result.getStatus()`. 
+```java
+result.getStatus().equal(VerifyVerificationProofStatus.ALL_PASS);
+```
+
+There are several status of verify result :  `ALL_PASS`, `SIG_ERROR`, `CONTRACT_CONNECTION_ERROR`.
+- `ALL_PASS` : The proof is verified successfully.
+- `SIG_ERROR` : Fail to verify signature of proof. The proof content is modified.
+- `CONTRACT_CONNECTION_ERROR` : Fail to connect to contract. Check you network or `InfuraProjectId`.
+
+
+
+You also can check every single proof.
+```java
+result.getVerifyReceiptResults().forEach( singleResult -> { singleResult.isPass(); })
+```
+
 ### Verify by Command Line Interface
 
 Enter the following command in CLI with your informations

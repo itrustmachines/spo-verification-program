@@ -143,9 +143,22 @@
             ```
 
     3. 驗證結果
+        可透過 result.getStatus() 查看驗證結果。result.getStatus() 有三種狀態顯示驗證結果，分別為 `ALL_PASS`, `SIG_ERROR`, `CONTRACT_CONNET_ERROR`
+        
+        - `ALL_PASS` : 驗證成功
+        - `SIG_ERROR` : 驗證證據簽章錯誤，證據內容有被修改過
+        - `CONTRACT_CONNECT_ERROR` : 無法與合約構通，請檢查您的網路連線或 `InfuraProjectId` 設定是否有誤
+        
+        查看整體驗證結果 : 
+        ```java
+        result.getStatus().equal(VerifyVerificationProofStatus.ALL_PASS);
+        ```
+        
+        查看每筆證據驗證結果 :
+        ```java
+        result.getVerifyReceiptResults().forEach( singleResult -> { singleResult.isPass(); })
+        ```
 
-        若result.isPass()結果為true，表示驗證成功，若結果為false，可以從result.getVerifyReceiptResults()中確認是哪一筆資料有誤
-    
 - 使用CLI進行驗證
 
     若該證據使用的是私有鏈，無須輸入infuraProjectId
